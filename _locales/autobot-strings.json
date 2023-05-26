@@ -4,7 +4,7 @@
   "autoBot.EnumDir.Left|block": "left",
   "autoBot.EnumDir.Right|block": "right",
   "autoBot.EnumDir.Stop|block": "stop",
-  "autoBot.backwardDir|block": "backforward",
+  "autoBot.backwardDir|block": "backward",
   "autoBot.backward|block": "go backward $speed km/hr",
   "autoBot.equal|block": "$directionA equal to $directionB",
   "autoBot.forwardDir|block": "forward",
