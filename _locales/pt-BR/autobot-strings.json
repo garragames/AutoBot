@@ -8,7 +8,7 @@
   "autoBot.backward|block": "go backward $speed km/hr",
   "autoBot.equal|block": "$directionA equal to $directionB",
   "autoBot.forwardDir|block": "avançar",
-  "autoBot.forward|block": "go forward $speed km/hr",
+  "autoBot.forward|block": "avançar $speed km/hr",
   "autoBot.leftDir|block": "left",
   "autoBot.left|block": "turn left $speed km/hr",
   "autoBot.rightDir|block": "right",
