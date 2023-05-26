@@ -3,7 +3,7 @@
   "autoBot.backward": "Moves the autobot backward at speed between 0 and 100 km/hr",
   "autoBot.backwardDir": "Returns the value of backward to compare with the value returned by the line sensor.",
   "autoBot.equal": "Compares two values and returns true if equal or false if not equal",
-  "autoBot.forward": "Moves the autobot forward at speed between 0 and 100 km/hr",
+  "autoBot.forward": "Move o autobot para frente a uma velocidade entre 0 e 100 km/h",
   "autoBot.forwardDir": "Returns the value of forward to compare with the value returned by the line sensor.",
   "autoBot.left": "Turn the autobot left at speed between 0 and 100 km/hr",
   "autoBot.leftDir": "Returns the value of left to compare with the value returned by the line sensor.",
