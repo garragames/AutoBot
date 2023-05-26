@@ -10,7 +10,11 @@
     "files": [
         "README.md",
         "main.blocks",
-        "main.ts"
+        "main.ts",
+	"_locales/autobot-strings.json",
+	"_locales/autobot-jsdoc-strings.json",
+	"_locales/es-ES/autobot-strings.json",
+	"_locales/es-ES/autobot-jsdoc-strings.json"
     ],
     "testFiles": [
         "test.ts"
