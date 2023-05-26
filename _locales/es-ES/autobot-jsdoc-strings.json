@@ -1,5 +1,4 @@
 {
-  "autoBot": "Bloque gráfico personalizado",
   "autoBot.backward": "Mueve el autobot hacia atrás a una velocidad entre 0 y 100 km/h",
   "autoBot.backwardDir": "Devuelve el valor de hacia atrás para compararlo con el valor devuelto por el sensor de línea",
   "autoBot.equal": "Compara dos valores y devuelve verdadero si es igual o falso si no lo es",
@@ -11,5 +10,5 @@
   "autoBot.rightDir": "Devuelve el valor de la derecha para comparar con el valor devuelto por el sensor de línea",
   "autoBot.senseLine": "Detecta la línea a través de los cinco sensores infrarrojos delante del AutoBot, y devuelve adelante, atrás, izquierda, derecha o parada",
   "autoBot.stop": "Detener el autobot",
-  "autoBot.stopDir": "Constantes de dirección\n\nDevuelve el valor de parada para compararlo con el valor devuelto por el sensor de línea"
+  "autoBot.stopDir": "Devuelve el valor de parada para compararlo con el valor devuelto por el sensor de línea"
 }
