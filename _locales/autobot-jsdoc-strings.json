@@ -1,5 +1,4 @@
 {
-  "autoBot": "Custom graphic block",
   "autoBot.backward": "Moves the autobot backward at speed between 0 and 100 km/hr",
   "autoBot.backwardDir": "Returns the value of backward to compare with the value returned by the line sensor.",
   "autoBot.equal": "Compares two values and returns true if equal or false if not equal",
@@ -11,5 +10,5 @@
   "autoBot.rightDir": "Returns the value of right to compare with the value returned by the line sensor.",
   "autoBot.senseLine": "Detects the line through the five infrared sensors in front of the AutoBot, and returns forward, backward, left, right or stop.",
   "autoBot.stop": "Stop the autobot",
-  "autoBot.stopDir": "Direction constants\n\nReturns the value of stop to compare with the value returned by the line sensor."
+  "autoBot.stopDir": "Returns the value of stop to compare with the value returned by the line sensor."
 }
