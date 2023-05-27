@@ -11,6 +11,7 @@
         "README.md",
         "main.blocks",
         "main.ts",
+        "fieldEditors/speed-level.ts",
         "_locales/autobot-strings.json",
         "_locales/autobot-jsdoc-strings.json",
         "_locales/es-ES/autobot-strings.json",
@@ -31,5 +32,8 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "tsprj",
+    "editor": {
+      "fieldEditors": ["fieldEditors/speed-lever.ts"]
+    }
 }
