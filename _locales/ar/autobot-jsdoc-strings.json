@@ -1,15 +1,14 @@
 {
-  "autoBot": "Custom graphic block",
-  "autoBot.backward": "Moves the autobot backward at speed between 0 and 100 km/hr",
-  "autoBot.backwardDir": "Returns the value of backward to compare with the value returned by the line sensor.",
-  "autoBot.equal": "Compares two values and returns true if equal or false if not equal",
-  "autoBot.forward": "Moves the autobot forward at speed between 0 and 100 km/hr",
-  "autoBot.forwardDir": "Returns the value of forward to compare with the value returned by the line sensor.",
-  "autoBot.left": "Turn the autobot left at speed between 0 and 100 km/hr",
-  "autoBot.leftDir": "Returns the value of left to compare with the value returned by the line sensor.",
-  "autoBot.right": "Turn the autobot right at speed between 0 and 100 km/hr",
-  "autoBot.rightDir": "Returns the value of right to compare with the value returned by the line sensor.",
-  "autoBot.senseLine": "Detects the line through the five infrared sensors in front of the AutoBot, and returns forward, backward, left, right or stop.",
-  "autoBot.stop": "Stop the autobot",
-  "autoBot.stopDir": "Direction constants\n\nReturns the value of stop to compare with the value returned by the line sensor."
+    "autoBot.backward": "تحرك الروبوت الآلي إلى الخلف بسرعة تتراوح بين 0 و 100 كم/ساعة",
+    "autoBot.backwardDir": "يعيد قيمة الخلف للمقارنة مع القيمة المُرجَعَة من حساس الخط.",
+    "autoBot.equal": "يقارن قيمتين ويعيد القيمة true إذا كانت متساويتين والقيمة false إذا كانت غير متساويتين",
+    "autoBot.forward": "تحرك الروبوت الآلي إلى الأمام بسرعة تتراوح بين 0 و 100 كم/ساعة",
+    "autoBot.forwardDir": "يعيد قيمة الأمام للمقارنة مع القيمة المُرجَعَة من حساس الخط.",
+    "autoBot.left": "استدر الروبوت الآلي إلى اليسار بسرعة تتراوح بين 0 و 100 كم/ساعة",
+    "autoBot.leftDir": "يعيد قيمة اليسار للمقارنة مع القيمة المُرجَعَة من حساس الخط.",
+    "autoBot.right": "استدر الروبوت الآلي إلى اليمين بسرعة تتراوح بين 0 و 100 كم/ساعة",
+    "autoBot.rightDir": "يعيد قيمة اليمين للمقارنة مع القيمة المُرجَعَة من حساس الخط.",
+    "autoBot.senseLine": "يكتشف الخط من خلال الحساسات الخمسة للأشعة تحت الحمراء في مقدمة الروبوت الآلي، ويعيد القيمة الأمامية، الخلفية، اليسرى، اليمنى أو الوقف.",
+    "autoBot.stop": "قف الروبوت الآلي",
+    "autoBot.stopDir": "يعيد قيمة الوقف للمقارنة مع القيمة المُرجَعَة من حساس الخط."
 }
