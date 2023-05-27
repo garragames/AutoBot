@@ -33,6 +33,8 @@
     ],
     "preferredEditor": "tsprj",
     "editor": {
-      "fieldEditors": ["fieldEditors/speed-lever.ts"]
+        "fieldEditors": [
+            "fieldEditors/speed-lever.ts"
+        ]
     }
 }
