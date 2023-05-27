@@ -11,7 +11,6 @@
         "README.md",
         "main.blocks",
         "main.ts",
-        "fieldEditors/speed-level.ts",
         "_locales/autobot-strings.json",
         "_locales/autobot-jsdoc-strings.json",
         "_locales/es-ES/autobot-strings.json",
@@ -34,6 +33,8 @@
     ],
     "preferredEditor": "tsprj",
     "editor": {
-      "fieldEditors": ["fieldEditors/speed-lever.ts"]
+        "fieldEditors": [
+            "fieldEditors/speed-lever.ts"
+        ]
     }
 }
