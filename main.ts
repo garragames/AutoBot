@@ -8,8 +8,8 @@
 /**
  * Custom graphic block
  */
-//% icon="\uf544"
-//% weight=100 color=#fa8f13 block="Garragames"
+
+//% weight=100 color=#fa8f13 icon="\uf544" block="Garragames"
 // groups=['Directions', 'Movements', 'Sensors', 'Logic']
 namespace autoBot {
 
