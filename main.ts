@@ -9,7 +9,7 @@
  * Custom graphic block
  */
 //% iconSet="mdi"
-//% icon="\uf12e"
+//% icon="\uf544"
 //% weight=100 color=#fa8f13 block="Garragames"
 // groups=['Directions', 'Movements', 'Sensors', 'Logic']
 namespace autoBot {
