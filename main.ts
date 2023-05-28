@@ -9,7 +9,7 @@
  * Custom graphic block
  */
 //% weight=100 color=#fa8f13 icon="\uf124" block="Garragames"
-//% groups=['Directions', 'Movements', 'Sensors', 'Logic']
+// groups=['Directions', 'Movements', 'Sensors', 'Logic']
 namespace autoBot {
 
     const MIN_VEL = 150;  //   0 km/hr
