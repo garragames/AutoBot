@@ -60,7 +60,6 @@ namespace autoBot {
     //% block="sense acelerometer"
     //% block.loc.es-ES="detectar acelerómetro"
     //% group="Sensors"
-    //% subcategory="Bots"
     export function senseAcelerometer(): number {
         return 0
     }
@@ -69,7 +68,6 @@ namespace autoBot {
     //% block="sense distance"
     //% block.loc.es-ES="detectar distancia"
     //% group="Sensors"
-    //% subcategory="Bots"
     export function senseDistance(): number {
         return 0
     }
@@ -81,7 +79,6 @@ namespace autoBot {
     //% block="sense line"
     //% block.loc.es-ES="detectar línea"
     //% group="Sensors"
-    //% subcategory="Bots"
     export function senseLine(): EnumDir {
         if (pins.digitalReadPin(DigitalPin.P0) == 1 && (pins.digitalReadPin(DigitalPin.P1) == 1 && (pins.digitalReadPin(DigitalPin.P2) == 0 && (pins.digitalReadPin(DigitalPin.P3) == 1 && pins.digitalReadPin(DigitalPin.P4) == 1)))) {
             return EnumDir.Forward
