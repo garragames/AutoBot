@@ -8,6 +8,7 @@
 /**
  * Custom graphic block
  */
+//% iconSet="fontawesome"
 //% weight=100 color=#fa8f13 icon="\uf124" block="Garragames"
 // groups=['Directions', 'Movements', 'Sensors', 'Logic']
 namespace autoBot {
