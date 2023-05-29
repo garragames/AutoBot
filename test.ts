@@ -19,3 +19,4 @@ basic.forever(function () {
         autoBot.stop()
     }
 })
+
