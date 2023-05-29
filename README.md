@@ -18,10 +18,26 @@ To edit this repository in MakeCode.
 * click on **Import** then click on **Import URL**
 * paste **https://github.com/garragames/autobot** and click import
 
-## Blocks preview
+## Usage
 
-This image shows the blocks code from the last commit in master.
-This image may take a few minutes to refresh.
+### Line follower
+
+```blocks
+basic.forever(function () {
+    if (autoBot.equal(autoBot.senseLine(), autoBot.forwardDir())) {
+        autoBot.forward(86)
+    }
+    if (autoBot.equal(autoBot.senseLine(), autoBot.leftDir())) {
+        autoBot.left(50)
+    }
+    if (autoBot.equal(autoBot.senseLine(), autoBot.rightDir())) {
+        autoBot.right(50)
+    }
+    if (autoBot.equal(autoBot.senseLine(), autoBot.stopDir())) {
+        autoBot.stop()
+    }
+})
+```
 
 ![A rendered view of the blocks](https://github.com/garragames/autobot/raw/master/.github/makecode/blocks.png)
 
