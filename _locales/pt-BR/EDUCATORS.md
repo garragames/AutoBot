@@ -46,4 +46,4 @@ esperar para ver as maravilhas que eles criarão usando as **extensões MakeCode
 Garragames**. Feliz programação, educadores! Vocês estão fazendo um trabalho incrível!
 
 Continuem sendo maravilhosos,
-A equipe da **Garragames**
+A equipe da *Garragames*
