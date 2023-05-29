@@ -57,6 +57,10 @@ namespace autoBot {
         pins.analogWritePin(AnalogPin.P16, s)
     }
 
+    /**
+     * Detects the tilt of the micro:bit card via the accelerometer
+     * @returns 
+     */
     //% blockId=senseAcelerometer
     //% block="sense acelerometer"
     //% block.loc.es-ES="detectar acelerómetro"
@@ -65,6 +69,10 @@ namespace autoBot {
         return 0
     }
 
+    /**
+     * Detects distance through ultrasonic sensor
+     * @returns 
+     */
     //% blockId=senseDistance
     //% block="sense distance"
     //% block.loc.es-ES="detectar distancia"
@@ -101,8 +109,6 @@ namespace autoBot {
                             }
         return EnumDir.Stop // If no condition then Stop motors
     }
-    
-
 
     /**
      * Stop the autobot
