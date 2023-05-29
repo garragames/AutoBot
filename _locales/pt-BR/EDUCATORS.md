@@ -5,11 +5,11 @@
 Olá, Super Educadores!
 
 Estamos animados para dar as boas-vindas à nova documentação das extensões MakeCode da 
-Garragames! Como vocês provavelmente já sabem, aqui na Garragames, somos apaixonados 
-por levar a alegria e a acessibilidade da programação de baixo código a todos os 
+**Garragames**! Como vocês provavelmente já sabem, aqui na **Garragames**, somos apaixonados 
+por levar a alegria e a acessibilidade da programação de low-code a todos os 
 aprendizes, especialmente às maravilhosas mentes jovens na educação básica.
 
-Vamos falar um pouco sobre o que significa "baixo código", certo? Em poucas palavras, 
+Vamos falar um pouco sobre o que significa "low-code", certo? Em poucas palavras, 
 é tudo sobre simplificar o processo de programação. Vocês veem, a codificação 
 tradicional muitas vezes pode ser cheia de uma sintaxe complexa e blocos de código 
 intimidantes. Mas acreditamos que isso não deveria ser uma barreira para nossos jovens 
@@ -17,13 +17,13 @@ aprendizes que estão apenas começando sua emocionante jornada de codificação
 isso que desenvolvemos ferramentas que colocam o poder da codificação em suas mãos, 
 mesmo que eles ainda não saibam o que é um "loop for".
 
-Nossas extensões MakeCode seguem essa filosofia de baixo código. Criamos novos blocos 
+Nossas extensões MakeCode seguem essa filosofia de low-code. Criamos novos blocos 
 que encapsulam as operações mais intrincadas, eliminando a complexidade mas mantendo a 
 funcionalidade. Esses blocos oferecem uma experiência de codificação encantadora e 
 acessível, abrindo o mundo da programação sem todos os obstáculos (intencionalmente, 
 um jogo de palavras!).
 
-Nossa abordagem se inspira em plataformas brilhantes como Scratch e MakeCode, que usam 
+Nossa abordagem se inspira em plataformas brilhantes como **Scratch** e **MakeCode**, que usam 
 uma abordagem visual para introduzir conceitos de codificação. Os estudantes podem 
 arrastar e soltar, conectar e manipular blocos para criar código. Eles podem ver como 
 o código deles está sendo formado, entender a estrutura lógica e, o melhor de tudo, ver 
@@ -42,8 +42,8 @@ passo a passo, exemplos e dicas para solucionar problemas que ajudarão vocês a
 do caminho. Não se preocupem; estamos juntos nisso!
 
 Estamos animados para fazer parte da jornada de codificação de seus alunos e mal podemos 
-esperar para ver as maravilhas que eles criarão usando as extensões MakeCode da 
-Garragames. Feliz programação, educadores! Vocês estão fazendo um trabalho incrível!
+esperar para ver as maravilhas que eles criarão usando as **extensões MakeCode da 
+Garragames**. Feliz programação, educadores! Vocês estão fazendo um trabalho incrível!
 
 Continuem sendo maravilhosos,
-A equipe da Garragames
+A equipe da **Garragames**
