@@ -18,7 +18,8 @@
         "_locales/pt-BR/autobot-strings.json",
         "_locales/pt-BR/autobot-jsdoc-strings.json",
         "_locales/ar/autobot-strings.json",
-        "_locales/ar/autobot-jsdoc-strings.json"
+        "_locales/ar/autobot-jsdoc-strings.json",
+        "_locales/es-ES/README.md"
     ],
     "testFiles": [
         "test.ts"
