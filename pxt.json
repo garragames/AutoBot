@@ -11,17 +11,7 @@
         "README.md",
         "EDUCATORS.md",
         "main.blocks",
-        "main.ts",
-        "_locales/autobot-strings.json",
-        "_locales/autobot-jsdoc-strings.json",
-        "_locales/es-ES/README.md",
-        "_locales/es-ES/EDUCATORS.md",
-        "_locales/es-ES/autobot-strings.json",
-        "_locales/es-ES/autobot-jsdoc-strings.json",
-        "_locales/pt-BR/autobot-strings.json",
-        "_locales/pt-BR/autobot-jsdoc-strings.json",
-        "_locales/ar/autobot-strings.json",
-        "_locales/ar/autobot-jsdoc-strings.json"
+        "main.ts"
     ],
     "testFiles": [
         "test.ts"
