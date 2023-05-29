@@ -9,7 +9,7 @@
  * Custom graphic block
  */
 
-//% weight=100 color=#fa8f13 icon="\uf1b9" block="Garragames"
+//% weight=100 color=#fa8f13 icon="\uf1b9" block="AutoBot"
 // groups=['Directions', 'Movements', 'Sensors', 'Logic']
 namespace autoBot {
 
