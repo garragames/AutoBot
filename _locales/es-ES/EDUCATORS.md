@@ -7,19 +7,19 @@
 ¡Estamos emocionados de darles la bienvenida a la nueva documentación
  de las extensiones de MakeCode de **Garragames!** Como probablemente 
 ya sepan, aquí en **Garragames**, nos apasiona llevar la alegría y 
-accesibilidad de la programación de bajo código a todos los aprendices, 
+accesibilidad de la programación de low-code a todos los estudiantes, 
 particularmente a esas maravillosas mentes jóvenes en educación básica.
 
-Hablemos un poco de lo que significa "bajo código", ¿les parece? En 
+Hablemos un poco de lo que significa "low-code", ¿les parece? En 
 pocas palabras, se trata de simplificar el proceso de programación. Verán, 
 la codificación tradicional puede estar llena de una sintaxis compleja 
 y bloques de código intimidantes. Pero creemos que eso no debería ser una 
-barrera para nuestros jóvenes aprendices que apenas están comenzando 
+barrera para nuestros jóvenes estudiantes que apenas están comenzando 
 su emocionante viaje de codificación. Es por eso que desarrollamos 
 herramientas que ponen el poder de la codificación en sus manos, incluso 
-si aún no saben qué es un "bucle for".
+si aún no saben qué es un "ciclo for".
 
-Nuestras extensiones de MakeCode siguen esta filosofía de bajo código. 
+Nuestras extensiones de MakeCode siguen esta filosofía de low-code. 
 Hemos creado bloques nuevos que encapsulan las operaciones más intrincadas, 
 eliminando la complejidad pero manteniendo la funcionalidad. Estos bloques 
 ofrecen una experiencia de codificación encantadora y accesible, abriendo 
