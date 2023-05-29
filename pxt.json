@@ -10,6 +10,7 @@
     "files": [
         "README.md",
         "EDUCATORS.md",
+        "LICENSE",
         "main.blocks",
         "main.ts",
         "_locales/autobot-strings.json",
