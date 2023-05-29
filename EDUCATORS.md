@@ -15,9 +15,9 @@ coding journey. That's why we develop tools that put the power of coding in thei
 know what a "for loop" is yet. 
 
 Our MakeCode extensions follows this low-code philosophy. We've cooked up some brand-new blocks that encapsulate
- the more intricate operations, stripping away the complexity, yet maintaining the functionality. These blocks 
- provide a delightful and accessible coding experience, opening up the world of programming without all the 
- stumbling blocks. 
+the more intricate operations, stripping away the complexity, yet maintaining the functionality. These blocks 
+provide a delightful and accessible coding experience, opening up the world of programming without all the 
+stumbling blocks. 
 
 Our approach takes inspiration from brilliant platforms like **Scratch** and **MakeCode**, which use a visual 
 approach to introduce coding concepts. Students can drag and drop, connect, and manipulate blocks to create code. 
