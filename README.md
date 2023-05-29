@@ -39,8 +39,6 @@ basic.forever(function () {
 })
 ```
 
-![A rendered view of the blocks](https://github.com/garragames/autobot/raw/master/.github/makecode/blocks.png)
-
 #### Metadata (used for search, rendering)
 
 * for PXT/microbit
