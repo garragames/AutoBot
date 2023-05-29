@@ -1,40 +1,49 @@
-# MakeCode Extensions
+# Extensões do MakeCode
 
 ## AutoBot
 
-Hello Super Educators!
+Olá, Super Educadores!
 
-We are thrilled to welcome you to **Garragames'** new MakeCode extensions documentation! As you probably know, 
-here at **Garragames**, we're passionate about bringing the joy and accessibility of low-code programming to 
-all learners, particularly those wonderful young minds in basic education.
+Estamos animados para dar as boas-vindas à nova documentação das extensões MakeCode da 
+Garragames! Como vocês provavelmente já sabem, aqui na Garragames, somos apaixonados 
+por levar a alegria e a acessibilidade da programação de baixo código a todos os 
+aprendizes, especialmente às maravilhosas mentes jovens na educação básica.
 
-Let's talk about what we mean by 'low-code', shall we? In short, it's all about simplifying the process of 
-programming. You see, traditional coding can often be filled with complex syntax and intimidating blocks of 
-code. But we believe that shouldn't be a barrier for our young learners who are just starting their exciting 
-coding journey. That's why we develop tools that put the power of coding in their hands, even if they don't 
-know what a "for loop" is yet. 
+Vamos falar um pouco sobre o que significa "baixo código", certo? Em poucas palavras, 
+é tudo sobre simplificar o processo de programação. Vocês veem, a codificação 
+tradicional muitas vezes pode ser cheia de uma sintaxe complexa e blocos de código 
+intimidantes. Mas acreditamos que isso não deveria ser uma barreira para nossos jovens 
+aprendizes que estão apenas começando sua emocionante jornada de codificação. É por 
+isso que desenvolvemos ferramentas que colocam o poder da codificação em suas mãos, 
+mesmo que eles ainda não saibam o que é um "loop for".
 
-Our MakeCode extensions follows this low-code philosophy. We've cooked up some brand-new blocks that encapsulate
-the more intricate operations, stripping away the complexity, yet maintaining the functionality. These blocks 
-provide a delightful and accessible coding experience, opening up the world of programming without all the 
-stumbling blocks. 
+Nossas extensões MakeCode seguem essa filosofia de baixo código. Criamos novos blocos 
+que encapsulam as operações mais intrincadas, eliminando a complexidade mas mantendo a 
+funcionalidade. Esses blocos oferecem uma experiência de codificação encantadora e 
+acessível, abrindo o mundo da programação sem todos os obstáculos (intencionalmente, 
+um jogo de palavras!).
 
-Our approach takes inspiration from brilliant platforms like **Scratch** and **MakeCode**, which use a visual 
-approach to introduce coding concepts. Students can drag and drop, connect, and manipulate blocks to create code. 
-They can see their code taking shape, understand the logical structure, and, best of all, watch the results 
-in real-time. 
+Nossa abordagem se inspira em plataformas brilhantes como Scratch e MakeCode, que usam 
+uma abordagem visual para introduzir conceitos de codificação. Os estudantes podem 
+arrastar e soltar, conectar e manipular blocos para criar código. Eles podem ver como 
+o código deles está sendo formado, entender a estrutura lógica e, o melhor de tudo, ver 
+os resultados em tempo real.
 
-The beauty of our MakeCode extensions is that it allows students to create complex projects without having to 
-delve into the more difficult aspects of programming that might otherwise be discouraging. Instead, they can 
-focus on creative problem solving, designing, and understanding the fundamental concepts of programming. This 
-way, we ensure that learning programming is not only approachable but also a whole lot of fun.
+A beleza das nossas extensões MakeCode é que elas permitem aos alunos criar projetos 
+complexos sem ter que mergulhar nos aspectos mais difíceis da programação que, de outra 
+forma, poderiam ser desanimadores. Em vez disso, eles podem se concentrar na resolução 
+criativa de problemas, no design e na compreensão dos conceitos fundamentais da 
+programação. Desta forma, garantimos que aprender a programar não é apenas acessível, 
+mas também muito divertido.
 
-That said, this documentation will walk you through all you need to know to start using our new MakeCode 
-extensions in your classroom. We've included step-by-step guides, examples, and troubleshooting tips to 
-help you out along the way. Don't worry; we're in this together!
+Dito isso, esta documentação irá orientá-los em tudo que vocês precisam saber para 
+começar a usar nossas novas extensões MakeCode em suas salas de aula. Incluímos guias 
+passo a passo, exemplos e dicas para solucionar problemas que ajudarão vocês ao longo 
+do caminho. Não se preocupem; estamos juntos nisso!
 
-We are excited to be part of your students' coding journey and can't wait to see the wonderful things they'll 
-create using **Garragames' MakeCode extensions**. Happy coding, educators! You're doing an amazing job!
+Estamos animados para fazer parte da jornada de codificação de seus alunos e mal podemos 
+esperar para ver as maravilhas que eles criarão usando as extensões MakeCode da 
+Garragames. Feliz programação, educadores! Vocês estão fazendo um trabalho incrível!
 
-Keep on being awesome,
-The Garragames Team
+Continuem sendo maravilhosos,
+A equipe da Garragames
