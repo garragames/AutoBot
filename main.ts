@@ -78,11 +78,13 @@ namespace autoBot {
         pins.analogWritePin(AnalogPin.P16, s)
     }
 
+    /*************************************************************************************************/
+
     /**
      * Uno (OK)
      * @param gesture
      */
-    //% blockId=getDirection
+    //% blockId=getDirection1
     //% block="uno $gesture"
     //% gesture.fieldEditor="gestures" gesture.fieldOptions.columns=4
     // shim=input::onGesture
@@ -94,9 +96,9 @@ namespace autoBot {
      * Dos
      * @param direction2
      */
-    //% blockId=getDirection2
+    //% blockId=getDirection2 
     //% block="dos $direction2"
-    //% gesture.fieldEditor="direction2" direction2.fieldOptions.columns=3 shim=input::onGesture
+    //% direction2.fieldEditor="direction2" direction2.fieldOptions.columns=3 shim=input::onGesture
     export function onGesture4(direction2: Gesture2): number {
         return direction2
     }
@@ -112,6 +114,8 @@ namespace autoBot {
     export function onGesture3(gesture3: EnumDir): number {
         return gesture3
     }
+
+    /*************************************************************************************************/
 
     /**
      * Detects the tilt of the micro:bit card via the accelerometer
