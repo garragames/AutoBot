@@ -57,7 +57,7 @@ namespace autoBot {
         Forward = 1,
         //% block="backward"
         //% block.loc.es-ES="atrás"
-        //% jres=directions.tiltleft
+        //% jres=directions.tiltbackward
         Backward = 2,
 
         //% block="right"
