@@ -87,7 +87,7 @@ namespace autoBot {
     //% blockId=getDirection
     //% block="$gesture"
     //% gesture.fieldEditor="gestures" gesture.fieldOptions.columns=3 shim=input::onGesture
-    export function onGesture2(gesture: EnumDir): number {
+    export function onGesture2(gesture: Gesture2): number {
         return gesture
     };
 
