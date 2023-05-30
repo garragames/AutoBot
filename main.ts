@@ -47,15 +47,15 @@ namespace autoBot {
 
         //% block="izquierda"
         //% jres=gestures.uno
-        Uno = 1,  // MICROBIT_ACCELEROMETER_EVT_SHAKE
+        Uno = 1,  
 
         //% block="adelante"
-        //% jres=gestures.iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsSAAALEgHS3X78AAADqElEQVR4nO2b4XWbMBSFP3r6P2wQOkGcCUonqDtB0wnqbuBO0GSCJhvYG5AJiiconaD2BK8
-        Dos = 2,  // MICROBIT_ACCELEROMETER_EVT_TILT_UP
+        //% jres=gestures.dos
+        Dos = 2,  
    
         //% block="derecha"
         //% jres=gestures.tres
-        Tres = 3,  // MICROBIT_ACCELEROMETER_EVT_TILT_DOWN
+        Tres = 3,  
     }
 
     // Motor Directions
