@@ -65,10 +65,10 @@ namespace autoBot {
     //% blockId=device_gesture_event2 
     //% block="on $gesture"
     //% parts="accelerometer"
-    //% gesture.fieldEditor="gestures" gesture.fieldOptions.columns=3 shim=input::onGesture2
+    //% gesture.fieldEditor="gestures" gesture.fieldOptions.columns=3 shim=input::onGesture
     //% group="Sensors"
-    export function onGesture2(gesture: Gesture): void {
-
+    export function onGesture2(gesture: Gesture): number {
+        return gesture
     };
 
     /**
