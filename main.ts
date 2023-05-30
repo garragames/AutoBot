@@ -69,6 +69,33 @@ namespace autoBot {
         Stop = 0
     }
 
+    // Motor Speeds
+    export enum EnumSpeed {
+        //% block="first"
+        //% block.loc.es-ES="primera"
+        //% jres=directions.first
+        Firts = 3,
+        //% block="second"
+        //% block.loc.es-ES="segunda"
+        //% jres=directions.second
+        Second = 1,
+        //% block="third"
+        //% block.loc.es-ES="tercera"
+        //% jres=directions.third
+        Third = 2,
+        //% block="forth"
+        //% block.loc.es-ES="cuarta"
+        //% jres=directions.fourth
+        Fourth = 4,
+        //% block="fift"
+        //% block.loc.es-ES="quinta"
+        //% jres=directions.fifth
+        Fifth = 0,
+        //% block="reverse"
+        //% block.loc.es-ES="reversa"
+        //% jres=directions.reverse
+        Reverse = 0
+    }
     // Set speed to both motors
     function setSpeed(speed: number): void {
         let s = speed * (MAX_VEL - MIN_VEL) / 100 + MIN_VEL; // Adjust to the min and max PWM values
@@ -88,7 +115,7 @@ namespace autoBot {
     //% block="$gesture"
     //% gesture.fieldEditor="gestures" gesture.fieldOptions.columns=4
     // shim=input::onGesture
-    export function onGesture2(gesture: Gesture2): number {
+    export function onGesture2(gesture: EnumSpeed): number {
         return gesture
     }
 
