@@ -43,7 +43,7 @@ namespace autoBot {
         }
     }
 
-    declare const enum Gesture2 {
+    enum Gesture2 {
 
         //% block="izquierda"
         //% jres=gestures.uno
