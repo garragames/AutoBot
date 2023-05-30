@@ -111,11 +111,22 @@ namespace autoBot {
      * Uno (OK)
      * @param gesture
      */
+    //% blockId=getSpeed
+    //% block="speed $gesture"
+    //% gesture.fieldEditor="gestures" gesture.fieldOptions.columns=4
+    export function onSpeed(speed: EnumSpeed): number {
+        return speed
+    }
+
+    /**
+     * Uno (OK)
+     * @param gesture
+     */
     //% blockId=getDirection1
     //% block="$gesture"
     //% gesture.fieldEditor="gestures" gesture.fieldOptions.columns=4
     // shim=input::onGesture
-    export function onGesture2(gesture: EnumSpeed): number {
+    export function onGesture2(gesture: Gesture2): number {
         return gesture
     }
 
