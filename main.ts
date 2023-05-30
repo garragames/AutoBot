@@ -29,6 +29,39 @@ namespace autoBot {
     // Set initial speed
     setSpeed(50)
 
+    declare const enum Gesture {
+        /**
+         * Raised when shaken
+         */
+        //% block=shake
+        //% jres=gestures.shake
+        Shake = 11,  // MICROBIT_ACCELEROMETER_EVT_SHAKE
+        /**
+         * Raised when the logo is upward and the screen is vertical
+         */
+        //% block="logo up"
+        //% jres=gestures.tiltforward
+        LogoUp = 1,  // MICROBIT_ACCELEROMETER_EVT_TILT_UP
+        /**
+         * Raised when the logo is downward and the screen is vertical
+         */
+        //% block="logo down"
+        //% jres=gestures.tiltbackwards
+        LogoDown = 2,  // MICROBIT_ACCELEROMETER_EVT_TILT_DOWN
+        /**
+         * Raised when the screen is pointing up and the board is horizontal
+         */
+        //% block="screen up"
+        //% jres=gestures.frontsideup
+        ScreenUp = 5,  // MICROBIT_ACCELEROMETER_EVT_FACE_UP
+        /**
+         * Raised when the screen is pointing down and the board is horizontal
+         */
+        //% block="screen down"
+        //% jres=gestures.backsideup
+        ScreenDown = 6,  // MICROBIT_ACCELEROMETER_EVT_FACE_DOWN
+    }
+
     // Motor Directions
     export enum EnumDir {
         //% block="forward"
