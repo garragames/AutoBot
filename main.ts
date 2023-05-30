@@ -41,7 +41,11 @@ namespace autoBot {
    
         //% block="derecha"
         //% jres=gestures.tiltright
-        Tres = 3,  
+        Tres = 3,
+
+        //% block="stop"
+        //% jres=gestures.tiltright
+        Stop = 0,
     }
 
     // Motor Directions
@@ -94,7 +98,7 @@ namespace autoBot {
      */
     //% blockId=getDirection
     //% block="$gesture"
-    //% gesture.fieldEditor="gestures" gesture.fieldOptions.columns=1
+    //% gesture.fieldEditor="gestures" gesture.fieldOptions.columns=4
     // shim=input::onGesture
     export function onGesture2(gesture: Gesture2): number {
         return gesture
