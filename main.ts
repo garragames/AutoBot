@@ -109,7 +109,7 @@ namespace autoBot {
     //% block="tres $gesture"
     //% gesture.fieldEditor="gestures" gesture.fieldOptions.columns=4
     // shim=input::onGesture
-    export function onGesture4(gesture: Gesture2): number {
+    export function onGesture4(gesture: EnumDir): number {
         return gesture
     }
 
