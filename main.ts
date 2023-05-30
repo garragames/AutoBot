@@ -11,7 +11,7 @@
 
 // import { gestures } from "./enums.d.ts"
 
-let gestures = {
+let gesturesXXX = {
     "*": {
         "namespace": "gestures",
         "dataEncoding": "base64"
