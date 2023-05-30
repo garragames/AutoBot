@@ -68,7 +68,7 @@ namespace autoBot {
         Right = 4,
         //% block="stop"
         //% block.loc.es-ES="alto"
-        //% jres=directions.tilt            right
+        //% jres=directions.tiltright
         Stop = 0
     }
 
