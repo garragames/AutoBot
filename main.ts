@@ -50,18 +50,23 @@ namespace autoBot {
     export enum EnumDir {
         //% block="forward"
         //% block.loc.es-ES="adelante"
+        //% jres=gestures.tiltforward
         Forward = 1,
         //% block="backward"
         //% block.loc.es-ES="atrás"
+        //% jres=gestures.tiltbackwards
         Backward = 2,
         //% block="left"
         //% block.loc.es-ES="izquierda"
+        //% jres=gestures.tiltleft
         Left = 3,
         //% block="right"
         //% block.loc.es-ES="derecha"
+        //% jres=gestures.tiltright
         Right = 4,
         //% block="stop"
         //% block.loc.es-ES="alto"
+        //% jres=gestures.shake
         Stop = 0
     }
 
@@ -82,7 +87,7 @@ namespace autoBot {
     //% blockId=getDirection
     //% block="$gesture"
     //% gesture.fieldEditor="gestures" gesture.fieldOptions.columns=3 shim=input::onGesture
-    export function onGesture2(gesture: Gesture2): number {
+    export function onGesture2(gesture: EnumDir): number {
         return gesture
     };
 
