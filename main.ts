@@ -59,14 +59,13 @@ namespace autoBot {
         //% block.loc.es-ES="atrás"
         //% jres=directions.tiltbackward
         Backward = 2,
-
         //% block="right"
         //% block.loc.es-ES="derecha"
         //% jres=directions.tiltright
         Right = 4,
         //% block="stop"
         //% block.loc.es-ES="alto"
-        //% jres=directions.tiltright
+        //% jres=directions.stop
         Stop = 0
     }
 
