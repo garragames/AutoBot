@@ -9,8 +9,6 @@
  * Custom graphic block
  */
 
-// import { gestures } from "./enums.d.ts"
-
 //% weight=100 color=#fa8f13 icon="\uf1b9" block="AutoBot"
 // groups=['Directions', 'Movements', 'Sensors', 'Logic']
 namespace autoBot {
@@ -50,23 +48,23 @@ namespace autoBot {
     export enum EnumDir {
         //% block="forward"
         //% block.loc.es-ES="adelante"
-        //% jres=gestures.tiltforward
+        //% jres=directions.forward
         Forward = 1,
         //% block="backward"
         //% block.loc.es-ES="atrás"
-        //% jres=gestures.tiltbackwards
+        //% jres=directions.left
         Backward = 2,
         //% block="left"
         //% block.loc.es-ES="izquierda"
-        //% jres=gestures.tiltleft
+        //% jres=directions.left
         Left = 3,
         //% block="right"
         //% block.loc.es-ES="derecha"
-        //% jres=gestures.tiltright
+        //% jres=directions.right
         Right = 4,
         //% block="stop"
         //% block.loc.es-ES="alto"
-        //% jres=gestures.shake
+        //% jres=directions.right
         Stop = 0
     }
 
@@ -79,6 +77,17 @@ namespace autoBot {
         pins.analogWritePin(AnalogPin.P16, s)
     }
 
+    /**
+     * Do something when when a gesture is done (like shaking the micro:bit).
+     * @param gesture the type of gesture to track, eg: Gesture.Shake
+     * @param body code to run when gesture is raised
+     */
+    //% blockId=getDirection
+    //% block="$gesture"
+    //% gesture.fieldEditor="gestures" gesture.fieldOptions.columns=3 shim=input::onGesture
+    export function onGesture3(gesture: EnumDir): number {
+        return gesture
+    };
     /**
      * Do something when when a gesture is done (like shaking the micro:bit).
      * @param gesture the type of gesture to track, eg: Gesture.Shake
