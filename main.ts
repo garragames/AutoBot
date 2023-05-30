@@ -49,19 +49,19 @@ namespace autoBot {
     export enum EnumDir {
         //% block="left"
         //% block.loc.es-ES="izquierda"
-        //% jres=directions.tiltleft
+        //% jres=directions.left
         Left = 3,
         //% block="forward"
         //% block.loc.es-ES="adelante"
-        //% jres=directions.tiltforward
+        //% jres=directions.forward
         Forward = 1,
         //% block="backward"
         //% block.loc.es-ES="atrás"
-        //% jres=directions.tiltbackward
+        //% jres=directions.backward
         Backward = 2,
         //% block="right"
         //% block.loc.es-ES="derecha"
-        //% jres=directions.tiltright
+        //% jres=directions.right
         Right = 4,
         //% block="stop"
         //% block.loc.es-ES="alto"
