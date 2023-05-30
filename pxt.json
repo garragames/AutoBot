@@ -15,6 +15,7 @@
         "main.ts",
         "gestures.jres",
         "directions.jres",
+        "speeds.jres",
         "_locales/autobot-strings.json",
         "_locales/autobot-jsdoc-strings.json",
         "_locales/es-ES/autobot-strings.json",
