@@ -159,6 +159,7 @@ namespace autoBot {
     //% group="Movements"
     //% speed.min=0 speed.max=100
     //% speed.defl=50
+    //% speed.fieldEditor = "gestures"
     export function right(speed: number): void {
         setSpeed(speed)
         pins.digitalWritePin(DigitalPin.P12, 0)
