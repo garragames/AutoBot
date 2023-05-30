@@ -73,27 +73,27 @@ namespace autoBot {
     export enum EnumSpeed {
         //% block="first"
         //% block.loc.es-ES="primera"
-        //% jres=directions.first
+        //% jres=speeds.first
         Firts = 3,
         //% block="second"
         //% block.loc.es-ES="segunda"
-        //% jres=directions.second
+        //% jres=speeds.second
         Second = 1,
         //% block="third"
         //% block.loc.es-ES="tercera"
-        //% jres=directions.third
+        //% jres=speeds.third
         Third = 2,
         //% block="forth"
         //% block.loc.es-ES="cuarta"
-        //% jres=directions.fourth
+        //% jres=speeds.fourth
         Fourth = 4,
         //% block="fift"
         //% block.loc.es-ES="quinta"
-        //% jres=directions.fifth
+        //% jres=speeds.fifth
         Fifth = 0,
         //% block="reverse"
         //% block.loc.es-ES="reversa"
-        //% jres=directions.reverse
+        //% jres=speeds.reverse
         Reverse = 0
     }
     // Set speed to both motors
