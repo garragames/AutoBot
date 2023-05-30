@@ -73,7 +73,7 @@ namespace autoBot {
     export enum Gesture2 {
 
         //% block="izquierda"
-        //% jres=gestures.tiltleft
+        //% jres=gestures.shake
         Uno = 1,  
 
         //% block="adelante"
