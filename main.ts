@@ -102,6 +102,18 @@ namespace autoBot {
     }
 
     /**
+     * Do something when when a gesture is done (like shaking the micro:bit).
+     * @param gesture the type of gesture to track, eg: Gesture.Shake
+     */
+    //% blockId=getDirection3
+    //% block="tres $gesture"
+    //% gesture.fieldEditor="gestures" gesture.fieldOptions.columns=4
+    // shim=input::onGesture
+    export function onGesture4(gesture: Gesture2): number {
+        return gesture
+    }
+
+    /**
      * Detects the tilt of the micro:bit card via the accelerometer
      * @returns 
      */
