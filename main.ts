@@ -29,7 +29,7 @@ namespace autoBot {
     // Set initial speed
     setSpeed(50)
 
-    declare const enum Gesture {
+    declare const enum Gesture2 {
         /**
          * Raised when shaken
          */
@@ -100,7 +100,7 @@ namespace autoBot {
     //% parts="accelerometer"
     //% gesture.fieldEditor="gestures" gesture.fieldOptions.columns=3 shim=input::onGesture
     //% group="Sensors"
-    export function onGesture2(gesture: Gesture): number {
+    export function onGesture2(gesture: Gesture2): number {
         return gesture
     };
 
