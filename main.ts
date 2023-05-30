@@ -47,6 +47,10 @@ namespace autoBot {
 
     // Motor Directions
     export enum EnumDir {
+        //% block="left"
+        //% block.loc.es-ES="izquierda"
+        //% jres=directions.tiltleft
+        Left = 3,
         //% block="forward"
         //% block.loc.es-ES="adelante"
         //% jres=directions.tiltforward
@@ -55,10 +59,7 @@ namespace autoBot {
         //% block.loc.es-ES="atrás"
         //% jres=directions.tiltleft
         Backward = 2,
-        //% block="left"
-        //% block.loc.es-ES="izquierda"
-        //% jres=directions.tiltleft
-        Left = 3,
+
         //% block="right"
         //% block.loc.es-ES="derecha"
         //% jres=directions.tiltright
