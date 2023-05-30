@@ -112,8 +112,8 @@ namespace autoBot {
      * @param gesture
      */
     //% blockId=getSpeed
-    //% block="speed $gesture"
-    //% gesture.fieldEditor="gestures" gesture.fieldOptions.columns=4
+    //% block="speed $speed"
+    //% speed.fieldEditor="gestures" speed.fieldOptions.columns=4
     export function onSpeed(speed: EnumSpeed): number {
         return speed
     }
