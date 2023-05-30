@@ -86,7 +86,7 @@ namespace autoBot {
      * @param gesture the type of gesture to track, eg: Gesture.Shake
      */
     //% blockId=getDirection2
-    //% block="ir $direction"
+    //% block="ir $direction2"
     //% gesture.fieldEditor="gestures" gesture.fieldOptions.columns=3 
     // shim=input::onGesture
     export function onGesture3(direction2: Gesture2): number {
