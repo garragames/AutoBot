@@ -31,15 +31,15 @@ namespace autoBot {
 
     export enum Gesture2 {
 
-        //% block="izquierda"
+        //% block="forward"
         //% jres=gestures.shake
         Uno = 1,  
 
-        //% block="adelante"
+        //% block="left"
         //% jres=gestures.tiltforward
         Dos = 2,  
    
-        //% block="derecha"
+        //% block="right"
         //% jres=gestures.tiltright
         Tres = 3,
 
