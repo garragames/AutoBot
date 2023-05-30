@@ -110,8 +110,7 @@ namespace autoBot {
      */
     //% blockId=getDirection3
     //% block="tres $gesture3"
-    //% gesture3.fieldEditor="gestures" gesture.fieldOptions.columns=4
-    // shim=input::onGesture
+    ///% gesture3.fieldEditor="gestures" gesture.fieldOptions.columns=4 // Not use gesture editor
     export function onGesture3(gesture3: Gesture2): number {
         return gesture3
     }
