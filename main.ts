@@ -46,11 +46,11 @@ namespace autoBot {
     declare const enum Gesture2 {
 
         //% block="izquierda"
-        //% jres=gestures.shake
+        //% jres=gestures.uno
         Uno = 1,  // MICROBIT_ACCELEROMETER_EVT_SHAKE
 
         //% block="adelante"
-        //% jres=gestures.freefall
+        //% jres=gestures.iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsSAAALEgHS3X78AAADqElEQVR4nO2b4XWbMBSFP3r6P2wQOkGcCUonqDtB0wnqbuBO0GSCJhvYG5AJiiconaD2BK8
         Dos = 2,  // MICROBIT_ACCELEROMETER_EVT_TILT_UP
    
         //% block="derecha"
