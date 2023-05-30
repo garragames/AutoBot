@@ -31,7 +31,7 @@ namespace autoBot {
     // Set initial speed
     setSpeed(50)
 
-    export enum EnumGesture2 {
+    export enum Gesture2 {
 
         //% block="izquierda"
         //% jres=gestures.shake
@@ -82,7 +82,7 @@ namespace autoBot {
     //% blockId=getDirection
     //% block="$gesture"
     //% gesture.fieldEditor="gestures" gesture.fieldOptions.columns=3 shim=input::onGesture
-    export function onGesture2(gesture: EnumGesture2): number {
+    export function onGesture2(gesture: Gesture2): number {
         return gesture
     };
 
