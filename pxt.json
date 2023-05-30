@@ -14,6 +14,7 @@
         "main.blocks",
         "main.ts",
         "gestures.jres",
+        "directions.jres",
         "_locales/autobot-strings.json",
         "_locales/autobot-jsdoc-strings.json",
         "_locales/es-ES/autobot-strings.json",
