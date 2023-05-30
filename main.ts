@@ -62,11 +62,12 @@ namespace autoBot {
      * @param gesture the type of gesture to track, eg: Gesture.Shake
      * @param body code to run when gesture is raised
      */
-    //% blockId=device_gesture_event 
+    //% blockId=device_gesture_event2 
     //% block="on $gesture"
     //% parts="accelerometer"
     //% gesture.fieldEditor="gestures" gesture.fieldOptions.columns=4 shim=input::onGesture
-    function onGesture(gesture: Gesture): void {
+    //% group="Sensors"
+    function onGesture2(gesture: Gesture): void {
 
     };
 
