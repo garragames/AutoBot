@@ -85,12 +85,12 @@ namespace autoBot {
     //% blockId=getDirection2
     //% block="ir $direction2"
     //% gesture.fieldEditor="direction2" direction2.fieldOptions.columns=3 shim=input::onGesture
-    export function onGesture3(direction2: Gesture2): number {
+    export function onGesture4(direction2: Gesture2): number {
         return direction2
     }
 
     /**
-     * Do something when when a gesture is done (like shaking the micro:bit).
+     * Este es el bueno
      * @param gesture the type of gesture to track, eg: Gesture.Shake
      */
     //% blockId=getDirection
@@ -106,11 +106,11 @@ namespace autoBot {
      * @param gesture the type of gesture to track, eg: Gesture.Shake
      */
     //% blockId=getDirection3
-    //% block="tres $gesture"
+    //% block="tres $gesture3"
     //% gesture.fieldEditor="gestures" gesture.fieldOptions.columns=4
     // shim=input::onGesture
-    export function onGesture4(gesture: EnumDir): number {
-        return gesture
+    export function onGesture3(gesture3: EnumDir): number {
+        return gesture3
     }
 
     /**
