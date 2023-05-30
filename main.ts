@@ -67,7 +67,7 @@ namespace autoBot {
     //% parts="accelerometer"
     //% gesture.fieldEditor="gestures" gesture.fieldOptions.columns=4 shim=input::onGesture
     //% group="Sensors"
-    function onGesture2(gesture: Gesture): void {
+    export function onGesture2(gesture: Gesture): void {
 
     };
 
