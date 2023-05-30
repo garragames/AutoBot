@@ -34,15 +34,12 @@ namespace autoBot {
         //% block="forward"
         //% jres=gestures.shake
         Uno = 1,  
-
         //% block="left"
         //% jres=gestures.tiltforward
-        Dos = 2,  
-   
+        Dos = 2,     
         //% block="right"
         //% jres=gestures.tiltright
         Tres = 3,
-
         //% block="stop"
         //% jres=gestures.tiltright
         Stop = 0,
@@ -87,10 +84,11 @@ namespace autoBot {
      */
     //% blockId=getDirection2
     //% block="ir $direction2"
-    //% gesture.fieldEditor="gestures" direction2.fieldOptions.columns=3 shim=input::onGesture
+    //% gesture.fieldEditor="direction2" direction2.fieldOptions.columns=3 shim=input::onGesture
     export function onGesture3(direction2: Gesture2): number {
         return direction2
-    };
+    }
+
     /**
      * Do something when when a gesture is done (like shaking the micro:bit).
      * @param gesture the type of gesture to track, eg: Gesture.Shake
@@ -101,7 +99,7 @@ namespace autoBot {
     // shim=input::onGesture
     export function onGesture2(gesture: Gesture2): number {
         return gesture
-    };
+    }
 
     /**
      * Detects the tilt of the micro:bit card via the accelerometer
