@@ -45,19 +45,19 @@ namespace autoBot {
         /**
          * Raised when shaken
          */
-        //% block=shake
+        //% block="izquierda"
         //% jres=gestures.uno
         Uno = 1,  // MICROBIT_ACCELEROMETER_EVT_SHAKE
         /**
          * Raised when the logo is upward and the screen is vertical
          */
-        //% block="logo up"
+        //% block="adelante"
         //% jres=gestures.dos
         Dos = 2,  // MICROBIT_ACCELEROMETER_EVT_TILT_UP
         /**
          * Raised when the logo is downward and the screen is vertical
          */
-        //% block="logo down"
+        //% block="derecha"
         //% jres=gestures.tres
         Tres = 3,  // MICROBIT_ACCELEROMETER_EVT_TILT_DOWN
     }
