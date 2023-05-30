@@ -111,7 +111,7 @@ namespace autoBot {
     //% blockId=getDirection3
     //% block="tres $gesture3"
     //% gesture.fieldEditor="gestures" gesture.fieldOptions.columns=4
-    export function onGesture3(gesture3: Gesture2): number {
+    export function onGesture3(gesture3: EnumDir): number {
         return gesture3
     }
 
