@@ -83,7 +83,7 @@ namespace autoBot {
 
     /**
      * Do something when when a gesture is done (like shaking the micro:bit).
-     * @param gesture the type of gesture to track, eg: Gesture.Shake
+     * @param direction2 the type of gesture to track, eg: Gesture.Shake
      */
     //% blockId=getDirection2
     //% block="ir $direction2"
