@@ -80,19 +80,17 @@ namespace autoBot {
     /**
      * Do something when when a gesture is done (like shaking the micro:bit).
      * @param gesture the type of gesture to track, eg: Gesture.Shake
-     * @param body code to run when gesture is raised
      */
     //% blockId=getDirection2
-    //% block="$gesture"
-    //% gesture.fieldEditor="gestures" gesture.fieldOptions.columns=3 
+    //% block="$direction"
+    //% gesture.fieldEditor="gestures" gesture.fieldOptions.columns=4 
     // shim=input::onGesture
-    export function onDirection(gesture: EnumDir): number {
-        return gesture
+    export function onDirection(direction: EnumDir): number {
+        return direction
     };
     /**
      * Do something when when a gesture is done (like shaking the micro:bit).
      * @param gesture the type of gesture to track, eg: Gesture.Shake
-     * @param body code to run when gesture is raised
      */
     //% blockId=getDirection
     //% block="$gesture"
