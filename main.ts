@@ -293,7 +293,7 @@ namespace autoBot {
     //% group="Movements"
     //% speed.min=0 speed.max=100
     //% speed.defl=50
-    export function right(speed: number): void {
+    export function right(speed: EnumSpeed): void {
         setSpeed(speed)
         pins.digitalWritePin(DigitalPin.P12, 0)
         pins.digitalWritePin(DigitalPin.P13, 0)
