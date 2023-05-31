@@ -127,7 +127,10 @@ namespace autoBot {
      */
     //% blockId=getSpeed
     //% block="$speed"
-    //% speed.fieldEditor="gestures" speed.fieldOptions.columns=3
+    //% speed.fieldEditor="imagedropdown"
+    //% speed.fieldOptions.columns=3
+    //% speed.fieldOptions.width="230"
+    //% speed.fieldOptions.maxRows=2
     export function onSpeed(speed: EnumSpeed2): number {
         return speed
     }
