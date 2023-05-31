@@ -160,8 +160,8 @@ namespace autoBot {
     * Direction Selector v4
     * @param direction
     */
-    //% blockId=getDirection5
-    //% block="show $direction"
+    //% blockId=getDirection4
+    //% block="$direction"
     //% direction.fieldEditor="imagedropdown"
     //% direction.fieldOptions.columns=5
     //% direction.fieldOptions.width="380"
