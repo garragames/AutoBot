@@ -106,18 +106,18 @@ namespace autoBot {
     }
 
     /**
-     * Uno (OK)
+     * Speed Selector
      * @param gesture
      */
     //% blockId=getSpeed
-    //% block="speed $speed"
+    //% block="$speed"
     //% speed.fieldEditor="gestures" speed.fieldOptions.columns=3
     export function onSpeed(speed: EnumSpeed): number {
         return speed
     }
 
     /**
-     * Uno (OK)
+     * Direction Selector v1
      * @param gesture
      */
     //% blockId=getDirection1
@@ -129,7 +129,7 @@ namespace autoBot {
     }
 
     /**
-     * Dos
+     * Direction Selctor v2
      * @param direction2
      */
     //% blockId=getDirection2 
@@ -140,7 +140,7 @@ namespace autoBot {
     }
 
     /**
-     * Tres
+     * Direction Selector v3
      * @param gesture
      */
     //% blockId=getDirection3
