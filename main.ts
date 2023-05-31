@@ -56,8 +56,8 @@ namespace autoBot {
         //% jres=directions.forward
         Forward = 1,
         //% block="backward"
-        //% block.loc.es-ES="adelante"
-        //% jres=directions.backforward
+        //% block.loc.es-ES="atrás"
+        //% jres=directions.backward
         Backward = 2,
         //% block="right"
         //% block.loc.es-ES="derecha"
