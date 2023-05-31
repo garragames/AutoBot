@@ -21,7 +21,7 @@ namespace autoBot {
      */
 
     // Disable LED Matrix
-    led.enable(true)
+    led.enable(true) // Set true to DEBUG
 
     // Stop motors
     stop()
@@ -29,23 +29,7 @@ namespace autoBot {
     // Set initial speed
     setSpeed(50)
 
-    export enum Gesture2 {
-
-        //% block="forward"
-        //% jres=gestures.shake
-        Uno = 1,  
-        //% block="left"
-        //% jres=gestures.tiltforward
-        Dos = 2,     
-        //% block="right"
-        //% jres=gestures.tiltright
-        Tres = 3,
-        //% block="stop"
-        //% jres=gestures.tiltright
-        Stop = 0,
-    }
-
-    // Motor Directions
+    // Directions
     export enum EnumDir {
         //% block="left"
         //% block.loc.es-ES="izquierda"
@@ -69,7 +53,7 @@ namespace autoBot {
         Stop = 0
     }
 
-    // Motor Speeds
+    // Speeds
     export enum EnumSpeed {
         //% block="first"
         //% block.loc.es-ES="primera"
@@ -96,7 +80,11 @@ namespace autoBot {
         //% jres=speeds.reverse
         Reverse = 20
     }
-    // Set speed to both motors
+
+    /**
+     * Set Speed
+     * @param speed
+     */
     function setSpeed(speed: number): void {
         let s = speed * (MAX_VEL - MIN_VEL) / 100 + MIN_VEL; // Adjust to the min and max PWM values
         // PWM para izquierdo
@@ -107,7 +95,7 @@ namespace autoBot {
 
     /**
      * Speed Selector
-     * @param gesture
+     * @param speed
      */
     //% blockId=getSpeed
     //% block="$speed"
@@ -122,7 +110,7 @@ namespace autoBot {
      */
     //% blockId=getDirection1
     //% block="$direction"
-    //% direction.fieldEditor="gestures" direction.fieldOptions.columns=5 shim=input::onGesture
+    //% direction.fieldEditor="gesturesx" direction.fieldOptions.columns=5 shim=input::onGesture
     export function onGesture2(direction: EnumDir): number {
         return direction
     }
