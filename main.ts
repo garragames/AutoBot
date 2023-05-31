@@ -55,6 +55,10 @@ namespace autoBot {
         //% block.loc.es-ES="adelante"
         //% jres=directions.forward
         Forward = 1,
+        //% block="backward"
+        //% block.loc.es-ES="adelante"
+        //% jres=directions.backforward
+        Backward = 2,
         //% block="right"
         //% block.loc.es-ES="derecha"
         //% jres=directions.right
@@ -360,7 +364,6 @@ namespace autoBot {
     //% group="Movements"
     //% speed.min=0 speed.max=100
     //% speed.defl=50
-    /*
     export function backward
         (speed: number): void {
         setSpeed(speed)
@@ -369,7 +372,6 @@ namespace autoBot {
         pins.digitalWritePin(DigitalPin.P14, 0)
         pins.digitalWritePin(DigitalPin.P15, 1)
     }
-    *
 
 
     /**
@@ -432,7 +434,6 @@ namespace autoBot {
      * Returns the value of backward to compare with the value returned by the line sensor.
      */
 
-    /*
     //% blockId=backwardDir
     //% block="backforward"
     //% block.loc.es-ES="atrás"
@@ -440,7 +441,6 @@ namespace autoBot {
     export function backwardDir(): number {
         return EnumDir.Backward
     }
-    */
 
     /**
      * Returns the value of forward to compare with the value returned by the line sensor.
