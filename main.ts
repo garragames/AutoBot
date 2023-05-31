@@ -157,6 +157,20 @@ namespace autoBot {
     }
     
     /**
+    * Direction Selector v4
+    * @param gesture
+    */
+    //% blockId=getDirection1
+    //% block="$direction"
+    //% direction.fieldEditor="imagedropdown"
+    //% direction.fieldOptions.columns=5
+    //% direction.fieldOptions.width="380"
+    //% direction.fieldOptions.maxRows=2
+    export function onGesture5(direction: EnumDir): number {
+        return direction
+    }
+
+    /**
      * Detects the tilt of the micro:bit card via the accelerometer
      * @returns 
      */
