@@ -55,10 +55,6 @@ namespace autoBot {
         //% block.loc.es-ES="adelante"
         //% jres=directions.forward
         Forward = 1,
-        //% block="backward"
-        //% block.loc.es-ES="atrás"
-        //% jres=directions.backward
-        Backward = 2,
         //% block="right"
         //% block.loc.es-ES="derecha"
         //% jres=directions.right
@@ -437,9 +433,11 @@ namespace autoBot {
     //% block="backforward"
     //% block.loc.es-ES="atrás"
     //% group="Directions"
+    /*
     export function backwardDir(): number {
         return EnumDir.Backward
     }
+    */
 
     /**
      * Returns the value of forward to compare with the value returned by the line sensor.
