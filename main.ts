@@ -158,10 +158,10 @@ namespace autoBot {
     
     /**
     * Direction Selector v4
-    * @param gesture
+    * @param direction
     */
-    //% blockId=getDirection1
-    //% block="$direction"
+    //% blockId=getDirection5
+    //% block="show $direction"
     //% direction.fieldEditor="imagedropdown"
     //% direction.fieldOptions.columns=5
     //% direction.fieldOptions.width="380"
