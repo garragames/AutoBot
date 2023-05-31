@@ -29,6 +29,22 @@ namespace autoBot {
     // Set initial speed
     setSpeed(50)
 
+    // Steering wheel
+    export enum EnumSteeringwheel {
+        //% block="left"
+        //% block.loc.es-ES="izquierda"
+        //% jres=steeringwheel.left
+        SWLeft = 1,
+        //% block="front"
+        //% block.loc.es-ES="frente"
+        //% jres=steeringwheel.front
+        SWFront = 1,
+        //% block="right"
+        //% block.loc.es-ES="derecha"
+        //% jres=steeringwheel.right
+        SWRight = 1
+    }
+
     // Directions
     export enum EnumDir {
         //% block="left"
