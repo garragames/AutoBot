@@ -319,7 +319,7 @@ namespace autoBot {
      */
     //% blockId=right2
     //% block="move $direction"
-    //% block.loc.es-ES="derecha $speed km/hr"
+    //% block.loc.es-ES="move $direccion"
     //% group="Movements"
     //% speed.min=0 speed.max=100
     //% speed.defl=50
