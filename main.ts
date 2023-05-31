@@ -429,11 +429,12 @@ namespace autoBot {
     /**
      * Returns the value of backward to compare with the value returned by the line sensor.
      */
+
+    /*
     //% blockId=backwardDir
     //% block="backforward"
     //% block.loc.es-ES="atrás"
     //% group="Directions"
-    /*
     export function backwardDir(): number {
         return EnumDir.Backward
     }
