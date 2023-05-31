@@ -74,27 +74,27 @@ namespace autoBot {
         //% block="first"
         //% block.loc.es-ES="primera"
         //% jres=speeds.first
-        First = 1,
+        First = 20,
         //% block="third"
         //% block.loc.es-ES="tercera"
         //% jres=speeds.third
-        Third = 3,
+        Third = 60,
         //% block="fifth"
         //% block.loc.es-ES="quinta"
         //% jres=speeds.fifth
-        Fifth = 5,
+        Fifth = 100,
         //% block="second"
         //% block.loc.es-ES="segunda"
         //% jres=speeds.second
-        Second = 2,
+        Second = 40,
         //% block="fourth"
         //% block.loc.es-ES="cuarta"
         //% jres=speeds.fourth
-        Fourth = 4,
+        Fourth = 80,
         //% block="reverse"
         //% block.loc.es-ES="reversa"
         //% jres=speeds.reverse
-        Reverse = 0
+        Reverse = 20
     }
     // Set speed to both motors
     function setSpeed(speed: number): void {
