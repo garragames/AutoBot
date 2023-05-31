@@ -166,8 +166,23 @@ namespace autoBot {
     //% direction.fieldOptions.columns=5
     //% direction.fieldOptions.width="380"
     //% direction.fieldOptions.maxRows=2
+    
     export function onGesture5(direction: EnumDir): number {
         return direction
+    }
+
+    /**
+    * Speed Selector
+    * @param speed
+    */
+    //% blockId=getSpeed2
+    //% block="$speed"
+    //% speed.fieldEditor="imagedropdown" 
+    //% speed.fieldOptions.columns=3
+    //% speed.fieldOptions.width="380"
+    //% speed.fieldOptions.maxRows=2
+    export function onSpeed2(speed: EnumSpeed): number {
+        return speed
     }
 
     /**
