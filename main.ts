@@ -360,6 +360,7 @@ namespace autoBot {
     //% group="Movements"
     //% speed.min=0 speed.max=100
     //% speed.defl=50
+    /*
     export function backward
         (speed: number): void {
         setSpeed(speed)
@@ -368,6 +369,7 @@ namespace autoBot {
         pins.digitalWritePin(DigitalPin.P14, 0)
         pins.digitalWritePin(DigitalPin.P15, 1)
     }
+    *
 
 
     /**
