@@ -207,7 +207,7 @@ namespace autoBot {
     //% block="$direction"
     //% direction.fieldEditor="imagedropdown"
     //% direction.fieldOptions.columns=4
-    //% direction.fieldOptions.width="380"
+    //% direction.fieldOptions.width="230"
     //% direction.fieldOptions.maxRows=2
     
     export function onGesture5(direction: EnumDir): number {
