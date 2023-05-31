@@ -79,7 +79,7 @@ namespace autoBot {
         //% block.loc.es-ES="tercera"
         //% jres=speeds.third
         Third = 3,
-        //% block="fift"
+        //% block="fifth"
         //% block.loc.es-ES="quinta"
         //% jres=speeds.fifth
         Fifth = 5,
@@ -87,7 +87,7 @@ namespace autoBot {
         //% block.loc.es-ES="segunda"
         //% jres=speeds.second
         Second = 2,
-        //% block="forth"
+        //% block="fourth"
         //% block.loc.es-ES="cuarta"
         //% jres=speeds.fourth
         Fourth = 4,
@@ -104,8 +104,6 @@ namespace autoBot {
         // PWM para derecho
         pins.analogWritePin(AnalogPin.P16, s)
     }
-
-    /*************************************************************************************************/
 
     /**
      * Uno (OK)
@@ -151,8 +149,6 @@ namespace autoBot {
     export function onGesture3(gesture3: EnumDir): number {
         return gesture3
     }
-
-    /*************************************************************************************************/
 
     /**
      * Detects the tilt of the micro:bit card via the accelerometer
