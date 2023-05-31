@@ -81,6 +81,34 @@ namespace autoBot {
         Reverse = 20
     }
 
+    // Speeds2
+    export enum EnumSpeed2 {
+        //% block="first"
+        //% block.loc.es-ES="primera"
+        //% jres=speeds.first2
+        First2 = 20,
+        //% block="third"
+        //% block.loc.es-ES="tercera"
+        //% jres=speeds.third2
+        Third2 = 60,
+        //% block="fifth"
+        //% block.loc.es-ES="quinta"
+        //% jres=speeds.fifth2
+        Fifth2 = 100,
+        //% block="second"
+        //% block.loc.es-ES="segunda"
+        //% jres=speeds.second2
+        Second2 = 40,
+        //% block="fourth"
+        //% block.loc.es-ES="cuarta"
+        //% jres=speeds.fourth2
+        Fourth2 = 80,
+        //% block="reverse"
+        //% block.loc.es-ES="reversa"
+        //% jres=speeds.reverse2
+        Reverse2 = 20
+    }
+
     /**
      * Set Speed
      * @param speed
@@ -100,7 +128,7 @@ namespace autoBot {
     //% blockId=getSpeed
     //% block="$speed"
     //% speed.fieldEditor="gestures" speed.fieldOptions.columns=3
-    export function onSpeed(speed: EnumSpeed): number {
+    export function onSpeed(speed: EnumSpeed2): number {
         return speed
     }
 
