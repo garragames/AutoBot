@@ -96,6 +96,7 @@ namespace autoBot {
         //% jres=speeds.reverse
         Reverse = 20
     }
+    
     // Set speed to both motors
     function setSpeed(speed: number): void {
         let s = speed * (MAX_VEL - MIN_VEL) / 100 + MIN_VEL; // Adjust to the min and max PWM values
