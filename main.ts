@@ -293,7 +293,7 @@ namespace autoBot {
     //% group="Movements"
     //% speed.min=0 speed.max=100
     //% speed.defl=50
-    export function right(speed: EnumSpeed): void {
+    export function right(speed: number): void {
         setSpeed(speed)
         pins.digitalWritePin(DigitalPin.P12, 0)
         pins.digitalWritePin(DigitalPin.P13, 0)
@@ -301,6 +301,24 @@ namespace autoBot {
         pins.digitalWritePin(DigitalPin.P15, 0)
     }
 
+    /**
+     * Move
+     * @param speed
+     */
+    //% blockId=right2
+    //% block="move $direction"
+    //% block.loc.es-ES="derecha $speed km/hr"
+    //% group="Movements"
+    //% speed.min=0 speed.max=100
+    //% speed.defl=50
+    //% speed.fieldEditor="imagedropdown"
+    export function right2(direction: EnumDir): void {
+        setSpeed(direction)
+        pins.digitalWritePin(DigitalPin.P12, 0)
+        pins.digitalWritePin(DigitalPin.P13, 0)
+        pins.digitalWritePin(DigitalPin.P14, 1)
+        pins.digitalWritePin(DigitalPin.P15, 0)
+    }
 
     /**
      * Turn the autobot left at speed between 0 and 100 km/hr
