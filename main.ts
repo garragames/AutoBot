@@ -325,15 +325,11 @@ namespace autoBot {
     //% block="move $direction"
     //% block.loc.es-ES="move $direccion"
     //% group="Movements"
-    //% speed.min=0 speed.max=100
-    //% speed.defl=50
-    //% speed.fieldEditor="imagedropdown"
-    export function right2(direction: EnumDir): void {
+    //% direction.min=0 speed.max=100
+    //% direction.defl=50
+    //% direction.fieldEditor="imagedropdown"
+    export function turnSteeringwheel(direction: EnumSteeringwheel): void {
         setSpeed(direction)
-        pins.digitalWritePin(DigitalPin.P12, 0)
-        pins.digitalWritePin(DigitalPin.P13, 0)
-        pins.digitalWritePin(DigitalPin.P14, 1)
-        pins.digitalWritePin(DigitalPin.P15, 0)
     }
 
     /**
