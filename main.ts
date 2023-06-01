@@ -300,6 +300,19 @@ namespace autoBot {
     }
 
     /**
+    * Turn steeringwheel
+    * @param direction
+    */
+    //% blockId=turnSteeringwheel
+    //% block="turn $direction"
+    //% block.loc.es-ES="girar $direction"
+    //% group="Movements"
+    //% direction.defl=EnumSteeringwheel.front
+    export function turn(direction: EnumSteeringwheel): void {
+        
+    }
+
+    /**
      * Turn the autobot right at speed between 0 and 100 km/hr
      * @param speed
      */
