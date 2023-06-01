@@ -190,7 +190,7 @@ namespace autoBot {
      * @param interval the amount of time (milliseconds) to show the icon. Default is 600.
      */
     //% weight=90 blockGap=8
-    //% blockId=basic_show_icon
+    //% blockId=basic_show_icon2
     //% block="show icon %i" icon="\uf00a"
     //% parts="ledmatrix"
     //% help=basic/show-icon
