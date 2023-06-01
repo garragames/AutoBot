@@ -145,7 +145,7 @@ namespace autoBot {
     //% block="$speed"
     //% speed.fieldEditor="imagedropdown"
     //% speed.fieldOptions.columns=3
-    //% speed.fieldOptions.width="230"
+    //% speed.fieldOptions.width="250"
     //% speed.fieldOptions.maxRows=2
     export function onSpeed(speed: EnumSpeed2): number {
         return speed
@@ -315,21 +315,6 @@ namespace autoBot {
         pins.digitalWritePin(DigitalPin.P13, 0)
         pins.digitalWritePin(DigitalPin.P14, 1)
         pins.digitalWritePin(DigitalPin.P15, 0)
-    }
-
-    /**
-     * Move
-     * @param speed
-     */
-    //% blockId=right2
-    //% block="move $direction"
-    //% block.loc.es-ES="move $direccion"
-    //% group="Movements"
-    //% direction.min=0 speed.max=100
-    //% direction.defl=50
-    //% direction.fieldEditor="imagedropdown"
-    export function turnSteeringwheel(direction: EnumSteeringwheel): void {
-        setSpeed(direction)
     }
 
     /**
