@@ -31,15 +31,15 @@ namespace autoBot {
 
     // Steering wheel
     export enum EnumSteeringwheel {
-        //% block="Swleft"
+        //% block="left"
         //% block.loc.es-ES="izquierda"
         //% jres=steeringwheel.left
         SWLeft = 1,
-        //% block="Swfront"
+        //% block="front"
         //% block.loc.es-ES="frente"
         //% jres=steeringwheel.front
         SWFront = 1,
-        //% block="Swright"
+        //% block="right"
         //% block.loc.es-ES="derecha"
         //% jres=steeringwheel.right
         SWRight = 1
@@ -303,7 +303,7 @@ namespace autoBot {
     * Turn steeringwheel
     * @param direction
     */
-    //% blockId=turnSteeringwheel2
+    //% blockId=turnDirection
     //% block="turn $direction"
     //% block.loc.es-ES="girar $direction"
     //% direction.defl=EnumSteeringwheel.front
@@ -311,7 +311,7 @@ namespace autoBot {
     //% direction.fieldOptions.columns=3
     //% dirrection.fieldOptions.width="230"
     //% direction.fieldOptions.maxRows=1
-    export function turnDirecction(direction: EnumSpeed2): void {
+    export function turnDirecction(direction: EnumSteeringwheel): void {
         
     }
 
