@@ -320,8 +320,8 @@ namespace autoBot {
     * @param direction
     */
     //% blockId=setSpeed
-    //% block="set $speed"
-    //% block.loc.es-ES="cambiar $speed"
+    //% block="change velocity $speed"
+    //% block.loc.es-ES="cambiar velocidad $speed"
     //% speed.defl=EnumSpeed.stop
     //% speed.fieldEditor="imagedropdown" 
     //% speed.fieldOptions.columns=3
