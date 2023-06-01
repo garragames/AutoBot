@@ -308,6 +308,10 @@ namespace autoBot {
     //% block.loc.es-ES="girar $direction"
     //% group="Movements"
     //% direction.defl=EnumSteeringwheel.front
+    //% direction.fieldEditor="imagedropdown" 
+    //% direction.fieldOptions.columns=3
+    //% dirrection.fieldOptions.width="230"
+    //% direction.fieldOptions.maxRows=1
     export function turn(direction: EnumSteeringwheel): void {
         
     }
@@ -365,7 +369,6 @@ namespace autoBot {
         pins.digitalWritePin(DigitalPin.P14, 0)
         pins.digitalWritePin(DigitalPin.P15, 1)
     }
-
 
     /**
      * Moves the autobot forward at speed between 0 and 100 km/hr
