@@ -31,15 +31,15 @@ namespace autoBot {
 
     // Steering wheel
     export enum EnumSteeringwheel {
-        //% block="left"
+        //% block="Swleft"
         //% block.loc.es-ES="izquierda"
         //% jres=steeringwheel.left
         SWLeft = 1,
-        //% block="front"
+        //% block="Swfront"
         //% block.loc.es-ES="frente"
         //% jres=steeringwheel.front
         SWFront = 1,
-        //% block="right"
+        //% block="Swright"
         //% block.loc.es-ES="derecha"
         //% jres=steeringwheel.right
         SWRight = 1
