@@ -454,6 +454,10 @@ namespace autoBot {
     //% blockId=compareDir
     //% block="$directionA equal to $directionB"
     //% block.loc.es-ES="$directionA igual a $directionB"
+    //% directionB.fieldEditor="imagedropdown"
+    //% directionB.fieldOptions.columns=4
+    //% directionB.fieldOptions.width="230"
+    //% directionB.fieldOptions.maxRows=2
     //% group="Logic"
     export function equal(directionA: number, directionB: number): boolean {
         return directionA == directionB
