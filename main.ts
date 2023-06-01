@@ -321,7 +321,7 @@ namespace autoBot {
     */
     //% blockId=setSpeed
     //% block="set $speed"
-    //% block.loc.es-ES="set $speed"
+    //% block.loc.es-ES="cambiar $speed"
     //% speed.defl=EnumSpeed.stop
     //% speed.fieldEditor="imagedropdown" 
     //% speed.fieldOptions.columns=3
