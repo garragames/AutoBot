@@ -316,6 +316,22 @@ namespace autoBot {
     }
 
     /**
+    * Set 
+    * @param direction
+    */
+    //% blockId=turnDirection
+    //% block="turn $speed"
+    //% block.loc.es-ES="set $speed"
+    //% speed.defl=EnumSpeed.stop
+    //% speed.fieldEditor="imagedropdown" 
+    //% speed.fieldOptions.columns=3
+    //% speed.fieldOptions.width="230"
+    //% speed.fieldOptions.maxRows=2
+    export function setSpeed3(direction: EnumSpeed2): void {
+
+    }
+
+    /**
      * Turn the autobot right at speed between 0 and 100 km/hr
      * @param speed
      */
@@ -461,5 +477,5 @@ namespace autoBot {
     //% group="Logic"
     export function equal(directionA: number, directionB: EnumDir): boolean {
         return directionA == directionB
-    }
+    }    
 }
