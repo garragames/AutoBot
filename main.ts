@@ -311,7 +311,7 @@ namespace autoBot {
     //% direction.fieldOptions.columns=3
     //% dirrection.fieldOptions.width="230"
     //% direction.fieldOptions.maxRows=1
-    export function turnDirecction(direction: EnumSteeringwheel): void {
+    export function turnDirecction(direction: EnumDir): void {
         
     }
 
