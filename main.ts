@@ -456,7 +456,7 @@ namespace autoBot {
     //% block.loc.es-ES="$directionA igual a $directionB"
     //% directionB.fieldEditor="imagedropdown"
     //% directionB.fieldOptions.columns=4
-    //% directionB.fieldOptions.width="245"
+    //% directionB.fieldOptions.width="326"
     //% directionB.fieldOptions.maxRows=1
     //% group="Logic"
     export function equal(directionA: number, directionB: EnumDir): boolean {
