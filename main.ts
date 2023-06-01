@@ -34,15 +34,15 @@ namespace autoBot {
         //% block="left"
         //% block.loc.es-ES="izquierda"
         //% jres=steeringwheel.left
-        SWLeft = 1,
+        Left = 1,
         //% block="front"
         //% block.loc.es-ES="frente"
         //% jres=steeringwheel.front
-        SWFront = 1,
+        Front = 1,
         //% block="right"
         //% block.loc.es-ES="derecha"
         //% jres=steeringwheel.right
-        SWRight = 1
+        Right = 1
     }
 
     // Directions
