@@ -316,18 +316,18 @@ namespace autoBot {
     }
 
     /**
-    * Set 
+    * Set Speed
     * @param direction
     */
-    //% blockId=turnDirection
-    //% block="turn $speed"
+    //% blockId=setSpeed
+    //% block="set $speed"
     //% block.loc.es-ES="set $speed"
     //% speed.defl=EnumSpeed.stop
     //% speed.fieldEditor="imagedropdown" 
     //% speed.fieldOptions.columns=3
     //% speed.fieldOptions.width="230"
     //% speed.fieldOptions.maxRows=2
-    export function setSpeed3(direction: EnumSpeed2): void {
+    export function setSpeed3(speed: EnumSpeed2): void {
 
     }
 
