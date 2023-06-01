@@ -328,7 +328,7 @@ namespace autoBot {
     //% speed.min=0 speed.max=100
     //% speed.defl=50
     //% speed.fieldEditor="imagedropdown"
-    export function right2(direction: EnumDir): void {
+    export function right2(direction: EnumSteeringwheel): void {
         setSpeed(direction)
         pins.digitalWritePin(DigitalPin.P12, 0)
         pins.digitalWritePin(DigitalPin.P13, 0)
