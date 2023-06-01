@@ -457,9 +457,9 @@ namespace autoBot {
     //% directionB.fieldEditor="imagedropdown"
     //% directionB.fieldOptions.columns=4
     //% directionB.fieldOptions.width="230"
-    //% directionB.fieldOptions.maxRows=2
+    //% directionB.fieldOptions.maxRows=1
     //% group="Logic"
-    export function equal(directionA: number, directionB: number): boolean {
+    export function equal(directionA: number, directionB: EnumDir): boolean {
         return directionA == directionB
     }
 }
