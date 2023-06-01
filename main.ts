@@ -304,8 +304,8 @@ namespace autoBot {
     * @param direction
     */
     //% blockId=turnDirection
-    //% block="turn $direction"
-    //% block.loc.es-ES="girar $direction"
+    //% block="turn steering wheel $direction"
+    //% block.loc.es-ES="girar volante $direction"
     //% direction.defl=EnumSteeringwheel.front
     //% direction.fieldEditor="imagedropdown" 
     //% direction.fieldOptions.columns=3
