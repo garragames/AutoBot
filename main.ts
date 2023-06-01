@@ -306,13 +306,12 @@ namespace autoBot {
     //% blockId=turnSteeringwheel2
     //% block="turn $direction"
     //% block.loc.es-ES="girar $direction"
-    //% group="Movements"
     //% direction.defl=EnumSteeringwheel.front
     //% direction.fieldEditor="imagedropdown" 
     //% direction.fieldOptions.columns=3
     //% dirrection.fieldOptions.width="230"
     //% direction.fieldOptions.maxRows=1
-    export function turnDirecction(direction: EnumSteeringwheel): void {
+    export function turnDirecction(direction: EnumSpeed2): void {
         
     }
 
