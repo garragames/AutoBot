@@ -14,7 +14,14 @@
 namespace autoBot {
 
     const MIN_VEL = 150;  //   0 km/hr
-    const MAX_VEL = 1023;  // 100 km/hr
+    const MAX_VEL = 1023; // 100 km/hr
+    const FIRST   = 25;
+    const SECOND  = 50;
+    const THIRD   = 75;
+    const FOURTH  = 100;
+    const ENGINE_ON = false;
+    const SEAT_BELT_FASTENED = false;
+    const NEUTRAL = 0;
 
     /**
      * Setup variables, pins and enumerations
