@@ -17,6 +17,7 @@
         "directions.jres",
         "speeds.jres",
         "steeringwheel.jres",
+        "icons.jres",
         "_locales/autobot-strings.json",
         "_locales/autobot-jsdoc-strings.json",
         "_locales/es-ES/autobot-strings.json",
