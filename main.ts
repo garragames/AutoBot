@@ -80,6 +80,33 @@ namespace autoBot {
     export enum EnumSpeed2 {
         //% block="first"
         //% block.loc.es-ES="primera"
+        //% jres=speeds.first2
+        First2 = 20,
+        //% block="third"
+        //% block.loc.es-ES="tercera"
+        //% jres=speeds.third2
+        Third2 = 60,
+        //% block="fifth"
+        //% block.loc.es-ES="quinta"
+        //% jres=speeds.fifth2
+        Fifth2 = 100,
+        //% block="second"
+        //% block.loc.es-ES="segunda"
+        //% jres=speeds.second2
+        Second2 = 40,
+        //% block="fourth"
+        //% block.loc.es-ES="cuarta"
+        //% jres=speeds.fourth2
+        Fourth2 = 80,
+        //% block="reverse"
+        //% block.loc.es-ES="reversa"
+        //% jres=speeds.reverse2
+    }
+
+    // Speeds
+    export enum EnumSpeed {
+        //% block="first"
+        //% block.loc.es-ES="primera"
         //% jres=speeds.first
         First = 20,
         //% block="third"
@@ -94,7 +121,7 @@ namespace autoBot {
         //% block.loc.es-ES="segunda"
         //% jres=speeds.second
         Second = 40,
-        //% block="fourth"
+        //% block="fourth2"
         //% block.loc.es-ES="cuarta"
         //% jres=speeds.fourth
         Fourth = 80,
@@ -102,34 +129,6 @@ namespace autoBot {
         //% block.loc.es-ES="reversa"
         //% jres=speeds.reverse
         Reverse = 20
-    }
-
-    // Speeds
-    export enum EnumSpeed {
-        //% block="first2"
-        //% block.loc.es-ES="primera"
-        //% jres=speeds.first2
-        First2 = 20,
-        //% block="third2"
-        //% block.loc.es-ES="tercera"
-        //% jres=speeds.third2
-        Third2 = 60,
-        //% block="fifth2"
-        //% block.loc.es-ES="quinta"
-        //% jres=speeds.fifth2
-        Fifth2 = 100,
-        //% block="second2"
-        //% block.loc.es-ES="segunda"
-        //% jres=speeds.second2
-        Second2 = 40,
-        //% block="fourth2"
-        //% block.loc.es-ES="cuarta"
-        //% jres=speeds.fourth2
-        Fourth2 = 80,
-        //% block="reverse2"
-        //% block.loc.es-ES="reversa"
-        //% jres=speeds.reverse2
-        Reverse2 = 20
     }
 
     /**
