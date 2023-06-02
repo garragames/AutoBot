@@ -216,6 +216,7 @@ namespace autoBot {
     */
     //% blockId=getDirection4
     //% block="$direction"
+    //% block.
     //% direction.fieldEditor="imagedropdown"
     //% direction.fieldOptions.columns=4
     //% direction.fieldOptions.width="230"
