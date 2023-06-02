@@ -76,8 +76,8 @@ namespace autoBot {
         Stop = 0
     }
 
-    // Speeds
-    export enum EnumSpeed {
+    // Speeds2
+    export enum EnumSpeed2 {
         //% block="first"
         //% block.loc.es-ES="primera"
         //% jres=speeds.first
@@ -104,8 +104,8 @@ namespace autoBot {
         Reverse = 20
     }
 
-    // Speeds2
-    export enum EnumSpeed2 {
+    // Speeds
+    export enum EnumSpeed {
         //% block="first2"
         //% block.loc.es-ES="primera"
         //% jres=speeds.first2
