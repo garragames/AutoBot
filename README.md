@@ -24,18 +24,18 @@ To edit this repository in MakeCode.
 
 ```blocks
 basic.forever(function () {
-    if (autoBot.equal(autoBot.senseLine(), autoBot.EnumDir.Stop)) {
-        autoBot.stop()
+    if (autoBot.equal(autoBot.senseLine(), autoBot.EnumDir.Right)) {
+        autoBot.setSpeed3(autoBot.EnumSpeed.Third)
+        autoBot.turnDirection(autoBot.EnumSteeringwheel.Right)
     } else {
-        if (autoBot.equal(autoBot.senseLine(), autoBot.EnumDir.Right)) {
-            autoBot.setSpeed3(autoBot.EnumSpeed2.First2)
-            autoBot.turnDirection(autoBot.EnumSteeringwheel.Right)
+        if (autoBot.equal(autoBot.senseLine(), autoBot.EnumDir.Left)) {
+            autoBot.turnDirection(autoBot.EnumSteeringwheel.Left)
         } else {
-            if (autoBot.equal(autoBot.senseLine(), autoBot.EnumDir.Left)) {
-                autoBot.turnDirection(autoBot.EnumSteeringwheel.Left)
+            if (autoBot.equal(autoBot.senseLine(), autoBot.EnumDir.Forward)) {
+                autoBot.turnDirection(autoBot.EnumSteeringwheel.Front)
             } else {
-                if (autoBot.equal(autoBot.senseLine(), autoBot.EnumDir.Forward)) {
-                    autoBot.turnDirection(autoBot.EnumSteeringwheel.Front)
+                if (autoBot.equal(autoBot.senseLine(), autoBot.EnumDir.Stop)) {
+                    autoBot.stop()
                 }
             }
         }
