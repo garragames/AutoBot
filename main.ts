@@ -440,6 +440,7 @@ namespace autoBot {
     //% block="forward"
     //% block.loc.es-ES="adelante"
     //% group="Directions"
+    //% icon="\uf0a4"
     export function forwardDir(): number {
         return EnumDir.Forward
     }
