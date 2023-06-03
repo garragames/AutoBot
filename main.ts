@@ -50,23 +50,23 @@ namespace autoBot {
     export enum EnumDir {
         //% block="left"
         //% block.loc.es-ES="izquierda"
-        //% jres=icons.left
+        //% jres=icons.left-sign
         Left = 3,
         //% block="forward"
         //% block.loc.es-ES="adelante"
-        //% jres=icons.forward
+        //% jres=icons.forward-sign
         Forward = 1,
         //% block="backward"
         //% block.loc.es-ES="atrás"
-        //% jres=icons.backward
+        //% jres=icons.backward-sign
         //Backward = 2,
         //% block="right"
         //% block.loc.es-ES="derecha"
-        //% jres=icons.right
+        //% jres=icons.right-sign
         Right = 4,
         //% block="stop"
         //% block.loc.es-ES="alto"
-        //% jres=icons.stop
+        //% jres=icons.stop-sign
         Stop = 0
     }
 
