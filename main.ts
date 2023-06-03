@@ -72,29 +72,29 @@ namespace autoBot {
 
     // Speeds
     export enum EnumSpeed {
-        //% block="first"
-        //% block.loc.es-ES="primera"
-        //% jres=speeds.first
+        //% block="first gear"
+        //% block.loc.es-ES="primera velocidad"
+        //% jres=speeds.first-gear
         First = 20,
-        //% block="third"
-        //% block.loc.es-ES="tercera"
-        //% jres=speeds.third
+        //% block="third gear"
+        //% block.loc.es-ES="tercera velocidad"
+        //% jres=speeds.third-gear
         Third = 60,
-        //% block="fifth"
-        //% block.loc.es-ES="quinta"
-        //% jres=speeds.fifth
+        //% block="fifth gear"
+        //% block.loc.es-ES="quinta velocidad"
+        //% jres=speeds.fifth-gear
         Fifth = 100,
-        //% block="second"
-        //% block.loc.es-ES="segunda"
-        //% jres=speeds.second
+        //% block="second gear"
+        //% block.loc.es-ES="segunda velocidad"
+        //% jres=speeds.second-gear
         Second = 40,
-        //% block="fourth2"
-        //% block.loc.es-ES="cuarta"
-        //% jres=speeds.fourth
+        //% block="fourth gear"
+        //% block.loc.es-ES="cuarta velocidad"
+        //% jres=speeds.fourth-gear
         Fourth = 80,
-        //% block="reverse"
+        //% block="reverse gear"
         //% block.loc.es-ES="reversa"
-        //% jres=speeds.reverse
+        //% jres=speeds.reverse-gear
         Reverse = 20
     }
 
