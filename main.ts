@@ -30,12 +30,6 @@ namespace autoBot {
     // Disable LED Matrix
     led.enable(true) // Set true to DEBUG
 
-    // Stop motors
-    stop()
-
-    // Set initial speed
-    setSpeed(50)
-
     // Steering wheel
     export enum EnumSteeringwheel {
         //% block="left"
@@ -115,6 +109,12 @@ namespace autoBot {
         // PWM para derecho
         pins.analogWritePin(AnalogPin.P16, s)
     }
+
+    // Stop motors
+    stop()
+
+    // Set initial speed
+    setSpeed(EnumSpeed.First); /// TODO: NEUTRAL
 
     /**
      * Speed Selector
