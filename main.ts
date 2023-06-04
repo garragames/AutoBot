@@ -305,6 +305,7 @@ namespace autoBot {
     //% blockId=turnDirection
     //% block="turn steering wheel $direction"
     //% block.loc.es-ES="girar volante $direction"
+    //% block.defl=EnumSteeringwheel.front
     //% direction.defl=EnumSteeringwheel.front
     //% direction.fieldEditor="imagedropdown" 
     //% direction.fieldOptions.columns=3
