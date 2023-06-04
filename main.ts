@@ -170,10 +170,11 @@ namespace autoBot {
     //% direction.fieldEditor="imagedropdown"
     //% direction.fieldOptions.columns=4
     //% direction.fieldOptions.width="230"
-    //% direction.fieldOptions.maxRows=2    
-    //export function onGesture5(direction: EnumDir): number {
-    //    return direction
-    //}
+    //% direction.fieldOptions.maxRows=2
+    //% group="Variables"    
+    export function onGesture5(direction: EnumDir): number {
+        return direction
+    }
 
     /**
     * Speed Selector
