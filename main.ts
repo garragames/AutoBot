@@ -152,6 +152,7 @@ namespace autoBot {
     //% status.fieldOptions.columns=2
     //% status.fieldOptions.width="166"
     //% status.fieldOptions.maxRows=1
+    //% status.defl=EnumSeatbelt.unfasten
     export function seatBelt(status: EnumSeatbelt): void {
         
     }
