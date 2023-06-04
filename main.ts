@@ -167,7 +167,7 @@ namespace autoBot {
     * @param direction
     */
     //% blockId=getSign
-    //% block="$direction"
+    //% block="$sign"
     //% block.
     //% sign.fieldEditor="imagedropdown"
     //% sign.fieldOptions.columns=4
