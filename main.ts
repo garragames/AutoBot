@@ -140,6 +140,7 @@ namespace autoBot {
     //% speed.fieldOptions.columns=3
     //% speed.fieldOptions.width="250"
     //% speed.fieldOptions.maxRows=2
+    //% group="Constants"
     export function onSpeed(speed: EnumSpeed): number {
         return speed
     }
