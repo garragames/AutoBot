@@ -34,7 +34,7 @@ namespace autoBot {
     export enum EnumSteeringwheel {
         //% block="left"
         //% block.loc.es-ES="izquierda"
-        //% jres=icons.engine-on
+        //% jres=icons.seatbelt-unfasent
         Left = 1,
         //% block="front"
         //% block.loc.es-ES="frente"
