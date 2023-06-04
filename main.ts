@@ -30,7 +30,7 @@ namespace autoBot {
     // Disable LED Matrix
     led.enable(true) // Set true to DEBUG
 
-    // Direction
+    // Directions
     export enum Directions {
         //% block="left"
         //% block.loc.es-ES="izquierda"
@@ -84,7 +84,7 @@ namespace autoBot {
     }
 
     // Speeds
-    export enum EnumGears {
+    export enum Gears {
         //% block="first gear"
         //% block.loc.es-ES="primera velocidad"
         //% jres=icons.first-gear
@@ -127,7 +127,7 @@ namespace autoBot {
     stop()
 
     // Set initial gear
-    setSpeed(EnumGears.First); /// TODO: NEUTRAL
+    // setSpeed(Gears.First); /// TODO: NEUTRAL
 
     /**
      * Gear Selector
@@ -135,13 +135,13 @@ namespace autoBot {
      */
     //% blockId=getGear
     //% block="$gear"
-    //% gear.defl=EnumGears.first
+    //% gear.defl=Gears.third
     //% gear.fieldEditor="imagedropdown"
     //% gear.fieldOptions.columns=3
     //% gear.fieldOptions.width="250"
     //% gear.fieldOptions.maxRows=2
     //% group="Variables"
-    export function getGear(gear: EnumGears): number {
+    export function getGear(gear: Gears): number {
         return gear
     }
 
@@ -322,13 +322,13 @@ namespace autoBot {
     //% blockId=setGear
     //% block="set gear $gear"
     //% block.loc.es-ES="cambiar velocidad $gear"
-    //% gear.defl=EnumGears.Third
+    //% gear.defl=Gears.Third
     //% gear.fieldEditor="imagedropdown" 
     //% gear.fieldOptions.columns=3
     //% gear.fieldOptions.width="230"
     //% gear.fieldOptions.maxRows=2
     //% group="Commands"
-    export function setGear(gear: EnumGears): void {
+    export function setGear(gear: Gears): void {
         setSpeed(gear)
     }
 
