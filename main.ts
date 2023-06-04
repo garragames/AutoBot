@@ -10,7 +10,7 @@
  */
 
 //% weight=100 color=#fa8f13 icon="\uf1b9" block="AutoBot"
-// groups=['Constants', 'Movements', 'Sensors', 'Logic']
+// groups=['Constants', 'Movements', 'Sensors', 'Logic', 'Commands']
 namespace autoBot {
 
     const MIN_VEL = 150;  //   0 km/hr
@@ -270,6 +270,7 @@ namespace autoBot {
     //% direction.fieldOptions.columns=3
     //% direction.fieldOptions.width="230"
     //% direction.fieldOptions.maxRows=1
+    //% gropu="Commands"
     export function turnDirection(direction: EnumSteeringwheel): void {
         
     }
@@ -286,6 +287,7 @@ namespace autoBot {
     //% speed.fieldOptions.columns=3
     //% speed.fieldOptions.width="230"
     //% speed.fieldOptions.maxRows=2
+    //% group="Commands"
     export function setSpeed3(speed: EnumSpeed): void {
 
     }
