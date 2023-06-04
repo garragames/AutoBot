@@ -209,10 +209,10 @@ namespace autoBot {
     //% icon.fieldOptions.width=220
     //% icon.fieldOptions.columns=2
     //% parts=microservo trackArgs=0
-    export function showIcon(icon: IconNames, interval = 600) {
-        let res = images.iconImage(icon)
-        res.showImage(0, interval)
-    }
+    //export function showIcon(icon: IconNames, interval = 600) {
+    //    let res = images.iconImage(icon)
+    //    res.showImage(0, interval)
+    //}
     
     /**
     * Direction Selector v4
@@ -225,9 +225,9 @@ namespace autoBot {
     //% direction.fieldOptions.columns=4
     //% direction.fieldOptions.width="230"
     //% direction.fieldOptions.maxRows=2    
-    export function onGesture5(direction: EnumDir): number {
-        return direction
-    }
+    //export function onGesture5(direction: EnumDir): number {
+    //    return direction
+    //}
 
     /**
     * Speed Selector
@@ -426,9 +426,9 @@ namespace autoBot {
     //% block="stop"
     //% block.loc.es-ES="alto"
     //% group="Directions"
-    export function stopDir(): number {
-        return EnumDir.Stop
-    }
+    //export function stopDir(): number {
+    //    return EnumDir.Stop
+    //}
 
     /**
      * Returns the value of right to compare with the value returned by the line sensor.
@@ -437,9 +437,9 @@ namespace autoBot {
     //% block="right"
     //% block.loc.es-ES="derecha"
     //% group="Directions"
-    export function rightDir(): number {
-        return EnumDir.Right
-    }
+    //export function rightDir(): number {
+    //    return EnumDir.Right
+    //}
 
 
     /**
@@ -449,9 +449,9 @@ namespace autoBot {
     //% block="left"
     //% block.loc.es-ES="izquierda"
     //% group="Directions"
-    export function leftDir(): number {
-        return EnumDir.Left
-    }
+    //export function leftDir(): number {
+    //    return EnumDir.Left
+    //}
 
     /**
      * Returns the value of backward to compare with the value returned by the line sensor.
@@ -473,9 +473,9 @@ namespace autoBot {
     //% block.loc.es-ES="adelante"
     //% group="Directions"
     //% icon="\uf0a4"
-    export function forwardDir(): number {
-        return EnumDir.Forward
-    }
+    //export function forwardDir(): number {
+    //    return EnumDir.Forward
+    //}
 
     /**
      * Compares two values and returns true if equal or false if not equal
