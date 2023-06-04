@@ -164,7 +164,7 @@ namespace autoBot {
     
     /**
     * Sign Selector
-    * @param direction
+    * @param sign
     */
     //% blockId=getSign
     //% block="$sign"
@@ -179,7 +179,7 @@ namespace autoBot {
     }
 
     /**
-    * Gear Selector 2
+    * Gear Selector
     * @param gear
     */
     //% blockId=getSpeed2
@@ -189,7 +189,7 @@ namespace autoBot {
     //% gear.fieldOptions.width="230"
     //% gear.fieldOptions.maxRows=2
     //% group="Variables"
-    export function onSpeed2(gear: EnumGears): number {
+    export function getGear(gear: EnumGears): number {
         return gear
     }
 
@@ -330,80 +330,6 @@ namespace autoBot {
     export function setSpeed3(gear: EnumGears): void {
 
     }
-
-
-    /**
-     * Movements
-     */
-    export function move(direction: EnumSigns): void {
-        switch (direction) {
-            case EnumSigns.Stop: {
-                stop();
-            }
-        }
-    }
-
-    /**
-     * Direction constants
-     */
-
-    /**
-     * Returns the value of stop to compare with the value returned by the line sensor.
-     */
-    //% blockId=stopDir
-    //% block="stop"
-    //% block.loc.es-ES="alto"
-    //% group="Directions"
-    //export function stopDir(): number {
-    //    return EnumSigns.Stop
-    //}
-
-    /**
-     * Returns the value of right to compare with the value returned by the line sensor.
-     */
-    //% blockId=rightDir
-    //% block="right"
-    //% block.loc.es-ES="derecha"
-    //% group="Directions"
-    //export function rightDir(): number {
-    //    return EnumSigns.Right
-    //}
-
-
-    /**
-     * Returns the value of left to compare with the value returned by the line sensor.
-     */
-    //% blockId=leftDir
-    //% block="left"
-    //% block.loc.es-ES="izquierda"
-    //% group="Directions"
-    //export function leftDir(): number {
-    //    return EnumSigns.Left
-    //}
-
-    /**
-     * Returns the value of backward to compare with the value returned by the line sensor.
-     */
-
-    //% blockId=backwardDir
-    //% block="backforward"
-    //% block.loc.es-ES="atrás"
-    //% group="Directions"
-    //export function backwardDir(): number {
-    //    return EnumSigns.Backward
-    //}
-
-    /**
-     * Returns the value of forward to compare with the value returned by the line sensor.
-     */
-    //% blockId=forwardDir
-    //% block="forward"
-    //% block.loc.es-ES="adelante"
-    //% group="Directions"
-    //% icon="\uf0a4"
-    //export function forwardDir(): number {
-    //    return EnumSigns.Forward
-    //}
 
     /**
      * Compares two values and returns true if equal or false if not equal
