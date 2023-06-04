@@ -213,6 +213,7 @@ namespace autoBot {
     //    let res = images.iconImage(icon)
     //    res.showImage(0, interval)
     //}
+    /*
     
     /**
     * Direction Selector v4
