@@ -149,6 +149,7 @@ namespace autoBot {
      */
     //% blockId=setSeatbelt
     //% block="seat belt $status"
+    //% block.loc-es-ES="cinturón de seguridad $status"
     //% status.defl=EnumSeatbelt.unfasten
     //% status.fieldEditor="imagedropdown"
     //% status.fieldOptions.columns=2
