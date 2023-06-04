@@ -39,11 +39,11 @@ namespace autoBot {
         //% block="front"
         //% block.loc.es-ES="frente"
         //% jres=icons.steeringwheel-front
-        Front = 1,
+        Front = 2,
         //% block="right"
         //% block.loc.es-ES="derecha"
         //% jres=icons.steeringwheel-right
-        Right = 1
+        Right = 3
     }
 
     // Directions
@@ -51,15 +51,15 @@ namespace autoBot {
         //% block="left"
         //% block.loc.es-ES="izquierda"
         //% jres=icons.left-sign
-        Left = 3,
+        Left = 1,
         //% block="forward"
         //% block.loc.es-ES="adelante"
         //% jres=icons.forward-sign
-        Forward = 1,
+        Forward = 2,
         //% block="backward"
         //% block.loc.es-ES="atrás"
         //% jres=icons.backward-sign
-        //Backward = 2,
+        //Backward = 3,
         //% block="right"
         //% block.loc.es-ES="derecha"
         //% jres=icons.right-sign
