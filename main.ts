@@ -157,7 +157,7 @@ namespace autoBot {
     //% direction.fieldOptions.width="250"
     //% direction.fieldOptions.maxRows=2
     //% group="Variables"
-    export function getDirection(direction: EnumSteeringwheel): number {
+    export function getDirection(direction: EnumSteeringwheel = 2): number {
         return direction
     }
 
