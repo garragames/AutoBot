@@ -149,7 +149,7 @@ namespace autoBot {
     * Direction Selector
     * @param direction
     */
-    //% blockId=getGear
+    //% blockId=getDirection
     //% block="$direction"
     //% direction.defl=EnumSteeringwheel.front
     //% direction.fieldEditor="imagedropdown"
