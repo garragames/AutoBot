@@ -207,6 +207,7 @@ namespace autoBot {
     //% icon.fieldOptions.columns="5"
     //% icon.fieldOptions.width="380"
     //% icon.fieldOptions.maxRows=4
+    //% parts=microservo trackArgs=0
     export function showIcon(icon: IconNames, interval = 600) {
         let res = images.iconImage(icon)
         res.showImage(0, interval)
@@ -222,9 +223,7 @@ namespace autoBot {
     //% direction.fieldEditor="imagedropdown"
     //% direction.fieldOptions.columns=4
     //% direction.fieldOptions.width="230"
-    //% direction.fieldOptions.maxRows=2
-    //% parts="neopixel"
-    
+    //% direction.fieldOptions.maxRows=2    
     export function onGesture5(direction: EnumDir): number {
         return direction
     }
