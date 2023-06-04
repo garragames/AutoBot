@@ -61,6 +61,10 @@ namespace autoBot {
 
     // Directions
     export enum EnumDir {
+        //% block="stop"
+        //% block.loc.es-ES="alto"
+        //% jres=icons.stop-sign
+        Stop = 0,
         //% block="left"
         //% block.loc.es-ES="izquierda"
         //% jres=icons.left-sign
@@ -76,11 +80,7 @@ namespace autoBot {
         //% block="right"
         //% block.loc.es-ES="derecha"
         //% jres=icons.right-sign
-        Right = 4,
-        //% block="stop"
-        //% block.loc.es-ES="alto"
-        //% jres=icons.stop-sign
-        Stop = 0
+        Right = 4
     }
 
     // Speeds
