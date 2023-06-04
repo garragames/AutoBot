@@ -223,6 +223,7 @@ namespace autoBot {
     //% direction.fieldOptions.columns=4
     //% direction.fieldOptions.width="230"
     //% direction.fieldOptions.maxRows=2
+    //% parts="neopixel"
     
     export function onGesture5(direction: EnumDir): number {
         return direction
@@ -369,6 +370,7 @@ namespace autoBot {
     //% group="Movements"
     //% speed.min=0 speed.max=100
     //% speed.defl=50
+    //% parts=""
     export function left(speed: number): void {
         setSpeed(speed)
         pins.digitalWritePin(DigitalPin.P12, 0)
