@@ -157,6 +157,7 @@ namespace autoBot {
     //% status.fieldOptions.columns=2
     //% status.fieldOptions.width="166"
     //% status.fieldOptions.maxRows=1
+    //% group="Commands"
     export function seatBelt(status: EnumSeatbelt): void {
         
     }
@@ -250,7 +251,7 @@ namespace autoBot {
     //% blockId=stop
     //% block="stop"
     //% block.loc.es-ES="alto"
-    //% group="Movements"
+    //% group="Commands"
     export function stop(): void {
         pins.digitalWritePin(DigitalPin.P12, 0)
         pins.digitalWritePin(DigitalPin.P13, 0)
