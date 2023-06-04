@@ -10,7 +10,7 @@ basic.forever(function () {
         autoBot.stop()
     } else {
         if (autoBot.equal(autoBot.senseLine(), autoBot.EnumSigns.Right)) {
-            autoBot.setSpeed3(autoBot.EnumSpeeds.Second)
+            autoBot.setSpeed3(autoBot.EnumGears.Second)
             autoBot.turnDirection(autoBot.EnumSteeringwheel.Front)
         } else {
             if (autoBot.equal(autoBot.senseLine(), autoBot.EnumSigns.Left)) {

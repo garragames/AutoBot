@@ -84,7 +84,7 @@ namespace autoBot {
     }
 
     // Speeds
-    export enum EnumSpeeds {
+    export enum EnumGears {
         //% block="first gear"
         //% block.loc.es-ES="primera velocidad"
         //% jres=icons.first-gear
@@ -112,11 +112,11 @@ namespace autoBot {
     }
 
     /**
-     * Set Speed
-     * @param speed
+     * Set Gear
+     * @param gear
      */
-    function setSpeed(speed: number): void {
-        let s = speed * (MAX_VEL - MIN_VEL) / 100 + MIN_VEL; // Adjust to the min and max PWM values
+    function setSpeed(gear: number): void {
+        let s = gear * (MAX_VEL - MIN_VEL) / 100 + MIN_VEL; // Adjust to the min and max PWM values
         // PWM para izquierdo
         pins.analogWritePin(AnalogPin.P8, s)
         // PWM para derecho
@@ -126,23 +126,23 @@ namespace autoBot {
     // Stop motors
     stop()
 
-    // Set initial speed
-    setSpeed(EnumSpeeds.First); /// TODO: NEUTRAL
+    // Set initial gear
+    setSpeed(EnumGears.First); /// TODO: NEUTRAL
 
     /**
-     * Speed Selector
-     * @param speed
+     * Gear Selector
+     * @param gear
      */
     //% blockId=getSpeed
-    //% block="$speed"
-    //% speed.defl=EnumSpeeds.first
-    //% speed.fieldEditor="imagedropdown"
-    //% speed.fieldOptions.columns=3
-    //% speed.fieldOptions.width="250"
-    //% speed.fieldOptions.maxRows=2
+    //% block="$gear"
+    //% gear.defl=EnumGears.first
+    //% gear.fieldEditor="imagedropdown"
+    //% gear.fieldOptions.columns=3
+    //% gear.fieldOptions.width="250"
+    //% gear.fieldOptions.maxRows=2
     //% group="Variables"
-    export function onSpeed(speed: EnumSpeeds): number {
-        return speed
+    export function onSpeed(gear: EnumGears): number {
+        return gear
     }
 
     /**
@@ -179,18 +179,18 @@ namespace autoBot {
     }
 
     /**
-    * Speed Selector 2
-    * @param speed
+    * Gear Selector 2
+    * @param gear
     */
     //% blockId=getSpeed2
-    //% block="$speed"
-    //% speed.fieldEditor="imagedropdown" 
-    //% speed.fieldOptions.columns=3
-    //% speed.fieldOptions.width="230"
-    //% speed.fieldOptions.maxRows=2
+    //% block="$gear"
+    //% gear.fieldEditor="imagedropdown" 
+    //% gear.fieldOptions.columns=3
+    //% gear.fieldOptions.width="230"
+    //% gear.fieldOptions.maxRows=2
     //% group="Variables"
-    export function onSpeed2(speed: EnumSpeeds): number {
-        return speed
+    export function onSpeed2(gear: EnumGears): number {
+        return gear
     }
 
     /**
@@ -315,19 +315,19 @@ namespace autoBot {
     }
 
     /**
-    * Set Speed
+    * Set Gear
     * @param direction
     */
     //% blockId=setSpeed
-    //% block="change velocity $speed"
-    //% block.loc.es-ES="cambiar velocidad $speed"
-    //% speed.defl=EnumSpeeds.stop
-    //% speed.fieldEditor="imagedropdown" 
-    //% speed.fieldOptions.columns=3
-    //% speed.fieldOptions.width="230"
-    //% speed.fieldOptions.maxRows=2
+    //% block="change velocity $gear"
+    //% block.loc.es-ES="cambiar velocidad $gear"
+    //% gear.defl=EnumGears.stop
+    //% gear.fieldEditor="imagedropdown" 
+    //% gear.fieldOptions.columns=3
+    //% gear.fieldOptions.width="230"
+    //% gear.fieldOptions.maxRows=2
     //% group="Commands"
-    export function setSpeed3(speed: EnumSpeeds): void {
+    export function setSpeed3(gear: EnumGears): void {
 
     }
 
