@@ -6,17 +6,17 @@
  */
 
 basic.forever(function () {
-    if (autoBot.equal(autoBot.senseLine(), autoBot.EnumDir.Stop)) {
+    if (autoBot.equal(autoBot.senseLine(), autoBot.EnumSigns.Stop)) {
         autoBot.stop()
     } else {
-        if (autoBot.equal(autoBot.senseLine(), autoBot.EnumDir.Right)) {
-            autoBot.setSpeed3(autoBot.EnumSpeed.Second)
+        if (autoBot.equal(autoBot.senseLine(), autoBot.EnumSigns.Right)) {
+            autoBot.setSpeed3(autoBot.EnumSpeeds.Second)
             autoBot.turnDirection(autoBot.EnumSteeringwheel.Front)
         } else {
-            if (autoBot.equal(autoBot.senseLine(), autoBot.EnumDir.Left)) {
+            if (autoBot.equal(autoBot.senseLine(), autoBot.EnumSigns.Left)) {
                 autoBot.turnDirection(autoBot.EnumSteeringwheel.Left)
             } else {
-                if (autoBot.equal(autoBot.senseLine(), autoBot.EnumDir.Forward)) {
+                if (autoBot.equal(autoBot.senseLine(), autoBot.EnumSigns.Forward)) {
                     autoBot.turnDirection(autoBot.EnumSteeringwheel.Front)
                 }
             }
