@@ -10,7 +10,7 @@
  */
 
 //% weight=100 color=#fa8f13 icon="\uf1b9" block="AutoBot"
-// groups=['Constants', 'Movements', 'Sensors', 'Logic', 'Commands']
+// groups=['Variables', 'Movements', 'Sensors', 'Logic', 'Commands']
 namespace autoBot {
 
     const MIN_VEL = 150;  //   0 km/hr
@@ -140,7 +140,7 @@ namespace autoBot {
     //% speed.fieldOptions.columns=3
     //% speed.fieldOptions.width="250"
     //% speed.fieldOptions.maxRows=2
-    //% group="Constants"
+    //% group="Variables"
     export function onSpeed(speed: EnumSpeeds): number {
         return speed
     }
@@ -173,7 +173,7 @@ namespace autoBot {
     //% sign.fieldOptions.columns=4
     //% sign.fieldOptions.width="230"
     //% sign.fieldOptions.maxRows=2
-    //% group="Constants"    
+    //% group="Variables"    
     export function getSign(sign: EnumSigns): number {
         return sign
     }
@@ -188,6 +188,7 @@ namespace autoBot {
     //% speed.fieldOptions.columns=3
     //% speed.fieldOptions.width="230"
     //% speed.fieldOptions.maxRows=2
+    //% grouo="Variables"
     export function onSpeed2(speed: EnumSpeeds): number {
         return speed
     }
