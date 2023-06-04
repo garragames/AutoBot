@@ -146,6 +146,22 @@ namespace autoBot {
     }
 
     /**
+    * Direction Selector
+    * @param direction
+    */
+    //% blockId=getGear
+    //% block="$direction"
+    //% direction.defl=EnumSteeringwheel.front
+    //% direction.fieldEditor="imagedropdown"
+    //% direction.fieldOptions.columns=3
+    //% direction.fieldOptions.width="250"
+    //% direction.fieldOptions.maxRows=2
+    //% group="Variables"
+    export function getDirection(direction: EnumSteeringwheel): number {
+        return direction
+    }
+
+    /**
      * Seat belt
      * @param status
      */
