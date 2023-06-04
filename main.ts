@@ -249,14 +249,51 @@ namespace autoBot {
     /**
      * Stop the autobot
      */
-    //% blockId=stop
-    //% block="stop"
-    //% block.loc.es-ES="alto"
-    //% group="Commands"
     export function stop(): void {
         pins.digitalWritePin(DigitalPin.P12, 0)
         pins.digitalWritePin(DigitalPin.P13, 0)
         pins.digitalWritePin(DigitalPin.P14, 0)
+        pins.digitalWritePin(DigitalPin.P15, 0)
+    }
+
+    /**
+     * Turn the autobot right
+     */
+    export function right(): void {
+        pins.digitalWritePin(DigitalPin.P12, 0)
+        pins.digitalWritePin(DigitalPin.P13, 0)
+        pins.digitalWritePin(DigitalPin.P14, 1)
+        pins.digitalWritePin(DigitalPin.P15, 0)
+    }
+
+    /**
+    * Turn the autobot left
+    */
+    export function left(): void {
+        pins.digitalWritePin(DigitalPin.P12, 0)
+        pins.digitalWritePin(DigitalPin.P13, 1)
+        pins.digitalWritePin(DigitalPin.P14, 0)
+        pins.digitalWritePin(DigitalPin.P15, 0)
+    }
+
+    /**
+     * Moves the autobot backward
+     */
+    export function backward(): void {
+        pins.digitalWritePin(DigitalPin.P12, 1)
+        pins.digitalWritePin(DigitalPin.P13, 0)
+        pins.digitalWritePin(DigitalPin.P14, 0)
+        pins.digitalWritePin(DigitalPin.P15, 1)
+    }
+
+
+    /**
+     * Moves the autobot forward
+     */
+    export function forward(): void {
+        pins.digitalWritePin(DigitalPin.P12, 0)
+        pins.digitalWritePin(DigitalPin.P13, 1)
+        pins.digitalWritePin(DigitalPin.P14, 1)
         pins.digitalWritePin(DigitalPin.P15, 0)
     }
 
@@ -294,77 +331,16 @@ namespace autoBot {
 
     }
 
-    /**
-     * Turn the autobot right at speed between 0 and 100 km/hr
-     * @param speed
-     */
-    //% blockId=right
-    //% block="turn right $speed km/hr"
-    //% block.loc.es-ES="derecha $speed km/hr"
-    //% group="Movements"
-    //% speed.min=0 speed.max=100
-    //% speed.defl=50
-    export function right(speed: number): void {
-        setSpeed(speed)
-        pins.digitalWritePin(DigitalPin.P12, 0)
-        pins.digitalWritePin(DigitalPin.P13, 0)
-        pins.digitalWritePin(DigitalPin.P14, 1)
-        pins.digitalWritePin(DigitalPin.P15, 0)
-    }
 
     /**
-     * Turn the autobot left at speed between 0 and 100 km/hr
-     * @param speed
+     * Movements
      */
-    //%blockId=left
-    //%block="turn left $speed km/hr"
-    //% block.loc.es-ES="izquierda $speed km/hr"
-    //% group="Movements"
-    //% speed.min=0 speed.max=100
-    //% speed.defl=50
-    //% parts=""
-    export function left(speed: number): void {
-        setSpeed(speed)
-        pins.digitalWritePin(DigitalPin.P12, 0)
-        pins.digitalWritePin(DigitalPin.P13, 1)
-        pins.digitalWritePin(DigitalPin.P14, 0)
-        pins.digitalWritePin(DigitalPin.P15, 0)
-    }
-
-    /**
-     * Moves the autobot backward at speed between 0 and 100 km/hr
-     * @param speed
-     */
-    //%blockId=backward
-    //%block="go backward $speed km/hr"
-    //%block.loc.es-ES="atrás $speed km/hr"
-    //% group="Movements"
-    //% speed.min=0 speed.max=100
-    //% speed.defl=50
-    export function backward(speed: number): void {
-        setSpeed(speed)
-        pins.digitalWritePin(DigitalPin.P12, 1)
-        pins.digitalWritePin(DigitalPin.P13, 0)
-        pins.digitalWritePin(DigitalPin.P14, 0)
-        pins.digitalWritePin(DigitalPin.P15, 1)
-    }
-
-    /**
-     * Moves the autobot forward at speed between 0 and 100 km/hr
-     * @param speed
-     */
-    //%blockId=forward
-    //%block="go forward $speed km/hr"
-    //%block.loc.es-ES="adelante $speed km/hr"
-    //% group="Movements"
-    //% speed.min=0 speed.max=100
-    //% speed.defl=50
-    export function forward(speed: number): void {
-        setSpeed(speed)
-        pins.digitalWritePin(DigitalPin.P12, 0)
-        pins.digitalWritePin(DigitalPin.P13, 1)
-        pins.digitalWritePin(DigitalPin.P14, 1)
-        pins.digitalWritePin(DigitalPin.P15, 0)
+    export function move(direction: EnumSigns): void {
+        switch (direction) {
+            case EnumSigns.Stop: {
+                stop();
+            }
+        }
     }
 
     /**
