@@ -47,14 +47,14 @@ namespace autoBot {
     }
 
     // Seat Belt 
-    export enum EnumSeatbelt {
+    export enum BeltStates {
         //% block="unfasten"
         //% block.loc.es-ES="desabrochado"
-        //% jres=icons.seatbelt-unfasten
+        //% jres=icons.belt-unfasten
         Unfasten = 1,
         //% block="fasten"
         //% block.loc.es-ES="abrochado"
-        //% jres=icons.seatbelt-fasten
+        //% jres=icons.belt-fasten
         Fasten = 2
 
     }
@@ -168,13 +168,13 @@ namespace autoBot {
     //% blockId=setSeatbelt
     //% block="seat belt $status"
     //% block.loc.es-ES="cinturón de seguridad $status"
-    //% status.defl=EnumSeatbelt.unfasten
+    //% status.defl=BeltStates.unfasten
     //% status.fieldEditor="imagedropdown"
     //% status.fieldOptions.columns=2
     //% status.fieldOptions.width="166"
     //% status.fieldOptions.maxRows=1
     //% group="Commands"
-    export function seatBelt(status: EnumSeatbelt): void {
+    export function belt(status: BeltStates): void {
         
     }
     
@@ -328,22 +328,24 @@ namespace autoBot {
     //% gear.fieldOptions.width="230"
     //% gear.fieldOptions.maxRows=2
     //% group="Commands"
-    export function setSpeed3(gear: EnumGears): void {
+    export function setGear(gear: EnumGears): void {
         setSpeed(gear)
     }
 
     /**
      * Compares two values and returns true if equal or false if not equal
+     * @param A
+     * @param B
      */
-    //% blockId=compareDir
-    //% block="$directionA equal to $directionB"
-    //% block.loc.es-ES="$directionA igual a $directionB"
-    //% directionB.fieldEditor="imagedropdown"
-    //% directionB.fieldOptions.columns=4
-    //% directionB.fieldOptions.width="326"
-    //% directionB.fieldOptions.maxRows=1
+    //% blockId=compare
+    //% block="$A equal to $B"
+    //% block.loc.es-ES="$A igual a $B"
+    //% B.fieldEditor="imagedropdown"
+    //% B.fieldOptions.columns=4
+    //% B.fieldOptions.width="326"
+    //% B.fieldOptions.maxRows=1
     //% group="Logic"
-    export function equal(directionA: number, directionB: EnumSigns): boolean {
-        return directionA == directionB
+    export function compare(A: number, B: EnumSigns): boolean {
+        return A == B
     }    
 }
