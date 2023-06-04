@@ -179,7 +179,7 @@ namespace autoBot {
     }
 
     /**
-    * Speed Selector
+    * Speed Selector 2
     * @param speed
     */
     //% blockId=getSpeed2
@@ -188,7 +188,7 @@ namespace autoBot {
     //% speed.fieldOptions.columns=3
     //% speed.fieldOptions.width="230"
     //% speed.fieldOptions.maxRows=2
-    //% grouo="Variables"
+    //% group="Variables"
     export function onSpeed2(speed: EnumSpeeds): number {
         return speed
     }
