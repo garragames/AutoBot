@@ -10,7 +10,7 @@
  */
 
 //% weight=100 color=#fa8f13 icon="\uf1b9" block="AutoBot"
-// groups=['Variables', 'Movements', 'Sensors', 'Logic']
+// groups=['Constants', 'Movements', 'Sensors', 'Logic']
 namespace autoBot {
 
     const MIN_VEL = 150;  //   0 km/hr
@@ -171,7 +171,7 @@ namespace autoBot {
     //% direction.fieldOptions.columns=4
     //% direction.fieldOptions.width="230"
     //% direction.fieldOptions.maxRows=2
-    //% group="Variables"    
+    //% group="Constants"    
     export function onGesture5(direction: EnumDir): number {
         return direction
     }
