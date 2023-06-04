@@ -134,6 +134,7 @@ namespace autoBot {
      */
     //% blockId=getSpeed
     //% block="$speed"
+    //% speed.defl=EnumSpeed.first
     //% speed.fieldEditor="imagedropdown"
     //% speed.fieldOptions.columns=3
     //% speed.fieldOptions.width="250"
@@ -148,11 +149,11 @@ namespace autoBot {
      */
     //% blockId=setSeatbelt
     //% block="seat belt $status"
+    //% status.defl=EnumSeatbelt.unfasten
     //% status.fieldEditor="imagedropdown"
     //% status.fieldOptions.columns=2
     //% status.fieldOptions.width="166"
     //% status.fieldOptions.maxRows=1
-    //% status.defl=EnumSeatbelt.unfasten
     export function seatBelt(status: EnumSeatbelt): void {
         
     }
