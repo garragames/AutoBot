@@ -327,7 +327,6 @@ namespace autoBot {
     //% gear.fieldOptions.columns=3
     //% gear.fieldOptions.width="230"
     //% gear.fieldOptions.maxRows=2
-    //% gear.fieldOptions.defl=EnumGears.front
     //% group="Commands"
     export function setSpeed3(gear: EnumGears): void {
         setSpeed(gear)
