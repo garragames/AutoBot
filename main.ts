@@ -31,7 +31,7 @@ namespace autoBot {
     led.enable(true) // Set true to DEBUG
 
     // Direction
-    export enum Direction {
+    export enum Directions {
         //% block="left"
         //% block.loc.es-ES="izquierda"
         //% jres=icons.direction-left
@@ -46,7 +46,7 @@ namespace autoBot {
         Right = 3
     }
 
-    // Seat Belt 
+    // Seat Belt States
     export enum BeltStates {
         //% block="unfasten"
         //% block.loc.es-ES="desabrochado"
@@ -60,7 +60,7 @@ namespace autoBot {
     }
 
     // Variables
-    export enum EnumSigns {
+    export enum Signs {
         //% block="stop"
         //% block.loc.es-ES="alto"
         //% jres=icons.stop-sign
@@ -151,13 +151,13 @@ namespace autoBot {
     */
     //% blockId=getDirection
     //% block="$direction"
-    //% direction.defl=Direction.front
+    //% direction.defl=Directions.front
     //% direction.fieldEditor="imagedropdown"
     //% direction.fieldOptions.columns=3
     //% direction.fieldOptions.width="250"
     //% direction.fieldOptions.maxRows=2
     //% group="Variables"
-    export function getDirection(direction: Direction): number {
+    export function getDirection(direction: Directions): number {
         return direction
     }
 
@@ -190,7 +190,7 @@ namespace autoBot {
     //% sign.fieldOptions.width="230"
     //% sign.fieldOptions.maxRows=2
     //% group="Variables"    
-    export function getSign(sign: EnumSigns): number {
+    export function getSign(sign: Signs): number {
         return sign
     }
 
@@ -225,26 +225,26 @@ namespace autoBot {
     //% block="sense line"
     //% block.loc.es-ES="detectar línea"
     //% group="Sensors"
-    export function senseLine(): EnumSigns {
+    export function senseLine(): Signs {
         if (pins.digitalReadPin(DigitalPin.P0) == 1 && (pins.digitalReadPin(DigitalPin.P1) == 1 && (pins.digitalReadPin(DigitalPin.P2) == 0 && (pins.digitalReadPin(DigitalPin.P3) == 1 && pins.digitalReadPin(DigitalPin.P4) == 1)))) {
-            return EnumSigns.Forward
+            return Signs.Forward
         } else
             if (pins.digitalReadPin(DigitalPin.P0) == 1 && (pins.digitalReadPin(DigitalPin.P1) == 0 && (pins.digitalReadPin(DigitalPin.P2) == 1 && (pins.digitalReadPin(DigitalPin.P3) == 1 && pins.digitalReadPin(DigitalPin.P4) == 1)))) {
-                return EnumSigns.Left
+                return Signs.Left
             } else
                 if (pins.digitalReadPin(DigitalPin.P0) == 0 && (pins.digitalReadPin(DigitalPin.P1) == 1 && (pins.digitalReadPin(DigitalPin.P2) == 1 && (pins.digitalReadPin(DigitalPin.P3) == 1 && pins.digitalReadPin(DigitalPin.P4) == 1)))) {
-                    return EnumSigns.Left
+                    return Signs.Left
                 } else
                     if (pins.digitalReadPin(DigitalPin.P0) == 1 && (pins.digitalReadPin(DigitalPin.P1) == 1 && (pins.digitalReadPin(DigitalPin.P2) == 1 && (pins.digitalReadPin(DigitalPin.P3) == 0 && pins.digitalReadPin(DigitalPin.P4) == 1)))) {
-                        return EnumSigns.Right
+                        return Signs.Right
                     } else
                         if (pins.digitalReadPin(DigitalPin.P0) == 1 && (pins.digitalReadPin(DigitalPin.P1) == 1 && (pins.digitalReadPin(DigitalPin.P2) == 1 && (pins.digitalReadPin(DigitalPin.P3) == 1 && pins.digitalReadPin(DigitalPin.P4) == 0)))) {
-                            return EnumSigns.Right
+                            return Signs.Right
                         } else
                             if (pins.digitalReadPin(DigitalPin.P0) == 1 && (pins.digitalReadPin(DigitalPin.P1) == 1 && (pins.digitalReadPin(DigitalPin.P2) == 1 && (pins.digitalReadPin(DigitalPin.P3) == 1 && pins.digitalReadPin(DigitalPin.P4) == 1)))) {
-                                return EnumSigns.Stop
+                                return Signs.Stop
                             }
-        return EnumSigns.Stop // If no condition then Stop motors
+        return Signs.Stop // If no condition then Stop motors
     }
 
     /**
@@ -311,7 +311,7 @@ namespace autoBot {
     //% direction.fieldOptions.width="230"
     //% direction.fieldOptions.maxRows=1
     //% group="Commands"
-    export function turnDirection(direction: Direction): void {
+    export function turnDirection(direction: Directions): void {
         
     }
 
@@ -345,7 +345,7 @@ namespace autoBot {
     //% B.fieldOptions.width="326"
     //% B.fieldOptions.maxRows=1
     //% group="Logic"
-    export function compare(A: number, B: EnumSigns): boolean {
+    export function compare(A: number, B: Signs): boolean {
         return A == B
     }    
 }

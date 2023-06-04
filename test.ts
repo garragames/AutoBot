@@ -6,18 +6,18 @@
  */
 
 basic.forever(function () {
-    if (autoBot.compare(autoBot.senseLine(), autoBot.EnumSigns.Stop)) {
+    if (autoBot.compare(autoBot.senseLine(), autoBot.Signs.Stop)) {
         autoBot.stop()
     } else {
-        if (autoBot.compare(autoBot.senseLine(), autoBot.EnumSigns.Right)) {
+        if (autoBot.compare(autoBot.senseLine(), autoBot.Signs.Right)) {
             autoBot.setGear(autoBot.EnumGears.Second)
-            autoBot.turnDirection(autoBot.Direction.Front)
+            autoBot.turnDirection(autoBot.Directions.Front)
         } else {
-            if (autoBot.compare(autoBot.senseLine(), autoBot.EnumSigns.Left)) {
-                autoBot.turnDirection(autoBot.Direction.Left)
+            if (autoBot.compare(autoBot.senseLine(), autoBot.Signs.Left)) {
+                autoBot.turnDirection(autoBot.Directions.Left)
             } else {
-                if (autoBot.compare(autoBot.senseLine(), autoBot.EnumSigns.Forward)) {
-                    autoBot.turnDirection(autoBot.Direction.Front)
+                if (autoBot.compare(autoBot.senseLine(), autoBot.Signs.Forward)) {
+                    autoBot.turnDirection(autoBot.Directions.Front)
                 }
             }
         }
