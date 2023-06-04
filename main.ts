@@ -34,7 +34,7 @@ namespace autoBot {
     export enum EnumSteeringwheel {
         //% block="left"
         //% block.loc.es-ES="izquierda"
-        //% jres=icons.seatbelt-fasten
+        //% jres=icons.steeringwheel-left
         Left = 1,
         //% block="front"
         //% block.loc.es-ES="frente"
@@ -44,6 +44,18 @@ namespace autoBot {
         //% block.loc.es-ES="derecha"
         //% jres=icons.steeringwheel-right
         Right = 3
+    }
+
+    // Seat Belt 
+    export enum EnumSeatbelt {
+        //% block="fasten"
+        //% block.loc.es-ES="abrochado"
+        //% jres=icons.seatbelt-fasten
+        Fasten = 1,
+        //% block="unfasten"
+        //% block.loc.es-ES="desabrochado"
+        //% jres=icons.seatbelt-unfasten
+        Unnfasten = 2
     }
 
     // Directions
@@ -128,6 +140,14 @@ namespace autoBot {
     //% speed.fieldOptions.maxRows=2
     export function onSpeed(speed: EnumSpeed): number {
         return speed
+    }
+
+    /**
+     * Seat belt
+     * @param status
+     */
+    export function seatBelt(status: EnumSeatbelt): number {
+        return status
     }
 
     /**
