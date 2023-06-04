@@ -159,17 +159,6 @@ namespace autoBot {
     export function seatBelt(status: EnumSeatbelt): void {
         
     }
-
-    /**
-     * Direction Selector v3
-     * @param gesture
-     */
-    //% blockId=getDirection3
-    //% block="$gesture3"
-    //% gesture.fieldEditor="gestures" gesture.fieldOptions.columns=4
-    export function onGesture3(gesture3: EnumDir): number {
-        return gesture3
-    }
     
     /**
     * Direction Selector v4
