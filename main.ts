@@ -198,6 +198,7 @@ namespace autoBot {
      * @param icon the predefined icon id
      * @param interval the amount of time (milliseconds) to show the icon. Default is 600.
      */
+     /*
     //% weight=90 blockGap=8
     //% blockId=basic_show_icon2
     //% block="show icon %i" icon="\uf00a"
@@ -213,7 +214,7 @@ namespace autoBot {
     //    let res = images.iconImage(icon)
     //    res.showImage(0, interval)
     //}
-    /*
+    */
     
     /**
     * Direction Selector v4
