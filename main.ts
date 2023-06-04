@@ -55,7 +55,7 @@ namespace autoBot {
         //% block="unfasten"
         //% block.loc.es-ES="desabrochado"
         //% jres=icons.seatbelt-unfasten
-        Unnfasten = 2
+        Unfasten = 2
     }
 
     // Directions
@@ -146,6 +146,12 @@ namespace autoBot {
      * Seat belt
      * @param status
      */
+    //% blockId=setSeatbelt
+    //% block="seat belt $status"
+    //% status.fieldEditor="imagedropdown"
+    //% status.fieldOptions.columns=2
+    //% status.fieldOptions.width="166"
+    //% status.fieldOptions.maxRows=1
     export function seatBelt(status: EnumSeatbelt): number {
         return status
     }
