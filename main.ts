@@ -322,7 +322,7 @@ namespace autoBot {
     //% blockId=setGear
     //% block="set gear $gear"
     //% block.loc.es-ES="cambiar velocidad $gear"
-    //% gear.defl=EnumGears.60
+    //% gear.defl=EnumGears.third
     //% gear.fieldEditor="imagedropdown" 
     //% gear.fieldOptions.columns=3
     //% gear.fieldOptions.width="230"
