@@ -133,7 +133,7 @@ namespace autoBot {
      * Gear Selector
      * @param gear
      */
-    //% blockId=getSpeed
+    //% blockId=getGear
     //% block="$gear"
     //% gear.defl=EnumGears.first
     //% gear.fieldEditor="imagedropdown"
@@ -141,7 +141,7 @@ namespace autoBot {
     //% gear.fieldOptions.width="250"
     //% gear.fieldOptions.maxRows=2
     //% group="Variables"
-    export function onSpeed(gear: EnumGears): number {
+    export function getGear(gear: EnumGears): number {
         return gear
     }
 
@@ -176,21 +176,6 @@ namespace autoBot {
     //% group="Variables"    
     export function getSign(sign: EnumSigns): number {
         return sign
-    }
-
-    /**
-    * Gear Selector
-    * @param gear
-    */
-    //% blockId=getSpeed2
-    //% block="$gear"
-    //% gear.fieldEditor="imagedropdown" 
-    //% gear.fieldOptions.columns=3
-    //% gear.fieldOptions.width="230"
-    //% gear.fieldOptions.maxRows=2
-    //% group="Variables"
-    export function getGear(gear: EnumGears): number {
-        return gear
     }
 
     /**
