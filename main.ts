@@ -30,19 +30,19 @@ namespace autoBot {
     // Disable LED Matrix
     led.enable(true) // Set true to DEBUG
 
-    // Steering wheel
-    export enum EnumSteeringwheel {
+    // Direction
+    export enum Direction {
         //% block="left"
         //% block.loc.es-ES="izquierda"
-        //% jres=icons.steeringwheel-left
+        //% jres=icons.direction-left
         Left = 1,
         //% block="front"
         //% block.loc.es-ES="frente"
-        //% jres=icons.steeringwheel-front
+        //% jres=icons.direction-front
         Front = 2,
         //% block="right"
         //% block.loc.es-ES="derecha"
-        //% jres=icons.steeringwheel-right
+        //% jres=icons.direction-right
         Right = 3
     }
 
@@ -151,13 +151,13 @@ namespace autoBot {
     */
     //% blockId=getDirection
     //% block="$direction"
-    //% direction.defl=EnumSteeringwheel.front
+    //% direction.defl=Direction.front
     //% direction.fieldEditor="imagedropdown"
     //% direction.fieldOptions.columns=3
     //% direction.fieldOptions.width="250"
     //% direction.fieldOptions.maxRows=2
     //% group="Variables"
-    export function getDirection(direction: EnumSteeringwheel = 2): number {
+    export function getDirection(direction: Direction): number {
         return direction
     }
 
@@ -299,11 +299,11 @@ namespace autoBot {
     }
 
     /**
-    * Turn steeringwheel
+    * Turn direction
     * @param direction
     */
     //% blockId=turnDirection
-    //% block="turn steering wheel $direction"
+    //% block="turn direction $direction"
     //% block.loc.es-ES="girar volante $direction"
     //% direction.defl=2
     //% direction.fieldEditor="imagedropdown" 
@@ -311,7 +311,7 @@ namespace autoBot {
     //% direction.fieldOptions.width="230"
     //% direction.fieldOptions.maxRows=1
     //% group="Commands"
-    export function turnDirection(direction: EnumSteeringwheel): void {
+    export function turnDirection(direction: Direction): void {
         
     }
 

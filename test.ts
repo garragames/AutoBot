@@ -11,13 +11,13 @@ basic.forever(function () {
     } else {
         if (autoBot.compare(autoBot.senseLine(), autoBot.EnumSigns.Right)) {
             autoBot.setGear(autoBot.EnumGears.Second)
-            autoBot.turnDirection(autoBot.EnumSteeringwheel.Front)
+            autoBot.turnDirection(autoBot.Direction.Front)
         } else {
             if (autoBot.compare(autoBot.senseLine(), autoBot.EnumSigns.Left)) {
-                autoBot.turnDirection(autoBot.EnumSteeringwheel.Left)
+                autoBot.turnDirection(autoBot.Direction.Left)
             } else {
                 if (autoBot.compare(autoBot.senseLine(), autoBot.EnumSigns.Forward)) {
-                    autoBot.turnDirection(autoBot.EnumSteeringwheel.Front)
+                    autoBot.turnDirection(autoBot.Direction.Front)
                 }
             }
         }
