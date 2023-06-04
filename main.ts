@@ -48,14 +48,15 @@ namespace autoBot {
 
     // Seat Belt 
     export enum EnumSeatbelt {
-        //% block="fasten"
-        //% block.loc.es-ES="abrochado"
-        //% jres=icons.seatbelt-fasten
-        Fasten = 1,
         //% block="unfasten"
         //% block.loc.es-ES="desabrochado"
         //% jres=icons.seatbelt-unfasten
-        Unfasten = 2
+        Unfasten = 1,
+        //% block="fasten"
+        //% block.loc.es-ES="abrochado"
+        //% jres=icons.seatbelt-fasten
+        Fasten = 2
+
     }
 
     // Directions
