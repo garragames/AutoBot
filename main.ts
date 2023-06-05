@@ -32,12 +32,12 @@ namespace autoBot {
 
     // OnOff Sates
     export enum OnOff {
-        //% block="left"
-        //% block.loc.es-ES="izquierda"
+        //% block="off"
+        //% block.loc.es-ES="apagado"
         //% jres=icons.direction-left
         Off = 0,
-        //% block="front"
-        //% block.loc.es-ES="frente"
+        //% block="on"
+        //% block.loc.es-ES="encendido"
         //% jres=icons.direction-front
         On = 1
     }
@@ -315,9 +315,9 @@ namespace autoBot {
     * Set Motor
     * @param state
     */
-    //% blockId=turnDirection
-    //% block="turn direction $direction"
-    //% block.loc.es-ES="girar volante $direction"
+    //% blockId=turnMotor
+    //% block="set motor $direction"
+    //% block.loc.es-ES="motor $state"
     //% state.defl=Directions.front
     //% state.fieldEditor="imagedropdown" 
     //% state.fieldOptions.columns=2
