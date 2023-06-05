@@ -312,11 +312,11 @@ namespace autoBot {
 
 
     /**
-    * Set Motor
+    * Turn Engine On/Off
     * @param state
     */
     //% blockId=setEngine
-    //% block="set engine $state"
+    //% block="turn engine $state"
     //% block.loc.es-ES="motor $state"
     //% state.defl=OnOff.off
     //% state.fieldEditor="imagedropdown" 
