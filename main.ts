@@ -315,8 +315,8 @@ namespace autoBot {
     * Set Motor
     * @param state
     */
-    //% blockId=turnMotor
-    //% block="set motor $state"
+    //% blockId=setEngine
+    //% block="set engine $state"
     //% block.loc.es-ES="motor $state"
     //% state.defl=OnOff.off
     //% state.fieldEditor="imagedropdown" 
@@ -324,7 +324,7 @@ namespace autoBot {
     //% state.fieldOptions.width="230"
     //% state.fieldOptions.maxRows=1
     //% group="Commands"
-    export function turnMotor(state: OnOff): void {
+    export function setEngine(state: OnOff): void {
 
     }
     /**
