@@ -15,12 +15,15 @@ namespace autoBot {
 
     const MIN_VEL = 150;  //   0 km/hr
     const MAX_VEL = 1023; // 100 km/hr
-    const NEUTRAL = 0;
     const FIRST   = 20;
     const SECOND  = 40;
     const THIRD   = 60;
     const FOURTH  = 80;
     const FIFTH   = 100;
+    const NEUTRAL = 0;
+    const PARKING = 1;
+    const REVERSE = 2;
+    const DRIVE   = 3;
     const ENGINE_STATE = 0;
     const BELT_STATE = 1;
 
@@ -97,8 +100,8 @@ namespace autoBot {
         Right = 4
     }
 
-    // Gears
-    export enum Gears {
+    // Manual Gears
+    export enum GearsManual {
         //% block="first gear"
         //% block.loc.es-ES="primera velocidad"
         //% jres=icons.first-gear
@@ -125,6 +128,33 @@ namespace autoBot {
         Reverse = 20
     }
 
+    // Automatic Gears
+    export enum GearsManual {
+        //% block="first gear"
+        //% block.loc.es-ES="primera velocidad"
+        //% jres=icons.parking-gear
+        AParking = PARKING,
+        //% block="third gear"
+        //% block.loc.es-ES="tercera velocidad"
+        //% jres=icons.reverse-gear
+        AReverse = REVERSE,
+        //% block="fifth gear"
+        //% block.loc.es-ES="quinta velocidad"
+        //% jres=icons.neutral-gear
+        ANeutral = NEUTRAL,
+        //% block="second gear"
+        //% block.loc.es-ES="segunda velocidad"
+        //% jres=icons.drive-gear
+        ADrive = DRIVE,
+        //% block="fourth gear"
+        //% block.loc.es-ES="cuarta velocidad"
+        //% jres=icons.second-gear
+        ASecond = SECOND,
+        //% block="reverse gear"
+        //% block.loc.es-ES="reversa"
+        //% jres=icons.first-gear
+        AFirst = FIRST
+    }
     /**
      * Set Speed
      * @param gear
@@ -155,7 +185,7 @@ namespace autoBot {
     //% gear.fieldOptions.width="225"
     //% gear.fieldOptions.maxRows=2
     //% group="Variables"
-    export function getGear(gear: Gears): number {
+    export function getGear(gear: GearsManual): number {
         return gear
     }
 
@@ -359,7 +389,7 @@ namespace autoBot {
     //% gear.fieldOptions.width="225"
     //% gear.fieldOptions.maxRows=2
     //% group="Commands"
-    export function setGear(gear: Gears): void {
+    export function setGear(gear: GearsManual): void {
         setSpeed(gear)
     }
 
