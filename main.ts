@@ -15,13 +15,15 @@ namespace autoBot {
 
     const MIN_VEL = 150;  //   0 km/hr
     const MAX_VEL = 1023; // 100 km/hr
-    const FIRST   = 25;
-    const SECOND  = 50;
-    const THIRD   = 75;
-    const FOURTH  = 100;
-    const ENGINE_ON = false;
-    const SEAT_BELT_FASTENED = false;
     const NEUTRAL = 0;
+    const FIRST   = 20;
+    const SECOND  = 40;
+    const THIRD   = 60;
+    const FOURTH  = 80;
+    const FIFTH   = 100;
+    const ENGINE_STATE = 0;
+    const BELT_STATE = 1;
+
 
     /**
      * Setup variables, pins and enumerations
@@ -100,11 +102,11 @@ namespace autoBot {
         //% block="first gear"
         //% block.loc.es-ES="primera velocidad"
         //% jres=icons.first-gear
-        First = 20,
+        First = FIRST,
         //% block="third gear"
         //% block.loc.es-ES="tercera velocidad"
         //% jres=icons.third-gear
-        Third = 60,
+        Third = THIRD,
         //% block="fifth gear"
         //% block.loc.es-ES="quinta velocidad"
         //% jres=icons.fifth-gear
@@ -112,11 +114,11 @@ namespace autoBot {
         //% block="second gear"
         //% block.loc.es-ES="segunda velocidad"
         //% jres=icons.second-gear
-        Second = 40,
+        Second = SECOND,
         //% block="fourth gear"
         //% block.loc.es-ES="cuarta velocidad"
         //% jres=icons.fourth-gear
-        Fourth = 80,
+        Fourth = FOURTH,
         //% block="reverse gear"
         //% block.loc.es-ES="reversa"
         //% jres=icons.reverse-gear
