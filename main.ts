@@ -112,8 +112,8 @@ namespace autoBot {
         Third = THIRD,
         //% block="fifth gear"
         //% block.loc.es-ES="quinta velocidad"
-        //% jres=icons.fifth-gear
-        Fifth = 100,
+        //% jres=icons.neutral-gear
+        Neutral = NEUTRAL,
         //% block="second gear"
         //% block.loc.es-ES="segunda velocidad"
         //% jres=icons.second-gear
