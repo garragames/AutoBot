@@ -34,11 +34,11 @@ namespace autoBot {
     export enum OnOff {
         //% block="off"
         //% block.loc.es-ES="apagado"
-        //% jres=icons.direction-left
+        //% jres=icons.engine-off
         Off = 0,
         //% block="on"
         //% block.loc.es-ES="encendido"
-        //% jres=icons.direction-front
+        //% jres=icons.engine-on
         On = 1
     }
     
