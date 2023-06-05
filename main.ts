@@ -101,7 +101,7 @@ namespace autoBot {
     }
 
     // Manual Gears
-    export enum GearsManual {
+    export enum ManualGears {
         //% block="first gear"
         //% block.loc.es-ES="primera velocidad"
         //% jres=icons.first-gear
@@ -129,7 +129,7 @@ namespace autoBot {
     }
 
     // Automatic Gears
-    export enum GearsManual {
+    export enum AutomaticGears {
         //% block="first gear"
         //% block.loc.es-ES="primera velocidad"
         //% jres=icons.parking-gear
@@ -185,7 +185,7 @@ namespace autoBot {
     //% gear.fieldOptions.width="225"
     //% gear.fieldOptions.maxRows=2
     //% group="Variables"
-    export function getGear(gear: GearsManual): number {
+    export function getGear(gear: ManualGears): number {
         return gear
     }
 
@@ -389,10 +389,26 @@ namespace autoBot {
     //% gear.fieldOptions.width="225"
     //% gear.fieldOptions.maxRows=2
     //% group="Commands"
-    export function setGear(gear: GearsManual): void {
+    export function setGear(gear: ManualGears): void {
         setSpeed(gear)
     }
 
+    /**
+        * Set Automatic Gear 
+        * @param gear
+        */
+    //% blockId=setAutomaticGear
+    //% block="set gear $gear"
+    //% block.loc.es-ES="cambiar velocidad $gear"
+    //% gear.defl=Gears.Third
+    //% gear.fieldEditor="imagedropdown" 
+    //% gear.fieldOptions.columns=3
+    //% gear.fieldOptions.width="225"
+    //% gear.fieldOptions.maxRows=2
+    //% group="Commands"
+    export function setAutomaticGear(gear: AutomaticGears): void {
+        setSpeed(gear)
+    }
     /**
      * Compares two values and returns true if equal or false if not equal
      * @param A
