@@ -152,7 +152,7 @@ namespace autoBot {
     //% gear.defl=Gears.third
     //% gear.fieldEditor="imagedropdown"
     //% gear.fieldOptions.columns=3
-    //% gear.fieldOptions.width="250"
+    //% gear.fieldOptions.width="225"
     //% gear.fieldOptions.maxRows=2
     //% group="Variables"
     export function getGear(gear: Gears): number {
@@ -168,7 +168,7 @@ namespace autoBot {
     //% direction.defl=Directions.front
     //% direction.fieldEditor="imagedropdown"
     //% direction.fieldOptions.columns=3
-    //% direction.fieldOptions.width="250"
+    //% direction.fieldOptions.width="225"
     //% direction.fieldOptions.maxRows=2
     //% group="Variables"
     export function getDirection(direction: Directions): number {
@@ -185,7 +185,7 @@ namespace autoBot {
     //% status.defl=BeltStates.unfasten
     //% status.fieldEditor="imagedropdown"
     //% status.fieldOptions.columns=2
-    //% status.fieldOptions.width="166"
+    //% status.fieldOptions.width="150"
     //% status.fieldOptions.maxRows=1
     //% group="Commands"
     export function belt(status: BeltStates): void {
@@ -201,7 +201,7 @@ namespace autoBot {
     //% block.
     //% sign.fieldEditor="imagedropdown"
     //% sign.fieldOptions.columns=4
-    //% sign.fieldOptions.width="230"
+    //% sign.fieldOptions.width="300"
     //% sign.fieldOptions.maxRows=2
     //% group="Variables"    
     export function getSign(sign: Signs): number {
@@ -339,7 +339,7 @@ namespace autoBot {
     //% direction.defl=Directions.front
     //% direction.fieldEditor="imagedropdown" 
     //% direction.fieldOptions.columns=3
-    //% direction.fieldOptions.width="230"
+    //% direction.fieldOptions.width="225"
     //% direction.fieldOptions.maxRows=1
     //% group="Commands"
     export function turnDirection(direction: Directions): void {
@@ -356,7 +356,7 @@ namespace autoBot {
     //% gear.defl=Gears.Third
     //% gear.fieldEditor="imagedropdown" 
     //% gear.fieldOptions.columns=3
-    //% gear.fieldOptions.width="230"
+    //% gear.fieldOptions.width="225"
     //% gear.fieldOptions.maxRows=2
     //% group="Commands"
     export function setGear(gear: Gears): void {
@@ -373,7 +373,7 @@ namespace autoBot {
     //% block.loc.es-ES="$A igual a $B"
     //% B.fieldEditor="imagedropdown"
     //% B.fieldOptions.columns=4
-    //% B.fieldOptions.width="326"
+    //% B.fieldOptions.width="300"
     //% B.fieldOptions.maxRows=1
     //% group="Logic"
     export function compare(A: number, B: Signs): boolean {
