@@ -323,7 +323,7 @@ namespace autoBot {
     //% state.defl=OnOff.off
     //% state.fieldEditor="imagedropdown" 
     //% state.fieldOptions.columns=2
-    //% state.fieldOptions.width="230"
+    //% state.fieldOptions.width="150"
     //% state.fieldOptions.maxRows=1
     //% group="Commands"
     export function setEngine(state: OnOff): void {
