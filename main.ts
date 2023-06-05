@@ -316,9 +316,9 @@ namespace autoBot {
     * @param state
     */
     //% blockId=turnMotor
-    //% block="set motor $direction"
+    //% block="set motor $state"
     //% block.loc.es-ES="motor $state"
-    //% state.defl=Directions.front
+    //% state.defl=OnOff.off
     //% state.fieldEditor="imagedropdown" 
     //% state.fieldOptions.columns=2
     //% state.fieldOptions.width="230"
