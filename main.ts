@@ -402,9 +402,9 @@ namespace autoBot {
     //% block.loc.es-ES="cambiar velocidad $gear"
     //% gear.defl=Gears.Third
     //% gear.fieldEditor="imagedropdown" 
-    //% gear.fieldOptions.columns=3
+    //% gear.fieldOptions.columns=1
     //% gear.fieldOptions.width="225"
-    //% gear.fieldOptions.maxRows=2
+    //% gear.fieldOptions.maxRows=6
     //% group="Commands"
     export function setAutomaticGear(gear: AutomaticGears): void {
         setSpeed(gear)
