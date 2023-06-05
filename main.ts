@@ -30,6 +30,18 @@ namespace autoBot {
     // Disable LED Matrix
     led.enable(true) // Set true to DEBUG
 
+    // OnOff Sates
+    export enum OnOff {
+        //% block="left"
+        //% block.loc.es-ES="izquierda"
+        //% jres=icons.direction-left
+        Off = 0,
+        //% block="front"
+        //% block.loc.es-ES="frente"
+        //% jres=icons.direction-front
+        On = 1
+    }
+    
     // Directions
     export enum Directions {
         //% block="left"
@@ -59,7 +71,7 @@ namespace autoBot {
 
     }
 
-    // Variables
+    // Signs
     export enum Signs {
         //% block="stop"
         //% block.loc.es-ES="alto"
@@ -83,7 +95,7 @@ namespace autoBot {
         Right = 4
     }
 
-    // Speeds
+    // Gears
     export enum Gears {
         //% block="first gear"
         //% block.loc.es-ES="primera velocidad"
@@ -162,7 +174,7 @@ namespace autoBot {
     }
 
     /**
-     * Seat belt
+     * Seat belt status
      * @param status
      */
     //% blockId=setSeatbelt
@@ -298,14 +310,31 @@ namespace autoBot {
         pins.digitalWritePin(DigitalPin.P15, 0)
     }
 
+
     /**
-    * Turn direction
+    * Set Motor
+    * @param state
+    */
+    //% blockId=turnDirection
+    //% block="turn direction $direction"
+    //% block.loc.es-ES="girar volante $direction"
+    //% state.defl=Directions.front
+    //% state.fieldEditor="imagedropdown" 
+    //% state.fieldOptions.columns=2
+    //% state.fieldOptions.width="230"
+    //% state.fieldOptions.maxRows=1
+    //% group="Commands"
+    export function turnMotor(state: OnOff): void {
+
+    }
+    /**
+    * Set Direction
     * @param direction
     */
     //% blockId=turnDirection
     //% block="turn direction $direction"
     //% block.loc.es-ES="girar volante $direction"
-    //% direction.defl=2
+    //% direction.defl=Directions.front
     //% direction.fieldEditor="imagedropdown" 
     //% direction.fieldOptions.columns=3
     //% direction.fieldOptions.width="230"
