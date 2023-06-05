@@ -403,7 +403,7 @@ namespace autoBot {
     //% gear.defl=Gears.Third
     //% gear.fieldEditor="imagedropdown" 
     //% gear.fieldOptions.columns=1
-    //% gear.fieldOptions.width="225"
+    //% gear.fieldOptions.width="75"
     //% gear.fieldOptions.maxRows=6
     //% group="Commands"
     export function setAutomaticGear(gear: AutomaticGears): void {
