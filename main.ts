@@ -168,7 +168,7 @@ namespace autoBot {
     }
 
     // Stop motors
-    stop()
+    _stop()
 
     // Set initial gear
     // setSpeed(Gears.First); /// TODO: NEUTRAL
@@ -413,22 +413,22 @@ namespace autoBot {
     /**
      * Move
      */
-    //% blockId=setInMotion
-    //% block="set in motion"
-    //% block.loc.es-ES="poner en movimiento"
+    //% blockId=accelerate
+    //% block="accelerate"
+    //% block.loc.es-ES="acelerar"
     //% group="Movements"
-    export function move(): void {
+    export function accelerate(): void {
 
     }
 
     /**
      * Stop
      */
-    //% blockId=stop
+    //% blockId=brake
     //% block="stop"
-    //% block.loc.es-ES="detener"
+    //% block.loc.es-ES="frenar"
     //% group="Movements"
-    export function stop(): void {
+    export function brake(): void {
 
     }
 

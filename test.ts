@@ -7,7 +7,7 @@
 
 basic.forever(function () {
     if (autoBot.compare(autoBot.senseLine(), autoBot.Signs.Stop)) {
-        autoBot.stop()
+        autoBot.brake()
     } else {
         if (autoBot.compare(autoBot.senseLine(), autoBot.Signs.Right)) {
             autoBot.setGear(autoBot.ManualGears.Second)
