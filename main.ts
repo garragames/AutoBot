@@ -411,13 +411,13 @@ namespace autoBot {
     }
 
     /**
-     * Move
+     * Start
      */
-    //% blockId=accelerate
-    //% block="accelerate"
-    //% block.loc.es-ES="acelerar"
+    //% blockId=start
+    //% block="start"
+    //% block.loc.es-ES="arrancar"
     //% group="Movements"
-    export function accelerate(): void {
+    export function start(): void {
 
     }
 
@@ -426,9 +426,9 @@ namespace autoBot {
      */
     //% blockId=brake
     //% block="stop"
-    //% block.loc.es-ES="frenar"
+    //% block.loc.es-ES="detenerse"
     //% group="Movements"
-    export function brake(): void {
+    export function stop(): void {
 
     }
 
