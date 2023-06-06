@@ -294,7 +294,7 @@ namespace autoBot {
     /**
      * Stop the autobot
      */
-    export function stop(): void {
+    export function _stop(): void {
         pins.digitalWritePin(DigitalPin.P12, 0)
         pins.digitalWritePin(DigitalPin.P13, 0)
         pins.digitalWritePin(DigitalPin.P14, 0)
@@ -304,7 +304,7 @@ namespace autoBot {
     /**
      * Turn the autobot right
      */
-    export function right(): void {
+    export function _right(): void {
         pins.digitalWritePin(DigitalPin.P12, 0)
         pins.digitalWritePin(DigitalPin.P13, 0)
         pins.digitalWritePin(DigitalPin.P14, 1)
@@ -314,7 +314,7 @@ namespace autoBot {
     /**
     * Turn the autobot left
     */
-    export function left(): void {
+    export function _left(): void {
         pins.digitalWritePin(DigitalPin.P12, 0)
         pins.digitalWritePin(DigitalPin.P13, 1)
         pins.digitalWritePin(DigitalPin.P14, 0)
@@ -324,7 +324,7 @@ namespace autoBot {
     /**
      * Moves the autobot backward
      */
-    export function backward(): void {
+    export function _backward(): void {
         pins.digitalWritePin(DigitalPin.P12, 1)
         pins.digitalWritePin(DigitalPin.P13, 0)
         pins.digitalWritePin(DigitalPin.P14, 0)
@@ -335,7 +335,7 @@ namespace autoBot {
     /**
      * Moves the autobot forward
      */
-    export function forward(): void {
+    export function _forward(): void {
         pins.digitalWritePin(DigitalPin.P12, 0)
         pins.digitalWritePin(DigitalPin.P13, 1)
         pins.digitalWritePin(DigitalPin.P14, 1)
@@ -409,6 +409,29 @@ namespace autoBot {
     export function setAutomaticGear(gear: AutomaticGears): void {
         setSpeed(gear)
     }
+
+    /**
+     * Move
+     */
+    //% blockId=setInMotion
+    //% block="set in motion"
+    //% block.loc.es-ES="poner en movimiento"
+    //% group="Movements"
+    export function move(): void {
+
+    }
+
+    /**
+     * Stop
+     */
+    //% blockId=stop
+    //% block="stop"
+    //% block.loc.es-ES="detener"
+    //% group="Movements"
+    export function stop(): void {
+
+    }
+
     /**
      * Compares two values and returns true if equal or false if not equal
      * @param A
