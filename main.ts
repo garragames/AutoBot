@@ -3,27 +3,15 @@ namespace autoBot {
     const MIN_VEL = 150;  //   0 km/hr
     const MAX_VEL = 1023; // 100 km/hr
 
-
-    const FIRST_GEAR = 1;
-    const SECOND_GEAR = 2;
-    const THIRD_GEAR = 3;
-    const FOURTH_GEAR = 4;
-    const FIFTH_GEAR = 5;
-    const DRIVE_GEAR = 8;
-    const NEUTRAL_GEAR = 6;
-    const PARKING_GEAR = 7;
-    const REVERSE_GEAR = 8;
-
-    const FIRST_VEL = 20;
-    const SECOND_VEL = 40;
-    const THIRD_VEL = 60;
-    const FOURTH_VEL = 80;
-    const FIFTH_VEL = 100;
-    const DRIVE_VEL = 100;
-    const NEUTRAL_VEL = 0;
-    const PARKING_VEL = 0;
-    const REVERSE_VEL = 20;
-
+    const FIRST_GEAR = 20;
+    const SECOND_GEAR = 40;
+    const THIRD_GEAR = 60;
+    const FOURTH_GEAR = 80;
+    const FIFTH_GEAR = 100;
+    const DRIVE_GEAR = 100;
+    const NEUTRAL_GEAR = 0;
+    const PARKING_GEAR = 0;
+    const REVERSE_GEAR = 20;
 
     /**
      * Setup variables, pins and enumerations
