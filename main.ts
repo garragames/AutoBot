@@ -33,8 +33,8 @@ namespace autoBot {
     // Disable LED Matrix
     led.enable(true) // Set true to DEBUG
 
-    // OnOff Sates
-    export enum OnOff {
+    // Engine Sates
+    export enum Engine {
         //% block="off"
         //% block.loc.es-ES="apagado"
         //% jres=icons.engine-off
@@ -86,7 +86,7 @@ namespace autoBot {
         //% block="straight"
         //% block.loc.es-ES="derecho"
         //% jres=icons.straight-sign
-        Forward = 2,
+        Straight = 2,
         //% block="backward"
         //% block.loc.es-ES="atrás"
         //% jres=icons.backward-sign
@@ -153,13 +153,13 @@ namespace autoBot {
         First = FIRST_GEAR
     }
 
-    let SIGN = Signs.Forward
-    let BELT = BeltStates.Unfasten
-    let DIRECTION = Directions.Front
-    let ENGINE = OnOff.Off
+    let SIGN           = Signs.Straight
+    let BELT           = BeltStates.Unfasten
+    let DIRECTION      = Directions.Front
+    let ENGINE         = Engine.Off
     let AUTOMATIC_GEAR = AutomaticGears.Parking
-    let MANUAL_GEAR = ManualGears.Neutral
-    let SPEED = 0
+    let MANUAL_GEAR    = ManualGears.Neutral
+    let SPEED          = 0
 
     /**
      * Set Speed
@@ -167,9 +167,9 @@ namespace autoBot {
      */
     function _setSpeed(speed: number): void {
         let s = speed * (MAX_VEL - MIN_VEL) / 100 + MIN_VEL; // Adjust to the min and max PWM values
-        // PWM para izquierdo
+        // PWM para motor izquierdo
         pins.analogWritePin(AnalogPin.P8, s)
-        // PWM para derecho
+        // PWM para motor derecho
         pins.analogWritePin(AnalogPin.P16, s)
     }
 
@@ -226,7 +226,7 @@ namespace autoBot {
     //% group="Commands"
     export function setSeatbelt(state: BeltStates): void {
         if (state == BeltStates.Unfasten) {
-            if (ENGINE == OnOff.Off) {
+            if (ENGINE == Engine.Off) {
                 BELT = state
             } else {
                 console.warn('Do not unfasten your seat belt while the engine is on')
@@ -285,7 +285,7 @@ namespace autoBot {
     //% group="Sensors"
     export function senseLine(): Signs {
         if (pins.digitalReadPin(DigitalPin.P0) == 1 && (pins.digitalReadPin(DigitalPin.P1) == 1 && (pins.digitalReadPin(DigitalPin.P2) == 0 && (pins.digitalReadPin(DigitalPin.P3) == 1 && pins.digitalReadPin(DigitalPin.P4) == 1)))) {
-            return Signs.Forward
+            return Signs.Straight
         } else
             if (pins.digitalReadPin(DigitalPin.P0) == 1 && (pins.digitalReadPin(DigitalPin.P1) == 0 && (pins.digitalReadPin(DigitalPin.P2) == 1 && (pins.digitalReadPin(DigitalPin.P3) == 1 && pins.digitalReadPin(DigitalPin.P4) == 1)))) {
                 return Signs.Left
@@ -359,20 +359,20 @@ namespace autoBot {
     * Turn Engine On/Off
     * @param state
     */
-    //% blockId=setEngine
-    //% block="turn engine $state"
-    //% block.loc.es-ES="motor $state"
-    //% state.defl=OnOff.off
+    //% blockId=setEngine2
+    //% block="turn engine2 $state"
+    //% block.loc.es-ES="motor2 $state"
+    //% state.defl=Engine.off
     //% state.fieldEditor="imagedropdown" 
     //% state.fieldOptions.columns=2
     //% state.fieldOptions.width="150"
     //% state.fieldOptions.maxRows=1
     //% group="Commands"
-    export function setEngine(state: OnOff): void {
-        console.log(MANUAL_GEAR)
-        console.log(ENGINE)
-        console.log(state)
-        if (state == OnOff.On) {
+    export function setEngine2(state: Engine): void {
+        console.log('Gear: ' + MANUAL_GEAR)
+        console.log('Engine: ' + ENGINE)
+        console.log('State: ' + state)
+        if (state == Engine.On) {
             if (BELT == BeltStates.Unfasten) {
                 console.warn('You cannot start the engine if you have not fastened your seat belt.')
             }
@@ -389,6 +389,39 @@ namespace autoBot {
             }
         }
     }
+
+    //% blockId=setEngine
+    //% block="turn engine $state"
+    //% block.loc.es-ES="motor $state"
+    //% state.defl=Engine.off
+    //% state.fieldEditor="imagedropdown" 
+    //% state.fieldOptions.columns=2
+    //% state.fieldOptions.width="150"
+    //% state.fieldOptions.maxRows=1
+    //% group="Commands"
+    export function setEngine(state: Engine): void {
+        console.log('Gear: ' + MANUAL_GEAR)
+        console.log('Engine: ' + ENGINE)
+        console.log('State: ' + state)
+
+        if (BELT == BeltStates.Unfasten && state == Engine.On) {
+            console.warn('You cannot start the engine if you have not fastened your seat belt.')
+            return;
+        }
+
+        if (MANUAL_GEAR != ManualGears.Neutral && state == Engine.On) {
+            console.warn('You need to put the AutoBot in neutral or parking to start the engine.')
+            return;
+        }
+
+        if (MANUAL_GEAR != ManualGears.Neutral && state == Engine.Off) {
+            console.warn('You need to put the AutoBot in neutral or parking to be able to turn off the engine.')
+            return;
+        }
+
+        ENGINE = state;
+    }
+
 
     /**
     * Set Direction
