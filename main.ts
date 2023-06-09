@@ -2,17 +2,27 @@ namespace autoBot {
 
     const MIN_VEL = 150;  //   0 km/hr
     const MAX_VEL = 1023; // 100 km/hr
-    const FIRST   = 20;
-    const SECOND  = 40;
-    const THIRD   = 60;
-    const FOURTH  = 80;
-    const FIFTH   = 100;
-    const NEUTRAL = 0;
-    const PARKING = 1;
-    const REVERSE = 2;
-    const DRIVE   = 3;
-    const ENGINE_STATE = 0;
-    const BELT_STATE = 1;
+
+
+    const FIRST_GEAR = 1;
+    const SECOND_GEAR = 2;
+    const THIRD_GEAR = 3;
+    const FOURTH_GEAR = 4;
+    const FIFTH_GEAR = 5;
+    const DRIVE_GEAR = 8;
+    const NEUTRAL_GEAR = 6;
+    const PARKING_GEAR = 7;
+    const REVERSE_GEAR = 8;
+
+    const FIRST_VEL = 20;
+    const SECOND_VEL = 40;
+    const THIRD_VEL = 60;
+    const FOURTH_VEL = 80;
+    const FIFTH_VEL = 100;
+    const DRIVE_VEL = 100;
+    const NEUTRAL_VEL = 0;
+    const PARKING_VEL = 0;
+    const REVERSE_VEL = 20;
 
 
     /**
@@ -33,7 +43,9 @@ namespace autoBot {
         //% jres=icons.engine-on
         On = 1
     }
-    
+
+    let ENGINE = OnOff.Off;
+
     // Directions
     export enum Directions {
         //% block="left"
@@ -50,18 +62,21 @@ namespace autoBot {
         Right = 3
     }
 
+    let DIRECTION = Directions.Front;
+
     // Seat Belt States
     export enum BeltStates {
         //% block="unfasten"
         //% block.loc.es-ES="desabrochado"
         //% jres=icons.belt-unfasten
-        Unfasten = 1,
+        Unfasten = 0,
         //% block="fasten"
         //% block.loc.es-ES="abrochado"
         //% jres=icons.belt-fasten
-        Fasten = 2
-
+        Fasten = 1
     }
+
+    let BELT = BeltStates.Unfasten;
 
     // Signs
     export enum Signs {
@@ -87,67 +102,75 @@ namespace autoBot {
         Right = 4
     }
 
+    let SIGN = Signs.Forward;
+
     // Manual Gears
     export enum ManualGears {
         //% block="first gear"
         //% block.loc.es-ES="primera velocidad"
         //% jres=icons.first-gear
-        First = FIRST,
+        First = FIRST_GEAR,
         //% block="third gear"
         //% block.loc.es-ES="tercera velocidad"
         //% jres=icons.third-gear
-        Third = THIRD,
+        Third = THIRD_GEAR,
         //% block="fifth gear"
         //% block.loc.es-ES="quinta velocidad"
         //% jres=icons.neutral-gear
-        Neutral = NEUTRAL,
+        Neutral = NEUTRAL_GEAR,
         //% block="second gear"
         //% block.loc.es-ES="segunda velocidad"
         //% jres=icons.second-gear
-        Second = SECOND,
+        Second = SECOND_GEAR,
         //% block="fourth gear"
         //% block.loc.es-ES="cuarta velocidad"
         //% jres=icons.fourth-gear
-        Fourth = FOURTH,
+        Fourth = FOURTH_GEAR,
         //% block="reverse gear"
         //% block.loc.es-ES="reversa"
         //% jres=icons.reverse-gear
-        Reverse = 20
+        Reverse = REVERSE_GEAR
     }
+
+    let MANUAL_GEAR = ManualGears.Neutral;
+    let SPEED = 0;
 
     // Automatic Gears
     export enum AutomaticGears {
         //% block="first gear"
         //% block.loc.es-ES="primera velocidad"
         //% jres=icons.parking-gear
-        AParking = PARKING,
+        Parking = PARKING_GEAR,
         //% block="third gear"
         //% block.loc.es-ES="tercera velocidad"
         //% jres=icons.reverse-gear
-        AReverse = REVERSE,
+        Reverse = REVERSE_GEAR,
         //% block="fifth gear"
         //% block.loc.es-ES="quinta velocidad"
         //% jres=icons.neutral-gear
-        ANeutral = NEUTRAL,
+        Neutral = NEUTRAL_GEAR,
         //% block="second gear"
         //% block.loc.es-ES="segunda velocidad"
         //% jres=icons.drive-gear
-        ADrive = DRIVE,
+        Drive = DRIVE_GEAR,
         //% block="fourth gear"
         //% block.loc.es-ES="cuarta velocidad"
         //% jres=icons.second-gear
-        ASecond = SECOND,
+        Second = SECOND_GEAR,
         //% block="reverse gear"
         //% block.loc.es-ES="reversa"
         //% jres=icons.first-gear
-        AFirst = FIRST
+        First = FIRST_GEAR
     }
+
+    let AUTOMATIC_GEAR = AutomaticGears.Parking;
+
     /**
      * Set Speed
      * @param gear
      */
-    function setSpeed(gear: number): void {
-        let s = gear * (MAX_VEL - MIN_VEL) / 100 + MIN_VEL; // Adjust to the min and max PWM values
+    function _setSpeed(speed: number): void {
+        let s = speed * (MAX_VEL - MIN_VEL) / 100 + MIN_VEL; // Adjust to the min and max PWM values
         // PWM para izquierdo
         pins.analogWritePin(AnalogPin.P8, s)
         // PWM para derecho
@@ -193,11 +216,11 @@ namespace autoBot {
     }
 
     /**
-     * Seat belt status
+     * Set seat belt state
      * @param status
      */
     //% blockId=setSeatbelt
-    //% block="seat belt $status"
+    //% block="seat belt $state"
     //% block.loc.es-ES="cinturón de seguridad $status"
     //% status.defl=BeltStates.unfasten
     //% status.fieldEditor="imagedropdown"
@@ -205,10 +228,18 @@ namespace autoBot {
     //% status.fieldOptions.width="150"
     //% status.fieldOptions.maxRows=1
     //% group="Commands"
-    export function belt(status: BeltStates): void {
-        
+    export function setSeatbelt(state: BeltStates): void {
+        if (state == BeltStates.Unfasten) {
+            if (ENGINE == OnOff.Off) {
+                BELT = state
+            } else {
+                console.warn('Do not unfasten your seat belt while the engine is on')
+            }
+        } else {
+            BELT = state
+        }
     }
-    
+
     /**
     * Sign Selector
     * @param sign
@@ -318,7 +349,6 @@ namespace autoBot {
         pins.digitalWritePin(DigitalPin.P15, 1)
     }
 
-
     /**
      * Moves the autobot forward
      */
@@ -328,7 +358,6 @@ namespace autoBot {
         pins.digitalWritePin(DigitalPin.P14, 1)
         pins.digitalWritePin(DigitalPin.P15, 0)
     }
-
 
     /**
     * Turn Engine On/Off
@@ -344,8 +373,13 @@ namespace autoBot {
     //% state.fieldOptions.maxRows=1
     //% group="Commands"
     export function setEngine(state: OnOff): void {
-
+        if (BELT == BeltStates.Fasten && (MANUAL_GEAR == ManualGears.Neutral || AUTOMATIC_GEAR == AutomaticGears.Parking)) {
+            ENGINE = state
+        } else {
+            console.warn('Fasten your seat belt and set neutral or parking gear')
+        }
     }
+
     /**
     * Set Direction
     * @param direction
@@ -360,14 +394,14 @@ namespace autoBot {
     //% direction.fieldOptions.maxRows=1
     //% group="Commands"
     export function turnDirection(direction: Directions): void {
-        
+        DIRECTION = direction
     }
 
     /**
-    * Set Gear
+    * Set Manual Gear
     * @param gear
     */
-    //% blockId=setGear
+    //% blockId=setManualGear
     //% block="set gear $gear"
     //% block.loc.es-ES="cambiar velocidad $gear"
     //% gear.defl=Gears.Third
@@ -376,8 +410,12 @@ namespace autoBot {
     //% gear.fieldOptions.width="225"
     //% gear.fieldOptions.maxRows=2
     //% group="Commands"
-    export function setGear(gear: ManualGears): void {
-        setSpeed(gear)
+    export function setManualGear(gear: ManualGears): void {
+        if (BELT == BeltStates.Fasten) {
+            SPEED = gear
+        } else {
+            console.warn('Fasten your seat belt')
+        }
     }
 
     /**
@@ -394,18 +432,33 @@ namespace autoBot {
     //% gear.fieldOptions.maxRows=6
     //% group="Commands"
     export function setAutomaticGear(gear: AutomaticGears): void {
-        setSpeed(gear)
+        if (BELT == BeltStates.Fasten) {
+            SPEED = gear
+        } else {
+            console.warn('Fasten your seat belt')
+        }
     }
 
     /**
-     * Start
+     * Move
      */
     //% blockId=start
-    //% block="start"
-    //% block.loc.es-ES="arrancar"
+    //% block="move"
+    //% block.loc.es-ES="moverse"
     //% group="Movements"
     export function start(): void {
-
+        _setSpeed(SPEED)
+        switch (DIRECTION) {
+            case Directions.Front: 
+                _forward()
+                break
+            case Directions.Left:
+                _left()
+                break
+            case Directions.Right:
+                _right()
+                break
+        }
     }
 
     /**
@@ -434,5 +487,5 @@ namespace autoBot {
     //% group="Logic"
     export function compare(A: number, B: Signs): boolean {
         return A == B
-    }    
+    }
 }

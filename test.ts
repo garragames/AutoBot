@@ -6,25 +6,25 @@
  */
 
 input.onButtonPressed(Button.A, function () {
-    autoBot.belt(autoBot.BeltStates.Fasten)
-    autoBot.setGear(autoBot.ManualGears.Neutral)
+    autoBot.setSeatbelt(autoBot.BeltStates.Fasten)
+    autoBot.setManualGear(autoBot.ManualGears.Neutral)
     autoBot.turnDirection(autoBot.Directions.Front)
     autoBot.setEngine(autoBot.OnOff.On)
-    autoBot.setGear(autoBot.ManualGears.First)
+    autoBot.setManualGear(autoBot.ManualGears.First)
     autoBot.start()
 })
 input.onButtonPressed(Button.B, function () {
     autoBot.stop()
-    autoBot.setGear(autoBot.ManualGears.Neutral)
+    autoBot.setManualGear(autoBot.ManualGears.Neutral)
     autoBot.setEngine(autoBot.OnOff.Off)
-    autoBot.belt(autoBot.BeltStates.Unfasten)
+    autoBot.setSeatbelt(autoBot.BeltStates.Unfasten)
 })
 basic.forever(function () {
     if (autoBot.compare(autoBot.senseLine(), autoBot.Signs.Stop)) {
         autoBot.stop()
     } else {
         if (autoBot.compare(autoBot.senseLine(), autoBot.Signs.Right)) {
-            autoBot.setGear(autoBot.ManualGears.Second)
+            autoBot.setManualGear(autoBot.ManualGears.Second)
             autoBot.turnDirection(autoBot.Directions.Front)
         } else {
             if (autoBot.compare(autoBot.senseLine(), autoBot.Signs.Left)) {
