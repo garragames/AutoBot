@@ -13,22 +13,6 @@
 // groups=['Variables', 'Movements', 'Sensors', 'Logic', 'Commands']
 namespace autoBot {
 
-    // Example function to create an error block
-    function createErrorBlock(): any {
-        const block = {
-            opcode: "myExtension.errorBlock",
-            blockType: "reporter",
-            text: "Error!",
-            color1: "#FF0000", // Set the background color to red
-            tooltip: "This block indicates an error.",
-        };
-
-        return block;
-    }
-
-
-
-
     const MIN_VEL = 150;  //   0 km/hr
     const MAX_VEL = 1023; // 100 km/hr
 
