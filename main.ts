@@ -364,7 +364,7 @@ namespace autoBot {
     /**
      * Moves the autobot straight
      */
-    export function _forward(): void {
+    export function _straight(): void {
         pins.digitalWritePin(DigitalPin.P12, 0)
         pins.digitalWritePin(DigitalPin.P13, 1)
         pins.digitalWritePin(DigitalPin.P14, 1)
@@ -483,7 +483,7 @@ namespace autoBot {
         _setSpeed(SPEED)
         switch (DIRECTION) {
             case Directions.Front: 
-                _forward()
+                _straight()
                 break
             case Directions.Left:
                 _left()
