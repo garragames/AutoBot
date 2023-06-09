@@ -374,10 +374,12 @@ namespace autoBot {
     //% state.fieldOptions.maxRows=1
     //% group="Commands"
     export function setEngine(state: OnOff): void {
-        if (BELT == BeltStates.Fasten && (MANUAL_GEAR == ManualGears.Neutral || AUTOMATIC_GEAR == AutomaticGears.Parking)) {
+        if (BELT == BeltStates.Fasten) {
+            console.warn('You cannot start the engine if you have not fastened your seat belt.')
+        } else if  (MANUAL_GEAR == ManualGears.Neutral || AUTOMATIC_GEAR == AutomaticGears.Parking) {
             ENGINE = state
         } else {
-            console.warn('Fasten your seat belt and set neutral or parking gear')
+            console.warn('You need to put the AutoBot in neutral to start the engine.')
         }
     }
 
