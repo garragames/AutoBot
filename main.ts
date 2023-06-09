@@ -1,3 +1,16 @@
+/*
+ * Auto Bot
+ *
+ * by Jorge Gonzalez Garcia <jorge@garragames.com>
+ *
+ * /
+
+/**
+ * Custom graphic block
+ */
+
+//% weight=100 color=#fa8f13 icon="\uf1b9" block="AutoBot"
+// groups=['Variables', 'Movements', 'Sensors', 'Logic', 'Commands']
 namespace autoBot {
 
     const MIN_VEL = 150;  //   0 km/hr
