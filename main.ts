@@ -223,11 +223,11 @@ namespace autoBot {
     //% blockId=setSeatbelt
     //% block="seat belt $state"
     //% block.loc.es-ES="cinturón de seguridad $state"
-    //% status.defl=BeltStates.unfasten
-    //% status.fieldEditor="imagedropdown"
-    //% status.fieldOptions.columns=2
-    //% status.fieldOptions.width="150"
-    //% status.fieldOptions.maxRows=1
+    //% state.defl=BeltStates.unfasten
+    //% state.fieldEditor="imagedropdown"
+    //% state.fieldOptions.columns=2
+    //% state.fieldOptions.width="150"
+    //% state.fieldOptions.maxRows=1
     //% group="Commands"
     export function setSeatbelt(state: BeltStates): void {
         if (state == BeltStates.Unfasten) {
