@@ -3,7 +3,7 @@
  *
  * by Jorge Gonzalez Garcia <jorge@garragames.com>
  *
- * /
+ */
 
 /**
  * Custom graphic block
@@ -12,6 +12,22 @@
 //% weight=100 color=#fa8f13 icon="\uf1b9" block="AutoBot"
 // groups=['Variables', 'Movements', 'Sensors', 'Logic', 'Commands']
 namespace autoBot {
+
+    // Example function to create an error block
+    function createErrorBlock(): any {
+        const block = {
+            opcode: "myExtension.errorBlock",
+            blockType: "reporter",
+            text: "Error!",
+            color1: "#FF0000", // Set the background color to red
+            tooltip: "This block indicates an error.",
+        };
+
+        return block;
+    }
+
+
+
 
     const MIN_VEL = 150;  //   0 km/hr
     const MAX_VEL = 1023; // 100 km/hr
@@ -180,18 +196,34 @@ namespace autoBot {
     // setSpeed(Gears.First); /// TODO: NEUTRAL
 
     /**
-     * Gear Selector
+     * Manual Gear Selector
      * @param gear
      */
-    //% blockId=getGear
+    //% blockId=getManualGear
     //% block="$gear"
-    //% gear.defl=Gears.third
+    //% gear.defl=ManualGears.third
     //% gear.fieldEditor="imagedropdown"
     //% gear.fieldOptions.columns=3
     //% gear.fieldOptions.width="225"
     //% gear.fieldOptions.maxRows=2
     //% group="Variables"
-    export function getGear(gear: ManualGears): number {
+    export function getManualGear(gear: ManualGears): number {
+        return gear
+    }
+
+    /**
+     * Automatic Gear Selector
+     * @param gear
+     */
+    //% blockId=getAutomaticGear
+    //% block="$gear"
+    //% gear.defl=AutomaticGears.third
+    //% gear.fieldEditor="imagedropdown"
+    //% gear.fieldOptions.columns=3
+    //% gear.fieldOptions.width="225"
+    //% gear.fieldOptions.maxRows=2
+    //% group="Variables"
+    export function getAutomaticGear(gear: AutomaticGears): number {
         return gear
     }
 
@@ -418,6 +450,7 @@ namespace autoBot {
     //% blockId=setManualGear
     //% block="set gear $gear"
     //% block.loc.es-ES="cambiar velocidad $gear"
+    //% blockImage=icons.first-gear
     //% gear.defl=Gears.Third
     //% gear.fieldEditor="imagedropdown" 
     //% gear.fieldOptions.columns=3
@@ -429,7 +462,7 @@ namespace autoBot {
             MANUAL_GEAR = gear
             SPEED = gear
         } else {
-            console.warn('Fasten your seat belt')
+            console.warn('You cannot shift gears if you do not have your seat belt fastened.')
         }
     }
 
@@ -451,7 +484,7 @@ namespace autoBot {
             AUTOMATIC_GEAR = gear
             SPEED = gear
         } else {
-            console.warn('Fasten your seat belt')
+            console.warn('You cannot shift gears if you do not have your seat belt fastened.')
         }
     }
 
