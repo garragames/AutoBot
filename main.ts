@@ -374,13 +374,24 @@ namespace autoBot {
     //% state.fieldOptions.maxRows=1
     //% group="Commands"
     export function setEngine(state: OnOff): void {
-        if (BELT == BeltStates.Fasten) {
-            console.warn('You cannot start the engine if you have not fastened your seat belt.')
-        } else if  (MANUAL_GEAR == ManualGears.Neutral || AUTOMATIC_GEAR == AutomaticGears.Parking) {
-            ENGINE = state
+        if (state == OnOff.On) {
+            if (BELT == BeltStates.Unfasten) {
+                console.warn('You cannot start the engine if you have not fastened your seat belt.')
+            } else if (MANUAL_GEAR == ManualGears.Neutral || AUTOMATIC_GEAR == AutomaticGears.Parking) {
+                ENGINE = state
+            } else {
+                console.warn('You need to put the AutoBot in neutral or parking to start the engine.')
+            }
         } else {
-            console.warn('You need to put the AutoBot in neutral to start the engine.')
+            if (MANUAL_GEAR == ManualGears.Neutral || AUTOMATIC_GEAR == AutomaticGears.Parking) {
+                ENGINE = state
+            } else {
+                console.warn('You need to put the AutoBot in neutral or parking to be able to turn off the engine.')
+            }
         }
+
+
+
     }
 
     /**
