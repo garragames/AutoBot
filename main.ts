@@ -45,7 +45,7 @@ namespace autoBot {
         On = 1
     }
 
-    let ENGINE = OnOff.Off;
+    let ENGINE = -1
 
     // Directions
     export enum Directions {
@@ -63,7 +63,7 @@ namespace autoBot {
         Right = 3
     }
 
-    let DIRECTION = Directions.Front;
+    let DIRECTION = -1
 
     // Seat Belt States
     export enum BeltStates {
@@ -77,7 +77,7 @@ namespace autoBot {
         Fasten = 1
     }
 
-    let BELT = BeltStates.Unfasten;
+    let BELT = -1
 
     // Signs
     export enum Signs {
@@ -103,7 +103,7 @@ namespace autoBot {
         Right = 4
     }
 
-    let SIGN = Signs.Forward;
+    let SIGN = -1
 
     // Manual Gears
     export enum ManualGears {
@@ -133,8 +133,8 @@ namespace autoBot {
         Reverse = REVERSE_GEAR
     }
 
-    let MANUAL_GEAR = ManualGears.Neutral;
-    let SPEED = 0;
+    let MANUAL_GEAR = -1
+    let SPEED = -1
 
     // Automatic Gears
     export enum AutomaticGears {
@@ -164,7 +164,7 @@ namespace autoBot {
         First = FIRST_GEAR
     }
 
-    let AUTOMATIC_GEAR = AutomaticGears.Parking;
+    let AUTOMATIC_GEAR = -1
 
     /**
      * Set Speed
@@ -374,6 +374,9 @@ namespace autoBot {
     //% state.fieldOptions.maxRows=1
     //% group="Commands"
     export function setEngine(state: OnOff): void {
+        console.log(MANUAL_GEAR)
+        console.log(ENGINE)
+        console.log(state)
         if (state == OnOff.On) {
             if (BELT == BeltStates.Unfasten) {
                 console.warn('You cannot start the engine if you have not fastened your seat belt.')
