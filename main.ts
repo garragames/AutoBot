@@ -359,37 +359,6 @@ namespace autoBot {
     * Turn Engine On/Off
     * @param state
     */
-    //% blockId=setEngine2
-    //% block="turn engine2 $state"
-    //% block.loc.es-ES="motor2 $state"
-    //% state.defl=Engine.off
-    //% state.fieldEditor="imagedropdown" 
-    //% state.fieldOptions.columns=2
-    //% state.fieldOptions.width="150"
-    //% state.fieldOptions.maxRows=1
-    //% group="Commands"
-    export function setEngine2(state: Engine): void {
-        console.log('Gear: ' + MANUAL_GEAR)
-        console.log('Engine: ' + ENGINE)
-        console.log('State: ' + state)
-        if (state == Engine.On) {
-            if (BELT == BeltStates.Unfasten) {
-                console.warn('You cannot start the engine if you have not fastened your seat belt.')
-            }
-            if (MANUAL_GEAR == ManualGears.Neutral) {
-                ENGINE = state
-            } else {
-                console.warn('You need to put the AutoBot in neutral or parking to start the engine.')
-            }
-        } else {
-            if (MANUAL_GEAR == ManualGears.Neutral) {
-                ENGINE = state
-            } else {
-                console.warn('You need to put the AutoBot in neutral or parking to be able to turn off the engine.')
-            }
-        }
-    }
-
     //% blockId=setEngine
     //% block="turn engine $state"
     //% block.loc.es-ES="motor $state"
@@ -400,9 +369,11 @@ namespace autoBot {
     //% state.fieldOptions.maxRows=1
     //% group="Commands"
     export function setEngine(state: Engine): void {
+        /*
         console.log('Gear: ' + MANUAL_GEAR)
         console.log('Engine: ' + ENGINE)
         console.log('State: ' + state)
+        */
 
         if (BELT == BeltStates.Unfasten && state == Engine.On) {
             console.warn('You cannot start the engine if you have not fastened your seat belt.')
@@ -455,6 +426,7 @@ namespace autoBot {
     //% group="Commands"
     export function setManualGear(gear: ManualGears): void {
         if (BELT == BeltStates.Fasten) {
+            MANUAL_GEAR = gear
             SPEED = gear
         } else {
             console.warn('Fasten your seat belt')
@@ -476,6 +448,7 @@ namespace autoBot {
     //% group="Commands"
     export function setAutomaticGear(gear: AutomaticGears): void {
         if (BELT == BeltStates.Fasten) {
+            AUTOMATIC_GEAR = gear
             SPEED = gear
         } else {
             console.warn('Fasten your seat belt')
