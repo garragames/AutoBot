@@ -45,8 +45,6 @@ namespace autoBot {
         On = 1
     }
 
-    let ENGINE = -1
-
     // Directions
     export enum Directions {
         //% block="left"
@@ -63,8 +61,6 @@ namespace autoBot {
         Right = 3
     }
 
-    let DIRECTION = -1
-
     // Seat Belt States
     export enum BeltStates {
         //% block="unfasten"
@@ -76,8 +72,6 @@ namespace autoBot {
         //% jres=icons.belt-fasten
         Fasten = 1
     }
-
-    let BELT = -1
 
     // Signs
     export enum Signs {
@@ -102,8 +96,6 @@ namespace autoBot {
         //% jres=icons.right-sign
         Right = 4
     }
-
-    let SIGN = -1
 
     // Manual Gears
     export enum ManualGears {
@@ -133,9 +125,6 @@ namespace autoBot {
         Reverse = REVERSE_GEAR
     }
 
-    let MANUAL_GEAR = -1
-    let SPEED = -1
-
     // Automatic Gears
     export enum AutomaticGears {
         //% block="first gear"
@@ -164,7 +153,13 @@ namespace autoBot {
         First = FIRST_GEAR
     }
 
-    let AUTOMATIC_GEAR = -1
+    let SIGN = Signs.Forward
+    let BELT = BeltStates.Unfasten
+    let DIRECTION = Directions.Front
+    let ENGINE = OnOff.Off
+    let AUTOMATIC_GEAR = AutomaticGears.Parking
+    let MANUAL_GEAR = ManualGears.Neutral
+    let SPEED = 0
 
     /**
      * Set Speed
@@ -380,7 +375,8 @@ namespace autoBot {
         if (state == OnOff.On) {
             if (BELT == BeltStates.Unfasten) {
                 console.warn('You cannot start the engine if you have not fastened your seat belt.')
-            } else if (MANUAL_GEAR == ManualGears.Neutral) {
+            }
+            if (MANUAL_GEAR == ManualGears.Neutral) {
                 ENGINE = state
             } else {
                 console.warn('You need to put the AutoBot in neutral or parking to start the engine.')
