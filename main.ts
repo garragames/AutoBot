@@ -377,21 +377,18 @@ namespace autoBot {
         if (state == OnOff.On) {
             if (BELT == BeltStates.Unfasten) {
                 console.warn('You cannot start the engine if you have not fastened your seat belt.')
-            } else if (MANUAL_GEAR == ManualGears.Neutral || AUTOMATIC_GEAR == AutomaticGears.Parking) {
+            } else if (MANUAL_GEAR == ManualGears.Neutral) {
                 ENGINE = state
             } else {
                 console.warn('You need to put the AutoBot in neutral or parking to start the engine.')
             }
         } else {
-            if (MANUAL_GEAR == ManualGears.Neutral || AUTOMATIC_GEAR == AutomaticGears.Parking) {
+            if (MANUAL_GEAR == ManualGears.Neutral) {
                 ENGINE = state
             } else {
                 console.warn('You need to put the AutoBot in neutral or parking to be able to turn off the engine.')
             }
         }
-
-
-
     }
 
     /**
