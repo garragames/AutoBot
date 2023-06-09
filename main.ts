@@ -89,9 +89,9 @@ namespace autoBot {
         //% block.loc.es-ES="izquierda"
         //% jres=icons.left-sign
         Left = 1,
-        //% block="forward"
-        //% block.loc.es-ES="adelante"
-        //% jres=icons.forward-sign
+        //% block="straight"
+        //% block.loc.es-ES="derecho"
+        //% jres=icons.straight-sign
         Forward = 2,
         //% block="backward"
         //% block.loc.es-ES="atrás"
@@ -282,7 +282,7 @@ namespace autoBot {
     }
 
     /**
-     * Detects the line through the five infrared sensors in front of the AutoBot, and returns forward, backward, left, right or stop.
+     * Detects the line through the five infrared sensors in front of the AutoBot, and returns straight, left, right or stop.
      */
     //% blockId=senseLine
     //% block="sense line"
@@ -351,7 +351,7 @@ namespace autoBot {
     }
 
     /**
-     * Moves the autobot forward
+     * Moves the autobot straight
      */
     export function _forward(): void {
         pins.digitalWritePin(DigitalPin.P12, 0)
@@ -443,11 +443,11 @@ namespace autoBot {
     /**
      * Move
      */
-    //% blockId=start
+    //% blockId=move
     //% block="move"
     //% block.loc.es-ES="moverse"
     //% group="Movements"
-    export function start(): void {
+    export function move(): void {
         _setSpeed(SPEED)
         switch (DIRECTION) {
             case Directions.Front: 
@@ -470,7 +470,7 @@ namespace autoBot {
     //% block.loc.es-ES="detenerse"
     //% group="Movements"
     export function stop(): void {
-
+        _stop()
     }
 
     /**

@@ -11,7 +11,7 @@ input.onButtonPressed(Button.A, function () {
     autoBot.turnDirection(autoBot.Directions.Front)
     autoBot.setEngine(autoBot.OnOff.On)
     autoBot.setManualGear(autoBot.ManualGears.First)
-    autoBot.start()
+    autoBot.move()
 })
 input.onButtonPressed(Button.B, function () {
     autoBot.stop()
