@@ -222,7 +222,7 @@ namespace autoBot {
      */
     //% blockId=setSeatbelt
     //% block="seat belt $state"
-    //% block.loc.es-ES="cinturón de seguridad $status"
+    //% block.loc.es-ES="cinturón de seguridad $state"
     //% status.defl=BeltStates.unfasten
     //% status.fieldEditor="imagedropdown"
     //% status.fieldOptions.columns=2
