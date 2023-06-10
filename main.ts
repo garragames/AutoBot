@@ -535,7 +535,6 @@ namespace autoBot {
     //% block="drive"
     //% block.loc.es-ES="conduce"
     //% group="Logic"
-    //% state.fieldOptions.columns=2
     export function AutoBotSwitchEvent(state: number, handler: () => void) {
         control.onEvent(AutoBotEventSource, state, handler)
     }
