@@ -534,6 +534,8 @@ namespace autoBot {
     //% blockId=AutoBotSwitchEvent
     //% block="drive"
     //% block.loc.es-ES="conduce"
+    //% state.fieldEditor="gridpicker" 
+    //% state.fieldOptions.columns=2
     //% group="Logic"
     export function AutoBotSwitchEvent(state: number, handler: () => void) {
         control.onEvent(AutoBotEventSource, state, handler)
