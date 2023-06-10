@@ -522,4 +522,5 @@ namespace autoBot {
         return A == B
     }
 
+    console.log('Autobot, (C)2023 Garragames')
 }
