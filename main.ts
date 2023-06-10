@@ -532,11 +532,11 @@ namespace autoBot {
     }
 
     //% blockId=AutoBotSwitchEvent
-    //% block="When switch %vocabulary"
+    //% block="drive"
+    //% block.loc.es-ES="conduce"
     //% group="Logic"
-    //% state.fieldEditor="gridpicker" 
     //% state.fieldOptions.columns=2
-    export function AutoBotSwitchEvent(state: AutoBotSwitchState, handler: () => void) {
-        //control.onEvent(AutoBotEventSource, state, handler)
+    export function AutoBotSwitchEvent(state: number, handler: () => void) {
+        control.onEvent(AutoBotEventSource, state, handler)
     }
 }
