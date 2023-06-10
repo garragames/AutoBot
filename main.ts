@@ -392,12 +392,12 @@ namespace autoBot {
         */
 
         if (BELT == BeltStates.Unfasten && state == Engine.On) {
-            console.warn('You cannot start the engine if you have not fastened your seat belt.')
+            console.warn('You cannot turn on the engine if you have not fastened your seat belt. https://garragames.com/seat-belt')
             return;
         }
 
         if (MANUAL_GEAR != ManualGears.Neutral && state == Engine.On) {
-            console.warn('You need to put the AutoBot in neutral or parking to start the engine.')
+            console.warn('You need to put the AutoBot in neutral or parking to turn on the engine.')
             return;
         }
 
@@ -446,7 +446,7 @@ namespace autoBot {
             MANUAL_GEAR = gear
             SPEED = gear
         } else {
-            console.warn('You cannot shift gears if you do not have your seat belt fastened.')
+            console.warn('You cannot shift gears if you do not have your seat belt fastened. https://garragames.com/seat-belt')
         }
     }
 
