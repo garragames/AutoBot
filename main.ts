@@ -245,7 +245,7 @@ namespace autoBot {
             if (ENGINE == Engine.Off) {
                 BELT = state
             } else {
-                console.warn('Do not unfasten your seat belt while the engine is on')
+                console.error('Do not unfasten your seat belt while the engine is on')
             }
         } else {
             BELT = state
