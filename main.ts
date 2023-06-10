@@ -521,4 +521,22 @@ namespace autoBot {
     export function compare(A: number, B: Signs): boolean {
         return A == B
     }
+
+    const AutoBotEventSource = 3100
+
+    export enum AutoBotSwitchState {
+        //% block="on"
+        On = 1,
+        //% block="off"
+        Off = 0
+    }
+
+    //% blockId=AutoBotSwitchEvent
+    //% block="When switch %vocabulary"
+    //% group="Logic"
+    //% state.fieldEditor="gridpicker" 
+    //% state.fieldOptions.columns=2
+    export function AutoBotSwitchEvent(state: AutoBotSwitchState, handler: () => void) {
+        //control.onEvent(AutoBotEventSource, state, handler)
+    }
 }
