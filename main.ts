@@ -523,4 +523,6 @@ namespace autoBot {
     }
 
     console.log('AutoBot, (c)2023 Garragames')
+    console.log('micro:bit version: ' + control.hardwareVersion())
+
 }
