@@ -522,22 +522,4 @@ namespace autoBot {
         return A == B
     }
 
-    const AutoBotEventSource = 3100
-
-    export enum AutoBotSwitchState {
-        //% block="on"
-        On = 1,
-        //% block="off"
-        Off = 0
-    }
-
-    //% blockId=AutoBotSwitchEvent
-    //% block="drive"
-    //% block.loc.es-ES="conduce"
-    //% state.fieldEditor="gridpicker" 
-    //% state.fieldOptions.columns=2
-    //% group="Logic"
-    export function AutoBotSwitchEvent(state: number, handler: () => void) {
-        control.onEvent(AutoBotEventSource, state, handler)
-    }
 }
