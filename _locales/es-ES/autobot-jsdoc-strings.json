@@ -1,12 +1,10 @@
 {
-  "autoBot": "Bloque gráfico personalizado",
   "autoBot._backward": "Mueve el autobot hacia atrás",
   "autoBot._left": "Gira el autobot a la izquierda",
   "autoBot._right": "Gira el autobot a la derecha",
   "autoBot._stop": "Detiene el autobot",
   "autoBot._straight": "Mueve el autobot en línea recta",
   "autoBot.compare": "Compara dos valores y devuelve verdadero si son iguales o falso si no son iguales",
-  "autoBot.compare|param|A": "@param B",
   "autoBot.getAutomaticGear": "Selector de cambio de marcha automático",
   "autoBot.getDirection": "Selector de dirección",
   "autoBot.getManualGear": "Selector de cambio de marcha manual",
