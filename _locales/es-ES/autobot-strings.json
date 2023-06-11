@@ -27,7 +27,7 @@
   "autoBot.getDirection|block": "$direction",
   "autoBot.getManualGear|block": "$gear",
   "autoBot.getSign|block": "$sign",
-  "autoBot.move|block": "mover",
+  "autoBot.move|block": "moverse",
   "autoBot.senseAcelerometer|block": "acelerómetro",
   "autoBot.senseDistance|block": "sensor ultrasónico",
   "autoBot.senseLight|block": "sensor de luz",

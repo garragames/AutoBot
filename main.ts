@@ -167,7 +167,7 @@ namespace autoBot {
     //% gear.fieldOptions.width="225"
     //% gear.fieldOptions.maxRows=2
     //% group="Variables"
-    //% weight=100
+    //% weight=800
     export function getManualGear(gear: ManualGears): number {
         return gear
     }
@@ -184,7 +184,7 @@ namespace autoBot {
     //% gear.fieldOptions.width="225"
     //% gear.fieldOptions.maxRows=2
     //% group="Variables"
-    //% weight=420
+    //% weight=820
     export function getAutomaticGear(gear: AutomaticGears): number {
         return gear
     }
@@ -201,7 +201,7 @@ namespace autoBot {
     //% direction.fieldOptions.width="225"
     //% direction.fieldOptions.maxRows=2
     //% group="Variables"
-    //% weight=430
+    //% weight=830
     export function getDirection(direction: Directions): number {
         return direction
     }
@@ -243,7 +243,7 @@ namespace autoBot {
     //% sign.fieldOptions.width="300"
     //% sign.fieldOptions.maxRows=2
     //% group="Variables"    
-    //% weight=440
+    //% weight=840
     export function getSign(sign: Signs): number {
         return sign
     }
