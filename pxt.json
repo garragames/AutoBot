@@ -38,10 +38,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "tsprj",
-    "editor": {
-        "fieldEditors": [
-            "fieldEditors/speed-lever.ts"
-        ]
-    }
+    "preferredEditor": "tsprj"
 }
