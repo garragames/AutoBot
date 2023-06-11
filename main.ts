@@ -215,6 +215,7 @@ namespace autoBot {
     //% state.fieldOptions.width="150"
     //% state.fieldOptions.maxRows=1
     //% group="Commands"
+    //% weight=590
     export function setSeatbelt(state: BeltStates): void {
         if (state == BeltStates.Unfasten) {
             if (ENGINE == Engine.Off) {
@@ -366,6 +367,7 @@ namespace autoBot {
     //% state.fieldOptions.width="150"
     //% state.fieldOptions.maxRows=1
     //% group="Commands"
+    //% weight=550
     export function setEngine(state: Engine): void {
         /*
         console.log('Gear: ' + MANUAL_GEAR)
@@ -404,6 +406,7 @@ namespace autoBot {
     //% direction.fieldOptions.width="225"
     //% direction.fieldOptions.maxRows=1
     //% group="Commands"
+    //% weight=580
     export function turnDirection(direction: Directions): void {
         DIRECTION = direction
     }
@@ -421,6 +424,7 @@ namespace autoBot {
     //% gear.fieldOptions.width="225"
     //% gear.fieldOptions.maxRows=2
     //% group="Commands"
+    //% weight=570
     export function setManualGear(gear: ManualGears): void {
         if (BELT == BeltStates.Fasten) {
             MANUAL_GEAR = gear
@@ -442,6 +446,7 @@ namespace autoBot {
     //% gear.fieldOptions.width="75"
     //% gear.fieldOptions.maxRows=6
     //% group="Commands"
+    //% weight=560
     export function setAutomaticGear(gear: AutomaticGears): void {
         if (BELT == BeltStates.Fasten) {
             AUTOMATIC_GEAR = gear
@@ -458,6 +463,7 @@ namespace autoBot {
     //% block="move"
     //% block.loc.es-ES="moverse"
     //% group="Commands"
+    //% weight=540
     export function move(): void {
         _setSpeed(SPEED)
         switch (DIRECTION) {
@@ -480,6 +486,7 @@ namespace autoBot {
     //% block="stop"
     //% block.loc.es-ES="detenerse"
     //% group="Commands"
+    //% weight=530
     export function stop(): void {
         _stop()
     }
@@ -491,6 +498,7 @@ namespace autoBot {
     //% block="stop"
     //% block.loc.es-ES="detenerse"
     //% group="Commands"
+    //% weight=590
     //% subcategory="K-12"
     export function test(): void {
         _stop()
