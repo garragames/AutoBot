@@ -167,7 +167,7 @@ namespace autoBot {
     //% gear.fieldOptions.width="225"
     //% gear.fieldOptions.maxRows=2
     //% group="Variables"
-    //% weight=410
+    //% weight=100
     export function getManualGear(gear: ManualGears): number {
         return gear
     }
@@ -410,7 +410,7 @@ namespace autoBot {
     //% direction.fieldOptions.width="225"
     //% direction.fieldOptions.maxRows=1
     //% group="Commands"
-    //% weight=580
+    //% weight=380
     export function turnDirection(direction: Directions): void {
         DIRECTION = direction
     }
@@ -428,7 +428,7 @@ namespace autoBot {
     //% gear.fieldOptions.width="225"
     //% gear.fieldOptions.maxRows=2
     //% group="Commands"
-    //% weight=570
+    //% weight=370
     export function setManualGear(gear: ManualGears): void {
         if (BELT == BeltStates.Fasten) {
             MANUAL_GEAR = gear
@@ -450,7 +450,7 @@ namespace autoBot {
     //% gear.fieldOptions.width="75"
     //% gear.fieldOptions.maxRows=6
     //% group="Commands"
-    //% weight=560
+    //% weight=360
     export function setAutomaticGear(gear: AutomaticGears): void {
         if (BELT == BeltStates.Fasten) {
             AUTOMATIC_GEAR = gear
@@ -467,7 +467,7 @@ namespace autoBot {
     //% block="move"
     //% block.loc.es-ES="moverse"
     //% group="Commands"
-    //% weight=540
+    //% weight=340
     export function move(): void {
         _setSpeed(SPEED)
         switch (DIRECTION) {
@@ -490,7 +490,7 @@ namespace autoBot {
     //% block="stop"
     //% block.loc.es-ES="detenerse"
     //% group="Commands"
-    //% weight=530
+    //% weight=330
     export function stop(): void {
         _stop()
     }
