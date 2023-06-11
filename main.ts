@@ -36,11 +36,9 @@ namespace autoBot {
     // Engine Sates
     export enum Engine {
         //% block="off"
-        //% block.loc.es-ES="apagado"
         //% jres=icons.engine-off
         Off = 0,
         //% block="on"
-        //% block.loc.es-ES="encendido"
         //% jres=icons.engine-on
         On = 1
     }
@@ -48,15 +46,12 @@ namespace autoBot {
     // Directions
     export enum Directions {
         //% block="left"
-        //% block.loc.es-ES="izquierda"
         //% jres=icons.direction-left
         Left = 1,
         //% block="front"
-        //% block.loc.es-ES="frente"
         //% jres=icons.direction-front
         Front = 2,
         //% block="right"
-        //% block.loc.es-ES="derecha"
         //% jres=icons.direction-right
         Right = 3
     }
@@ -64,11 +59,9 @@ namespace autoBot {
     // Seat Belt States
     export enum BeltStates {
         //% block="unfasten"
-        //% block.loc.es-ES="desabrochado"
         //% jres=icons.belt-unfasten
         Unfasten = 0,
         //% block="fasten"
-        //% block.loc.es-ES="abrochado"
         //% jres=icons.belt-fasten
         Fasten = 1
     }
@@ -76,23 +69,18 @@ namespace autoBot {
     // Signs
     export enum Signs {
         //% block="stop"
-        //% block.loc.es-ES="alto"
         //% jres=icons.stop-sign
         Stop = 0,
         //% block="left"
-        //% block.loc.es-ES="izquierda"
         //% jres=icons.left-sign
         Left = 1,
         //% block="straight"
-        //% block.loc.es-ES="derecho"
         //% jres=icons.straight-sign
         Straight = 2,
         //% block="backward"
-        //% block.loc.es-ES="atrás"
         //% jres=icons.backward-sign
         //Backward = 3,
         //% block="right"
-        //% block.loc.es-ES="derecha"
         //% jres=icons.right-sign
         Right = 4
     }
@@ -100,27 +88,21 @@ namespace autoBot {
     // Manual Gears
     export enum ManualGears {
         //% block="first gear"
-        //% block.loc.es-ES="primera velocidad"
         //% jres=icons.first-gear
         First = FIRST_GEAR,
         //% block="third gear"
-        //% block.loc.es-ES="tercera velocidad"
         //% jres=icons.third-gear
         Third = THIRD_GEAR,
         //% block="fifth gear"
-        //% block.loc.es-ES="quinta velocidad"
         //% jres=icons.neutral-gear
         Neutral = NEUTRAL_GEAR,
         //% block="second gear"
-        //% block.loc.es-ES="segunda velocidad"
         //% jres=icons.second-gear
         Second = SECOND_GEAR,
         //% block="fourth gear"
-        //% block.loc.es-ES="cuarta velocidad"
         //% jres=icons.fourth-gear
         Fourth = FOURTH_GEAR,
         //% block="reverse gear"
-        //% block.loc.es-ES="reversa"
         //% jres=icons.reverse-gear
         Reverse = REVERSE_GEAR
     }
@@ -128,27 +110,21 @@ namespace autoBot {
     // Automatic Gears
     export enum AutomaticGears {
         //% block="first gear"
-        //% block.loc.es-ES="primera velocidad"
         //% jres=icons.parking-gear
         Parking = PARKING_GEAR,
         //% block="third gear"
-        //% block.loc.es-ES="tercera velocidad"
         //% jres=icons.reverse-gear
         Reverse = REVERSE_GEAR,
         //% block="fifth gear"
-        //% block.loc.es-ES="quinta velocidad"
         //% jres=icons.neutral-gear
         Neutral = NEUTRAL_GEAR,
         //% block="second gear"
-        //% block.loc.es-ES="segunda velocidad"
         //% jres=icons.drive-gear
         Drive = DRIVE_GEAR,
         //% block="fourth gear"
-        //% block.loc.es-ES="cuarta velocidad"
         //% jres=icons.second-gear
         Second = SECOND_GEAR,
         //% block="reverse gear"
-        //% block.loc.es-ES="reversa"
         //% jres=icons.first-gear
         First = FIRST_GEAR
     }
@@ -233,7 +209,6 @@ namespace autoBot {
      */
     //% blockId=setSeatbelt
     //% block="seat belt $state"
-    //% block.loc.es-ES="cinturón de seguridad $state"
     //% state.defl=BeltStates.unfasten
     //% state.fieldEditor="imagedropdown"
     //% state.fieldOptions.columns=2
@@ -274,7 +249,6 @@ namespace autoBot {
      */
     //% blockId=senseAcelerometer
     //% block="acelerometer"
-    //% block.loc.es-ES="acelerómetro"
     //% group="Sensors"
     export function senseAcelerometer(): number {
         return 0
@@ -286,7 +260,6 @@ namespace autoBot {
      */
     //% blockId=senseDistance
     //% block="ultrasonic sensor"
-    //% block.loc.es-ES="sensor ultrasónico"
     //% group="Sensors"
     export function senseDistance(): number {
         return 0
@@ -298,7 +271,6 @@ namespace autoBot {
      */
     //% blockId=senseLight
     //% block="light sensor"
-    //% block.loc.es-ES="sensor de luz"
     //% group="Sensors"
     export function senseLight(): number {
         return 0
@@ -309,7 +281,6 @@ namespace autoBot {
      */
     //% blockId=senseLine
     //% block="infrared sensor"
-    //% block.loc.es-ES="sensor ingrarojo"
     //% group="Sensors"
     export function senseLine(): Signs {
         if (pins.digitalReadPin(DigitalPin.P0) == 1 && (pins.digitalReadPin(DigitalPin.P1) == 1 && (pins.digitalReadPin(DigitalPin.P2) == 0 && (pins.digitalReadPin(DigitalPin.P3) == 1 && pins.digitalReadPin(DigitalPin.P4) == 1)))) {
@@ -389,7 +360,6 @@ namespace autoBot {
     */
     //% blockId=setEngine
     //% block="turn engine $state"
-    //% block.loc.es-ES="motor $state"
     //% state.defl=Engine.off
     //% state.fieldEditor="imagedropdown" 
     //% state.fieldOptions.columns=2
@@ -428,7 +398,6 @@ namespace autoBot {
     */
     //% blockId=turnDirection
     //% block="turn direction $direction"
-    //% block.loc.es-ES="girar volante $direction"
     //% direction.defl=Directions.front
     //% direction.fieldEditor="imagedropdown" 
     //% direction.fieldOptions.columns=3
@@ -445,7 +414,6 @@ namespace autoBot {
     */
     //% blockId=setManualGear
     //% block="set gear $gear"
-    //% block.loc.es-ES="cambiar velocidad $gear"
     //% blockImage=icons.first-gear
     //% gear.defl=Gears.Third
     //% gear.fieldEditor="imagedropdown" 
@@ -468,7 +436,6 @@ namespace autoBot {
         */
     //% blockId=setAutomaticGear
     //% block="set gear $gear"
-    //% block.loc.es-ES="cambiar velocidad $gear"
     //% gear.defl=Gears.Third
     //% gear.fieldEditor="imagedropdown" 
     //% gear.fieldOptions.columns=1
@@ -489,7 +456,6 @@ namespace autoBot {
      */
     //% blockId=move
     //% block="move"
-    //% block.loc.es-ES="moverse"
     //% group="Movements"
     export function move(): void {
         _setSpeed(SPEED)
@@ -511,7 +477,6 @@ namespace autoBot {
      */
     //% blockId=brake
     //% block="stop"
-    //% block.loc.es-ES="detenerse"
     //% group="Movements"
     export function stop(): void {
         _stop()
@@ -522,7 +487,6 @@ namespace autoBot {
      */
     //% blockId=test
     //% block="stop"
-    //% block.loc.es-ES="detenerse"
     //% group="Movements"
     //% subcategory="K-12"
     export function test(): void {
@@ -536,7 +500,6 @@ namespace autoBot {
      */
     //% blockId=compare
     //% block="$A equal to $B"
-    //% block.loc.es-ES="$A igual a $B"
     //% B.fieldEditor="imagedropdown"
     //% B.fieldOptions.columns=4
     //% B.fieldOptions.width="300"
