@@ -473,7 +473,7 @@ namespace autoBot {
     }
 
     /**
-     * Move
+     * Move de AutoBot
      */
     //% blockId=move
     //% block="move"
@@ -495,13 +495,25 @@ namespace autoBot {
     }
 
     /**
-     * Stop
+     * Stop the AutoBot
      */
     //% blockId=brake
     //% block="stop"
     //% block.loc.es-ES="detenerse"
     //% group="Movements"
     export function stop(): void {
+        _stop()
+    }
+    
+    /**
+     * TEST BLOCK
+     */
+    //% blockId=test
+    //% block="stop"
+    //% block.loc.es-ES="detenerse"
+    //% group="Movements"
+    //% subcategory="K-12"
+    export function test(): void {
         _stop()
     }
 
