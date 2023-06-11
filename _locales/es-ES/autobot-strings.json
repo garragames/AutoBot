@@ -15,7 +15,7 @@
   "autoBot.right|block": "derecha $speed km/hr",
   "autoBot.senseAcelerometer|block": "detectar acelerómetro",
   "autoBot.senseDistance|block": "detectar distancia",
-  "autoBot.senseLine|block": "detectar línea",
+  "autoBot.senseLine|block": "autónomo",
   "autoBot.stopDir|block": "detenerse",
   "autoBot.stop|block": "detenerse",
   "autoBot|block": "Auto Bot",
