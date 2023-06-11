@@ -10,7 +10,7 @@
  */
 
 //% weight=100 color=#fa8f13 icon="\uf1b9" block="AutoBot"
-// groups=['Variables', 'Movements', 'Sensors', 'Logic', 'Commands']
+// groups=['Variables', 'Movements', 'Drivers', 'Sensors', 'Logic', 'Commands']
 namespace autoBot {
 
     const MIN_VEL = 150;  //   0 km/hr
@@ -240,6 +240,7 @@ namespace autoBot {
     //% state.fieldOptions.width="150"
     //% state.fieldOptions.maxRows=1
     //% group="Commands"
+    //% weight=100
     export function setSeatbelt(state: BeltStates): void {
         if (state == BeltStates.Unfasten) {
             if (ENGINE == Engine.Off) {
@@ -258,7 +259,6 @@ namespace autoBot {
     */
     //% blockId=getSign
     //% block="$sign"
-    //% block.
     //% sign.fieldEditor="imagedropdown"
     //% sign.fieldOptions.columns=4
     //% sign.fieldOptions.width="300"
@@ -269,23 +269,11 @@ namespace autoBot {
     }
 
     /**
-     * Detects the tilt of the micro:bit card via the accelerometer
-     * @returns 
-     */
-    //% blockId=senseAcelerometer
-    //% block="sense acelerometer"
-    //% block.loc.es-ES="detectar acelerómetro"
-    //% group="Sensors"
-    export function senseAcelerometer(): number {
-        return 0
-    }
-
-    /**
      * Detects distance through ultrasonic sensor
      * @returns 
      */
-    //% blockId=senseDistance
-    //% block="sense distance"
+    //% blockId=senseLine
+    //% block="sense "
     //% block.loc.es-ES="detectar distancia"
     //% group="Sensors"
     export function senseDistance(): number {
@@ -293,12 +281,24 @@ namespace autoBot {
     }
 
     /**
+     * Detects remote radio control commands
+     * @returns 
+     */
+    //% blockId=senseRemote
+    //% block="remote control"
+    //% block.loc.es-ES="control remoto"
+    //% group="Drivers"
+    export function senseRemote(): number {
+        return 0
+    }
+
+    /**
      * Detects the line through the five infrared sensors in front of the AutoBot, and returns straight, left, right or stop.
      */
     //% blockId=senseLine
-    //% block="sense line"
-    //% block.loc.es-ES="detectar línea"
-    //% group="Sensors"
+    //% block="autonomus"
+    //% block.loc.es-ES="autónomo"
+    //% group="Drivers"
     export function senseLine(): Signs {
         if (pins.digitalReadPin(DigitalPin.P0) == 1 && (pins.digitalReadPin(DigitalPin.P1) == 1 && (pins.digitalReadPin(DigitalPin.P2) == 0 && (pins.digitalReadPin(DigitalPin.P3) == 1 && pins.digitalReadPin(DigitalPin.P4) == 1)))) {
             return Signs.Straight
@@ -384,6 +384,7 @@ namespace autoBot {
     //% state.fieldOptions.width="150"
     //% state.fieldOptions.maxRows=1
     //% group="Commands"
+    //% weight=90
     export function setEngine(state: Engine): void {
         /*
         console.log('Gear: ' + MANUAL_GEAR)
@@ -478,7 +479,7 @@ namespace autoBot {
     //% blockId=move
     //% block="move"
     //% block.loc.es-ES="moverse"
-    //% group="Movements"
+    //% group="Commands"
     export function move(): void {
         _setSpeed(SPEED)
         switch (DIRECTION) {
@@ -497,10 +498,10 @@ namespace autoBot {
     /**
      * Stop the AutoBot
      */
-    //% blockId=brake
+    //% blockId=stop
     //% block="stop"
     //% block.loc.es-ES="detenerse"
-    //% group="Movements"
+    //% group="Commands"
     export function stop(): void {
         _stop()
     }
@@ -509,11 +510,12 @@ namespace autoBot {
      * TEST BLOCK
      */
     //% blockId=test
-    //% block="stop"
+    //% block="stop $param"
     //% block.loc.es-ES="detenerse"
     //% group="Movements"
     //% subcategory="K-12"
-    export function test(): void {
+    //% subcategory.icon="\uf1b9" 
+    export function test(param: Directions): void {
         _stop()
     }
 
@@ -534,7 +536,7 @@ namespace autoBot {
         return A == B
     }
 
-    console.log('AutoBot, (c)2023 Garragames')
+    console.log('AutoBot, (c)2023 Garragames https://garragames.com')
     console.log('micro:bit version: ' + control.hardwareVersion())
 
 }

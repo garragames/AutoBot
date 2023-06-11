@@ -16,12 +16,14 @@
   "autoBot.senseAcelerometer|block": "detectar acelerómetro",
   "autoBot.senseDistance|block": "detectar distancia",
   "autoBot.senseLine|block": "detectar línea",
-  "autoBot.stopDir|block": "alto",
-  "autoBot.stop|block": "alto",
+  "autoBot.stopDir|block": "detenerse",
+  "autoBot.stop|block": "detenerse",
   "autoBot|block": "Auto Bot",
   "{id:category}AutoBot": "AutoBot",
   "{id:group}Directions": "Direcciones",
   "{id:group}Logic": "Lógica",
   "{id:group}Movements": "Movimientos",
-  "{id:group}Sensors": "Sensores"
+  "{id:group}Sensors": "Sensores",
+  "{id:group}Drivers": "Conductores",
+"{id:group}Commands": "Comandos"
 }
