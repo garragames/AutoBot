@@ -11,6 +11,7 @@
 
 //% color=#fa8f13 icon="\uf1b9" block="AutoBot"
 //% groups=['Commands', 'Sensors', 'Logic', 'Variables']
+//% group.Commands.weight=900
 namespace autoBot {
 
     const MIN_VEL = 150;  //   0 km/hr
