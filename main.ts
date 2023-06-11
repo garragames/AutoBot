@@ -10,7 +10,7 @@
  */
 
 //% weight=100 color=#fa8f13 icon="\uf1b9" block="AutoBot"
-// groups=['Variables', 'Movements', 'Sensors', 'Logic', 'Commands']
+// groups=['Variables', 'Sensors', 'Logic', 'Commands']
 namespace autoBot {
 
     const MIN_VEL = 150;  //   0 km/hr
@@ -456,7 +456,8 @@ namespace autoBot {
      */
     //% blockId=move
     //% block="move"
-    //% group="Movements"
+    //% block.loc.es-ES="moverse"
+    //% group="Commands"
     export function move(): void {
         _setSpeed(SPEED)
         switch (DIRECTION) {
@@ -477,7 +478,8 @@ namespace autoBot {
      */
     //% blockId=brake
     //% block="stop"
-    //% group="Movements"
+    //% block.loc.es-ES="detenerse"
+    //% group="Commands"
     export function stop(): void {
         _stop()
     }
@@ -487,7 +489,8 @@ namespace autoBot {
      */
     //% blockId=test
     //% block="stop"
-    //% group="Movements"
+    //% block.loc.es-ES="detenerse"
+    //% group="Commands"
     //% subcategory="K-12"
     export function test(): void {
         _stop()
