@@ -15,15 +15,13 @@
   "autoBot.right|block": "derecha $speed km/hr",
   "autoBot.senseAcelerometer|block": "detectar acelerómetro",
   "autoBot.senseDistance|block": "detectar distancia",
-  "autoBot.senseLine|block": "autónomo",
-  "autoBot.stopDir|block": "detenerse",
-  "autoBot.stop|block": "detenerse",
+  "autoBot.senseLine|block": "detectar línea",
+  "autoBot.stopDir|block": "alto",
+  "autoBot.stop|block": "alto",
   "autoBot|block": "Auto Bot",
   "{id:category}AutoBot": "AutoBot",
   "{id:group}Directions": "Direcciones",
   "{id:group}Logic": "Lógica",
   "{id:group}Movements": "Movimientos",
-  "{id:group}Sensors": "Sensores",
-  "{id:group}Drivers": "Conductores",
-"{id:group}Commands": "Comandos"
+  "{id:group}Sensors": "Sensores"
 }
