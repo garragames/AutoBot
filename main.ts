@@ -273,8 +273,8 @@ namespace autoBot {
      * @returns 
      */
     //% blockId=senseAcelerometer
-    //% block="sense acelerometer"
-    //% block.loc.es-ES="detectar acelerómetro"
+    //% block="acelerometer"
+    //% block.loc.es-ES="acelerómetro"
     //% group="Sensors"
     export function senseAcelerometer(): number {
         return 0
@@ -285,10 +285,22 @@ namespace autoBot {
      * @returns 
      */
     //% blockId=senseDistance
-    //% block="sense distance"
-    //% block.loc.es-ES="detectar distancia"
+    //% block="ultrasonic sensor"
+    //% block.loc.es-ES="sensor ultrasónico"
     //% group="Sensors"
     export function senseDistance(): number {
+        return 0
+    }
+
+    /**
+     * Detects ligth sensor
+     * @returns 
+     */
+    //% blockId=senseLight
+    //% block="light sensor"
+    //% block.loc.es-ES="sensor de luz"
+    //% group="Sensors"
+    export function senseLight(): number {
         return 0
     }
 
@@ -296,8 +308,8 @@ namespace autoBot {
      * Detects the line through the five infrared sensors in front of the AutoBot, and returns straight, left, right or stop.
      */
     //% blockId=senseLine
-    //% block="sense line"
-    //% block.loc.es-ES="detectar línea"
+    //% block="infrared sensor"
+    //% block.loc.es-ES="sensor ingrarojo"
     //% group="Sensors"
     export function senseLine(): Signs {
         if (pins.digitalReadPin(DigitalPin.P0) == 1 && (pins.digitalReadPin(DigitalPin.P1) == 1 && (pins.digitalReadPin(DigitalPin.P2) == 0 && (pins.digitalReadPin(DigitalPin.P3) == 1 && pins.digitalReadPin(DigitalPin.P4) == 1)))) {
