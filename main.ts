@@ -5,10 +5,6 @@
  *
  */
 
-/**
- * Custom graphic block
- */
-
 //% color=#fa8f13 icon="\uf1b9" block="AutoBot"
 //% groups=['Commands', 'Sensors', 'Logic', 'Variables']
 namespace autoBot {
@@ -522,5 +518,6 @@ namespace autoBot {
 
     console.log('AutoBot, (c)2023 Garragames')
     console.log('micro:bit version: ' + control.hardwareVersion())
+    console.log('RAM Size: ' + control.ramSize())
 
 }
