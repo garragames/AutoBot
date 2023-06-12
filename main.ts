@@ -447,7 +447,7 @@ namespace autoBot {
 
     /**
      * Manual Gear Selector
-    * @param gear
+     * @param gear
      */
     //% blockId=getManualGear
     //% block="$gear"
@@ -511,6 +511,66 @@ namespace autoBot {
     //% weight=840
     export function getSign(sign: Signs): number {
         return sign
+    }
+
+    let distanceBackup: number = 0;
+
+    /**
+     * Create a new driver Grove - Ultrasonic Sensor to measure distances in inch
+     * @param pin signal pin of ultrasonic ranger module
+     */
+    //% blockId=grove_ultrasonic_inches_v2 block="(V2)Ultrasonic Sensor (in inch) at|%pin"
+    //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4
+    //% pin.fieldOptions.tooltips="false" pin.fieldOptions.width="250"
+    //% group="Sensors" pin.defl=DigitalPin.C16
+    export function measureInInchesV2(pin: DigitalPin): number {
+        let duration = 0;
+        let RangeInInches = 0;
+
+        pins.digitalWritePin(pin, 0);
+        control.waitMicros(2);
+        pins.digitalWritePin(pin, 1);
+        control.waitMicros(20);
+        pins.digitalWritePin(pin, 0);
+        duration = pins.pulseIn(pin, PulseValue.High, 100000); // Max duration 100 ms
+
+        RangeInInches = duration * 153 / 113 / 2 / 100;
+
+        if (RangeInInches > 0) distanceBackup = RangeInInches;
+        else RangeInInches = distanceBackup;
+
+        basic.pause(50);
+
+        return RangeInInches;
+    }
+
+    /**
+     * Send a ping and get the echo time (in microseconds) as a result
+     * @param trig tigger pin
+     * @param echo echo pin
+     * @param unit desired conversion unit
+     * @param maxCmDistance maximum distance in centimeters (default is 500)
+     * 
+     */
+    //% blockId=sonar_ping block="ping trig %trig|echo %echo|unit %unit"
+    //% group="Sensors"
+    export function ping(trig: DigitalPin, echo: DigitalPin, unit: PingUnit, maxCmDistance = 500): number {
+        // send pulse
+        pins.setPull(trig, PinPullMode.PullNone);
+        pins.digitalWritePin(trig, 0);
+        control.waitMicros(2);
+        pins.digitalWritePin(trig, 1);
+        control.waitMicros(10);
+        pins.digitalWritePin(trig, 0);
+
+        // read pulse
+        const d = pins.pulseIn(echo, PulseValue.High, maxCmDistance * 58);
+
+        switch (unit) {
+            case PingUnit.Centimeters: return Math.idiv(d, 58);
+            case PingUnit.Inches: return Math.idiv(d, 148);
+            default: return d;
+        }
     }
 
     // Stop motors
