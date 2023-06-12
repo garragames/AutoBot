@@ -11,7 +11,6 @@
 
 //% color=#fa8f13 icon="\uf1b9" block="AutoBot"
 //% groups=['Commands', 'Sensors', 'Logic', 'Variables']
-//% group.Commands.weight=900
 namespace autoBot {
 
     const MIN_VEL = 150;  //   0 km/hr
@@ -130,185 +129,13 @@ namespace autoBot {
         First = FIRST_GEAR
     }
 
-    let SIGN           = Signs.Straight
-    let BELT           = BeltStates.Unfasten
-    let DIRECTION      = Directions.Front
-    let ENGINE         = Engine.Off
+    let SIGN = Signs.Straight
+    let BELT = BeltStates.Unfasten
+    let DIRECTION = Directions.Front
+    let ENGINE = Engine.Off
     let AUTOMATIC_GEAR = AutomaticGears.Parking
-    let MANUAL_GEAR    = ManualGears.Neutral
-    let SPEED          = 0
-
-    /**
-     * Set Speed
-     * @param gear
-     */
-    function _setSpeed(speed: number): void {
-        let s = speed * (MAX_VEL - MIN_VEL) / 100 + MIN_VEL; // Adjust to the min and max PWM values
-        // PWM para motor izquierdo
-        pins.analogWritePin(AnalogPin.P8, s)
-        // PWM para motor derecho
-        pins.analogWritePin(AnalogPin.P16, s)
-    }
-
-    // Stop motors
-    _stop()
-
-    // Set initial gear
-    // setSpeed(Gears.First); /// TODO: NEUTRAL
-
-    /**
-     * Manual Gear Selector
-     * @param gear
-     */
-    //% blockId=getManualGear
-    //% block="$gear"
-    //% gear.defl=ManualGears.third
-    //% gear.fieldEditor="imagedropdown"
-    //% gear.fieldOptions.columns=3
-    //% gear.fieldOptions.width="225"
-    //% gear.fieldOptions.maxRows=2
-    //% group="Variables"
-    //% weight=800
-    export function getManualGear(gear: ManualGears): number {
-        return gear
-    }
-
-    /**
-     * Automatic Gear Selector
-     * @param gear
-     */
-    //% blockId=getAutomaticGear
-    //% block="$gear"
-    //% gear.defl=AutomaticGears.third
-    //% gear.fieldEditor="imagedropdown"
-    //% gear.fieldOptions.columns=3
-    //% gear.fieldOptions.width="225"
-    //% gear.fieldOptions.maxRows=2
-    //% group="Variables"
-    //% weight=820
-    export function getAutomaticGear(gear: AutomaticGears): number {
-        return gear
-    }
-
-    /**
-    * Direction Selector
-    * @param direction
-    */
-    //% blockId=getDirection
-    //% block="$direction"
-    //% direction.defl=Directions.front
-    //% direction.fieldEditor="imagedropdown"
-    //% direction.fieldOptions.columns=3
-    //% direction.fieldOptions.width="225"
-    //% direction.fieldOptions.maxRows=2
-    //% group="Variables"
-    //% weight=830
-    export function getDirection(direction: Directions): number {
-        return direction
-    }
-
-    /**
-     * Set seat belt state
-     * @param status
-     */
-    //% blockId=setSeatbelt
-    //% block="seat belt $state"
-    //% state.defl=BeltStates.unfasten
-    //% state.fieldEditor="imagedropdown"
-    //% state.fieldOptions.columns=2
-    //% state.fieldOptions.width="150"
-    //% state.fieldOptions.maxRows=1
-    //% group="Commands"
-    //% weight=590
-    export function setSeatbelt(state: BeltStates): void {
-        if (state == BeltStates.Unfasten) {
-            if (ENGINE == Engine.Off) {
-                BELT = state
-            } else {
-                console.error('Do not unfasten your seat belt while the engine is on')
-            }
-        } else {
-            BELT = state
-        }
-    }
-
-    /**
-    * Sign Selector
-    * @param sign
-    */
-    //% blockId=getSign
-    //% block="$sign"
-    //% block.
-    //% sign.fieldEditor="imagedropdown"
-    //% sign.fieldOptions.columns=4
-    //% sign.fieldOptions.width="300"
-    //% sign.fieldOptions.maxRows=2
-    //% group="Variables"    
-    //% weight=840
-    export function getSign(sign: Signs): number {
-        return sign
-    }
-
-    /**
-     * Detects the tilt of the micro:bit card via the accelerometer
-     * @returns 
-     */
-    //% blockId=senseAcelerometer
-    //% block="acelerometer"
-    //% group="Sensors"
-    export function senseAcelerometer(): number {
-        return 0
-    }
-
-    /**
-     * Detects distance through ultrasonic sensor
-     * @returns 
-     */
-    //% blockId=senseDistance
-    //% block="ultrasonic sensor"
-    //% group="Sensors"
-    export function senseDistance(): number {
-        return 0
-    }
-
-    /**
-     * Detects ligth sensor
-     * @returns 
-     */
-    //% blockId=senseLight
-    //% block="light sensor"
-    //% group="Sensors"
-    export function senseLight(): number {
-        return 0
-    }
-
-    /**
-     * Detects the line through the five infrared sensors in front of the AutoBot, and returns straight, left, right or stop.
-     */
-    //% blockId=senseLine
-    //% block="infrared sensor"
-    //% group="Sensors"
-    export function senseLine(): Signs {
-        if (pins.digitalReadPin(DigitalPin.P0) == 1 && (pins.digitalReadPin(DigitalPin.P1) == 1 && (pins.digitalReadPin(DigitalPin.P2) == 0 && (pins.digitalReadPin(DigitalPin.P3) == 1 && pins.digitalReadPin(DigitalPin.P4) == 1)))) {
-            return Signs.Straight
-        } else
-            if (pins.digitalReadPin(DigitalPin.P0) == 1 && (pins.digitalReadPin(DigitalPin.P1) == 0 && (pins.digitalReadPin(DigitalPin.P2) == 1 && (pins.digitalReadPin(DigitalPin.P3) == 1 && pins.digitalReadPin(DigitalPin.P4) == 1)))) {
-                return Signs.Left
-            } else
-                if (pins.digitalReadPin(DigitalPin.P0) == 0 && (pins.digitalReadPin(DigitalPin.P1) == 1 && (pins.digitalReadPin(DigitalPin.P2) == 1 && (pins.digitalReadPin(DigitalPin.P3) == 1 && pins.digitalReadPin(DigitalPin.P4) == 1)))) {
-                    return Signs.Left
-                } else
-                    if (pins.digitalReadPin(DigitalPin.P0) == 1 && (pins.digitalReadPin(DigitalPin.P1) == 1 && (pins.digitalReadPin(DigitalPin.P2) == 1 && (pins.digitalReadPin(DigitalPin.P3) == 0 && pins.digitalReadPin(DigitalPin.P4) == 1)))) {
-                        return Signs.Right
-                    } else
-                        if (pins.digitalReadPin(DigitalPin.P0) == 1 && (pins.digitalReadPin(DigitalPin.P1) == 1 && (pins.digitalReadPin(DigitalPin.P2) == 1 && (pins.digitalReadPin(DigitalPin.P3) == 1 && pins.digitalReadPin(DigitalPin.P4) == 0)))) {
-                            return Signs.Right
-                        } else
-                            if (pins.digitalReadPin(DigitalPin.P0) == 1 && (pins.digitalReadPin(DigitalPin.P1) == 1 && (pins.digitalReadPin(DigitalPin.P2) == 1 && (pins.digitalReadPin(DigitalPin.P3) == 1 && pins.digitalReadPin(DigitalPin.P4) == 1)))) {
-                                return Signs.Stop
-                            }
-        return Signs.Stop // If no condition then Stop motors
-    }
+    let MANUAL_GEAR = ManualGears.Neutral
+    let SPEED = 0
 
     /**
      * Stop the autobot
@@ -361,6 +188,43 @@ namespace autoBot {
     }
 
     /**
+     * Set Speed
+     * @param gear
+     */
+    function _setSpeed(speed: number): void {
+        let s = speed * (MAX_VEL - MIN_VEL) / 100 + MIN_VEL; // Adjust to the min and max PWM values
+        // PWM para motor izquierdo
+        pins.analogWritePin(AnalogPin.P8, s)
+        // PWM para motor derecho
+        pins.analogWritePin(AnalogPin.P16, s)
+    }
+
+    /**
+     * Set seat belt state
+     * @param status
+     */
+    //% blockId=setSeatbelt
+    //% block="seat belt $state"
+    //% state.defl=BeltStates.unfasten
+    //% state.fieldEditor="imagedropdown"
+    //% state.fieldOptions.columns=2
+    //% state.fieldOptions.width="150"
+    //% state.fieldOptions.maxRows=1
+    //% group="Commands"
+    //% weight=590
+    export function setSeatbelt(state: BeltStates): void {
+        if (state == BeltStates.Unfasten) {
+            if (ENGINE == Engine.Off) {
+                BELT = state
+            } else {
+                console.error('Do not unfasten your seat belt while the engine is on')
+            }
+        } else {
+            BELT = state
+        }
+    }
+
+    /**
     * Turn Engine On/Off
     * @param state
     */
@@ -397,7 +261,6 @@ namespace autoBot {
 
         ENGINE = state;
     }
-
 
     /**
     * Set Direction
@@ -472,7 +335,7 @@ namespace autoBot {
     export function move(): void {
         _setSpeed(SPEED)
         switch (DIRECTION) {
-            case Directions.Front: 
+            case Directions.Front:
                 _straight()
                 break
             case Directions.Left:
@@ -495,7 +358,7 @@ namespace autoBot {
     export function stop(): void {
         _stop()
     }
-    
+
     /**
      * TEST BLOCK
      */
@@ -507,6 +370,67 @@ namespace autoBot {
     //% subcategory="K-12"
     export function test(): void {
         _stop()
+    }
+
+    /**
+     * Detects distance through ultrasonic sensor
+     * @returns 
+     */
+    //% blockId=senseDistance
+    //% block="ultrasonic sensor"
+    //% group="Sensors"
+    export function senseDistance(): number {
+        return 0
+    }
+
+    /**
+     * Detects ligth sensor
+     * @returns 
+     */
+    //% blockId=senseLight
+    //% block="light sensor"
+    //% group="Sensors"
+    export function senseLight(): number {
+        return 0
+    }
+
+    /**
+     * Detects the line through the five infrared sensors in front of the AutoBot, and returns straight, left, right or stop.
+     */
+    //% blockId=senseLine
+    //% block="infrared sensor"
+    //% group="Sensors"
+    export function senseLine(): Signs {
+        if (pins.digitalReadPin(DigitalPin.P0) == 1 && (pins.digitalReadPin(DigitalPin.P1) == 1 && (pins.digitalReadPin(DigitalPin.P2) == 0 && (pins.digitalReadPin(DigitalPin.P3) == 1 && pins.digitalReadPin(DigitalPin.P4) == 1)))) {
+            return Signs.Straight
+        } else
+            if (pins.digitalReadPin(DigitalPin.P0) == 1 && (pins.digitalReadPin(DigitalPin.P1) == 0 && (pins.digitalReadPin(DigitalPin.P2) == 1 && (pins.digitalReadPin(DigitalPin.P3) == 1 && pins.digitalReadPin(DigitalPin.P4) == 1)))) {
+                return Signs.Left
+            } else
+                if (pins.digitalReadPin(DigitalPin.P0) == 0 && (pins.digitalReadPin(DigitalPin.P1) == 1 && (pins.digitalReadPin(DigitalPin.P2) == 1 && (pins.digitalReadPin(DigitalPin.P3) == 1 && pins.digitalReadPin(DigitalPin.P4) == 1)))) {
+                    return Signs.Left
+                } else
+                    if (pins.digitalReadPin(DigitalPin.P0) == 1 && (pins.digitalReadPin(DigitalPin.P1) == 1 && (pins.digitalReadPin(DigitalPin.P2) == 1 && (pins.digitalReadPin(DigitalPin.P3) == 0 && pins.digitalReadPin(DigitalPin.P4) == 1)))) {
+                        return Signs.Right
+                    } else
+                        if (pins.digitalReadPin(DigitalPin.P0) == 1 && (pins.digitalReadPin(DigitalPin.P1) == 1 && (pins.digitalReadPin(DigitalPin.P2) == 1 && (pins.digitalReadPin(DigitalPin.P3) == 1 && pins.digitalReadPin(DigitalPin.P4) == 0)))) {
+                            return Signs.Right
+                        } else
+                            if (pins.digitalReadPin(DigitalPin.P0) == 1 && (pins.digitalReadPin(DigitalPin.P1) == 1 && (pins.digitalReadPin(DigitalPin.P2) == 1 && (pins.digitalReadPin(DigitalPin.P3) == 1 && pins.digitalReadPin(DigitalPin.P4) == 1)))) {
+                                return Signs.Stop
+                            }
+        return Signs.Stop // If no condition then Stop motors
+    }
+
+    /**
+     * Detects the tilt of the micro:bit card via the accelerometer
+     * @returns 
+     */
+    //% blockId=senseAcelerometer
+    //% block="acelerometer"
+    //% group="Sensors"
+    export function senseAcelerometer(): number {
+        return 0
     }
 
     /**
@@ -524,6 +448,77 @@ namespace autoBot {
     export function compare(A: number, B: Signs): boolean {
         return A == B
     }
+
+    /**
+     * Manual Gear Selector
+    * @param gear
+     */
+    //% blockId=getManualGear
+    //% block="$gear"
+    //% gear.defl=ManualGears.third
+    //% gear.fieldEditor="imagedropdown"
+    //% gear.fieldOptions.columns=3
+    //% gear.fieldOptions.width="225"
+    //% gear.fieldOptions.maxRows=2
+    //% group="Variables"
+    //% weight=800
+    export function getManualGear(gear: ManualGears): number {
+        return gear
+    }
+
+    /**
+     * Automatic Gear Selector
+     * @param gear
+     */
+    //% blockId=getAutomaticGear
+    //% block="$gear"
+    //% gear.defl=AutomaticGears.third
+    //% gear.fieldEditor="imagedropdown"
+    //% gear.fieldOptions.columns=3
+    //% gear.fieldOptions.width="225"
+    //% gear.fieldOptions.maxRows=2
+    //% group="Variables"
+    //% weight=820
+    export function getAutomaticGear(gear: AutomaticGears): number {
+        return gear
+    }
+
+    /**
+    * Direction Selector
+    * @param direction
+    */
+    //% blockId=getDirection
+    //% block="$direction"
+    //% direction.defl=Directions.front
+    //% direction.fieldEditor="imagedropdown"
+    //% direction.fieldOptions.columns=3
+    //% direction.fieldOptions.width="225"
+    //% direction.fieldOptions.maxRows=2
+    //% group="Variables"
+    //% weight=830
+    export function getDirection(direction: Directions): number {
+        return direction
+    }
+
+    /**
+    * Sign Selector
+    * @param sign
+    */
+    //% blockId=getSign
+    //% block="$sign"
+    //% block.
+    //% sign.fieldEditor="imagedropdown"
+    //% sign.fieldOptions.columns=4
+    //% sign.fieldOptions.width="300"
+    //% sign.fieldOptions.maxRows=2
+    //% group="Variables"    
+    //% weight=840
+    export function getSign(sign: Signs): number {
+        return sign
+    }
+
+    // Stop motors
+    //_stop()
 
     console.log('AutoBot, (c)2023 Garragames')
     console.log('micro:bit version: ' + control.hardwareVersion())
