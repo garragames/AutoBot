@@ -557,10 +557,11 @@ namespace autoBot {
     export function ping(trig: DigitalPin, echo: DigitalPin, unit: PingUnit, maxCmDistance = 500): number {
         // send pulse
         pins.setPull(trig, PinPullMode.PullNone);
+        //pins.setPull(trig, PinPullMode.PullUp);
         pins.digitalWritePin(trig, 0);
         control.waitMicros(2);
         pins.digitalWritePin(trig, 1);
-        control.waitMicros(10);
+        control.waitMicros(5);
         pins.digitalWritePin(trig, 0);
 
         // read pulse
