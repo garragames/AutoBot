@@ -522,19 +522,19 @@ namespace autoBot {
      * 
      */
     //% blockId=senseUltrasonic
-    //% block="trig %trig echo %echo"
+    //% block="ultrasonic sensor"
     //% group="Sensors"
-    export function senseUltrasonic(trig: DigitalPin, echo: DigitalPin, maxCmDistance = 500): number {
+    export function senseUltrasonic(maxCmDistance = 500): number {
         // send pulse
-        pins.setPull(trig, PinPullMode.PullNone);
-        pins.digitalWritePin(trig, 0);
+        pins.setPull(1, PinPullMode.PullNone);
+        pins.digitalWritePin(1, 0);
         control.waitMicros(2);
-        pins.digitalWritePin(trig, 1);
+        pins.digitalWritePin(1, 1);
         control.waitMicros(5);
-        pins.digitalWritePin(trig, 0);
+        pins.digitalWritePin(1, 0);
 
         // read pulse
-        const d = pins.pulseIn(echo, PulseValue.High, maxCmDistance * 58);
+        const d = pins.pulseIn(0, PulseValue.High, maxCmDistance * 58);
         return Math.idiv(d, 58);
         
     }
