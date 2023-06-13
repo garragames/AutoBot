@@ -370,17 +370,6 @@ namespace autoBot {
     }
 
     /**
-     * Detects distance through ultrasonic sensor
-     * @returns 
-     */
-    //% blockId=senseDistance
-    //% block="ultrasonic sensor"
-    //% group="Sensors"
-    export function senseDistance(): number {
-        return 0
-    }
-
-    /**
      * Detects ligth sensor
      * @returns 
      */
