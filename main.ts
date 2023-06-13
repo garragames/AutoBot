@@ -294,7 +294,7 @@ namespace autoBot {
         if (BELT == BeltStates.Fasten) {
             MANUAL_GEAR = gear
             SPEED = gear
-            if (gear == Automatic.REVERSE_GEAR) {
+            if (gear == REVERSE_GEAR) {
                 FORWARD = false
             } else {
                 FORWARD = true
@@ -321,7 +321,7 @@ namespace autoBot {
         if (BELT == BeltStates.Fasten) {
             AUTOMATIC_GEAR = gear
             SPEED = gear
-            if (gear == Automatic.REVERSE_GEAR) {
+            if (gear == REVERSE_GEAR) {
                 FORWARD = false
             } else {
                 FORWARD = true
