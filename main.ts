@@ -526,7 +526,7 @@ namespace autoBot {
     //% blockId=sonarPing
     //% block="ping trig %trig|echo %echo|unit %unit"
     //% group="Sensors"
-    export function sonarPing(trig: DigitalPin, echo: DigitalPin, unit: PingUnit, maxCmDistance = 500): number {
+    export function sonarPing(trig: DigitalPin, echo: DigitalPin, maxCmDistance = 500): number {
         // send pulse
         pins.setPull(trig, PinPullMode.PullNone);
         pins.digitalWritePin(trig, 0);
@@ -537,12 +537,8 @@ namespace autoBot {
 
         // read pulse
         const d = pins.pulseIn(echo, PulseValue.High, maxCmDistance * 58);
-
-        switch (unit) {
-            case PingUnit.Centimeters: return Math.idiv(d, 58);
-            case PingUnit.Inches: return Math.idiv(d, 148);
-            default: return d;
-        }
+        return Math.idiv(d, 58);
+        
     }
 
     // Stop motors
