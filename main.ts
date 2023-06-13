@@ -521,10 +521,10 @@ namespace autoBot {
      * @param maxCmDistance maximum distance in centimeters (default is 500)
      * 
      */
-    //% blockId=sonarPing
+    //% blockId=senseUltrasonic
     //% block="trig %trig echo %echo"
     //% group="Sensors"
-    export function sonarPing(trig: DigitalPin, echo: DigitalPin, maxCmDistance = 500): number {
+    export function senseUltrasonic(trig: DigitalPin, echo: DigitalPin, maxCmDistance = 500): number {
         // send pulse
         pins.setPull(trig, PinPullMode.PullNone);
         pins.digitalWritePin(trig, 0);
