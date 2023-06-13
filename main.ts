@@ -526,15 +526,15 @@ namespace autoBot {
     //% group="Sensors"
     export function senseUltrasonic(maxCmDistance = 500): number {
         // send pulse
-        pins.setPull(1, PinPullMode.PullNone);
-        pins.digitalWritePin(1, 0);
+        pins.setPull(DigitalPin.P1, PinPullMode.PullNone);
+        pins.digitalWritePin(DigitalPin.P1, 0);
         control.waitMicros(2);
-        pins.digitalWritePin(1, 1);
+        pins.digitalWritePin(DigitalPin.P1, 1);
         control.waitMicros(5);
-        pins.digitalWritePin(1, 0);
+        pins.digitalWritePin(DigitalPin.P1, 0);
 
         // read pulse
-        const d = pins.pulseIn(0, PulseValue.High, maxCmDistance * 58);
+        const d = pins.pulseIn(DigitalPin.P0, PulseValue.High, maxCmDistance * 58);
         return Math.idiv(d, 58);
         
     }
