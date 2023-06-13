@@ -148,45 +148,45 @@ namespace autoBot {
      * Turn the autobot right
      */
     export function _right(): void {
-        pins.digitalWritePin(DigitalPin.P12, 0)
-        pins.digitalWritePin(DigitalPin.P13, 0)
-        pins.digitalWritePin(DigitalPin.P14, 1)
-        pins.digitalWritePin(DigitalPin.P15, 0)
+        pins.digitalWritePin(DigitalPin.P12, FORWARD?0:1)
+        pins.digitalWritePin(DigitalPin.P13, FORWARD?0:1)
+        pins.digitalWritePin(DigitalPin.P14, FORWARD?1:0)
+        pins.digitalWritePin(DigitalPin.P15, FORWARD?0:1)
     }
 
     /**
     * Turn the autobot left
     */
     export function _left(): void {
-        pins.digitalWritePin(DigitalPin.P12, 0)
-        pins.digitalWritePin(DigitalPin.P13, 1)
-        pins.digitalWritePin(DigitalPin.P14, 0)
-        pins.digitalWritePin(DigitalPin.P15, 0)
+        pins.digitalWritePin(DigitalPin.P12, FORWARD?0:1)
+        pins.digitalWritePin(DigitalPin.P13, FORWARD?1:0)
+        pins.digitalWritePin(DigitalPin.P14, FORWARD?0:1)
+        pins.digitalWritePin(DigitalPin.P15, FORWARD?0:1)
     }
 
     /**
      * Moves the autobot backward
      */
     export function _backward(): void {
-        pins.digitalWritePin(DigitalPin.P12, 1)
-        pins.digitalWritePin(DigitalPin.P13, 0)
-        pins.digitalWritePin(DigitalPin.P14, 0)
-        pins.digitalWritePin(DigitalPin.P15, 1)
+        pins.digitalWritePin(DigitalPin.P12, FORWARD?1:0)
+        pins.digitalWritePin(DigitalPin.P13, FORWARD?0:1)
+        pins.digitalWritePin(DigitalPin.P14, FORWARD?0:1)
+        pins.digitalWritePin(DigitalPin.P15, FORWARD?1:0)
     }
 
     /**
      * Moves the autobot straight
      */
     export function _straight(): void {
-        pins.digitalWritePin(DigitalPin.P12, 0)
-        pins.digitalWritePin(DigitalPin.P13, 1)
-        pins.digitalWritePin(DigitalPin.P14, 1)
-        pins.digitalWritePin(DigitalPin.P15, 0)
+        pins.digitalWritePin(DigitalPin.P12, FORWARD?0:1)
+        pins.digitalWritePin(DigitalPin.P13, FORWARD?1:0)
+        pins.digitalWritePin(DigitalPin.P14, FORWARD?1:0)
+        pins.digitalWritePin(DigitalPin.P15, FORWARD?0:1)
     }
 
     /**
      * Set Speed
-     * @param gear
+     * @param speed
      */
     function _setSpeed(speed: number): void {
         let s = speed * (MAX_VEL - MIN_VEL) / 100 + MIN_VEL; // Adjust to the min and max PWM values
@@ -294,6 +294,11 @@ namespace autoBot {
         if (BELT == BeltStates.Fasten) {
             MANUAL_GEAR = gear
             SPEED = gear
+            if (gear == Automatic.REVERSE_GEAR) {
+                FORWARD = false
+            } else {
+                FORWARD = true
+            }
         } else {
             console.warn('You cannot shift gears if you do not have your seat belt fastened.')
         }
@@ -316,6 +321,11 @@ namespace autoBot {
         if (BELT == BeltStates.Fasten) {
             AUTOMATIC_GEAR = gear
             SPEED = gear
+            if (gear == Automatic.REVERSE_GEAR) {
+                FORWARD = false
+            } else {
+                FORWARD = true
+            }
         } else {
             console.warn('You cannot shift gears if you do not have your seat belt fastened.')
         }
