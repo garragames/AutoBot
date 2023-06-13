@@ -29,7 +29,7 @@
   "autoBot.getSign|block": "$sign",
   "autoBot.move|block": "moverse",
   "autoBot.senseAcelerometer|block": "acelerómetro",
-  "autoBot.senseDistance|block": "sensor ultrasónico",
+  "autoBot.senseUltrasonic|block": "sensor ultrasónico",
   "autoBot.senseLight|block": "sensor de luz",
   "autoBot.senseLine|block": "sensor infrarrojo",
   "autoBot.setAutomaticGear|block": "cambiar velocidad $gear",

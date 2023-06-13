@@ -11,7 +11,7 @@
   "autoBot.getSign": "Selector de señal",
   "autoBot.move": "Mover AutoBot",
   "autoBot.senseAcelerometer": "Detecta la inclinación de la tarjeta micro:bit a través del acelerómetro",
-  "autoBot.senseDistance": "Detecta la distancia a través del sensor ultrasónico",
+  "autoBot.senseUltrasonic": "Detecta la distancia a través del sensor ultrasónico",
   "autoBot.senseLight": "Detecta el sensor de luz",
   "autoBot.senseLine": "Detecta la línea a través de los cinco sensores infrarrojos delanteros del AutoBot y devuelve recto, izquierda, derecha o detener.",
   "autoBot.setAutomaticGear": "Configurar cambio de marcha automático",
