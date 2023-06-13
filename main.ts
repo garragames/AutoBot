@@ -530,7 +530,7 @@ namespace autoBot {
         pins.digitalWritePin(trig, 0);
         control.waitMicros(2);
         pins.digitalWritePin(trig, 1);
-        control.waitMicros(5);
+        control.waitMicros(10);
         pins.digitalWritePin(trig, 0);
 
         // read pulse
