@@ -519,7 +519,6 @@ namespace autoBot {
      * @param trig tigger pin
      * @param echo echo pin
      * @param maxCmDistance maximum distance in centimeters (default is 500)
-     * 
      */
     //% blockId=senseUltrasonic
     //% block="ultrasonic sensor"
@@ -532,15 +531,10 @@ namespace autoBot {
         pins.digitalWritePin(DigitalPin.P1, 1);
         control.waitMicros(5);
         pins.digitalWritePin(DigitalPin.P1, 0);
-
         // read pulse
         const d = pins.pulseIn(DigitalPin.P0, PulseValue.High, maxCmDistance * 58);
-        return Math.idiv(d, 58);
-        
+        return Math.idiv(d, 58); 
     }
-
-    // Stop motors
-    //_stop()
 
     console.log('AutoBot, (c)2023 Garragames')
     console.log('micro:bit version: ' + control.hardwareVersion())
