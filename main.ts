@@ -132,6 +132,7 @@ namespace autoBot {
     let AUTOMATIC_GEAR = AutomaticGears.Parking
     let MANUAL_GEAR = ManualGears.Neutral
     let SPEED = 0
+    let FORWARD = true
 
     /**
      * Stop the autobot
@@ -517,7 +518,6 @@ namespace autoBot {
      * Send a ping and get the echo time (in microseconds) as a result
      * @param trig tigger pin
      * @param echo echo pin
-     * @param unit desired conversion unit
      * @param maxCmDistance maximum distance in centimeters (default is 500)
      * 
      */
