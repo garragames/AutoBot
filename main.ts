@@ -513,8 +513,6 @@ namespace autoBot {
         return sign
     }
 
-    let distanceBackup: number = 0;
-
     /**
      * Send a ping and get the echo time (in microseconds) as a result
      * @param trig tigger pin
@@ -524,7 +522,7 @@ namespace autoBot {
      * 
      */
     //% blockId=sonarPing
-    //% block="ping trig %trig|echo %echo|unit %unit"
+    //% block="trig %trig echo %echo"
     //% group="Sensors"
     export function sonarPing(trig: DigitalPin, echo: DigitalPin, maxCmDistance = 500): number {
         // send pulse
