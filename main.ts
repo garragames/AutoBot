@@ -420,6 +420,28 @@ namespace autoBot {
     }
 
     /**
+     * Send a ping and get the echo time (in microseconds) as a result
+     * @param trig tigger pin
+     * @param echo echo pin
+     * @param maxCmDistance maximum distance in centimeters (default is 500)
+     */
+    //% blockId=senseUltrasonic
+    //% block="ultrasonic sensor"
+    //% group="Sensors"
+    export function senseUltrasonic(maxCmDistance = 500): number {
+        // send pulse
+        pins.setPull(DigitalPin.P1, PinPullMode.PullNone);
+        pins.digitalWritePin(DigitalPin.P1, 0);
+        control.waitMicros(2);
+        pins.digitalWritePin(DigitalPin.P1, 1);
+        control.waitMicros(5);
+        pins.digitalWritePin(DigitalPin.P1, 0);
+        // read pulse
+        const d = pins.pulseIn(DigitalPin.P0, PulseValue.High, maxCmDistance * 58);
+        return Math.idiv(d, 58); 
+    }
+
+    /**
      * Detects the tilt of the micro:bit card via the accelerometer
      * @returns 
      */
@@ -512,28 +534,6 @@ namespace autoBot {
     //% weight=840
     export function getSign(sign: Signs): number {
         return sign
-    }
-
-    /**
-     * Send a ping and get the echo time (in microseconds) as a result
-     * @param trig tigger pin
-     * @param echo echo pin
-     * @param maxCmDistance maximum distance in centimeters (default is 500)
-     */
-    //% blockId=senseUltrasonic
-    //% block="ultrasonic sensor"
-    //% group="Sensors"
-    export function senseUltrasonic(maxCmDistance = 500): number {
-        // send pulse
-        pins.setPull(DigitalPin.P1, PinPullMode.PullNone);
-        pins.digitalWritePin(DigitalPin.P1, 0);
-        control.waitMicros(2);
-        pins.digitalWritePin(DigitalPin.P1, 1);
-        control.waitMicros(5);
-        pins.digitalWritePin(DigitalPin.P1, 0);
-        // read pulse
-        const d = pins.pulseIn(DigitalPin.P0, PulseValue.High, maxCmDistance * 58);
-        return Math.idiv(d, 58); 
     }
 
     console.log('AutoBot, (c)2023 Garragames')
