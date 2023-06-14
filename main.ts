@@ -1,12 +1,3 @@
-/*
- * Auto Bot
- *
- * by Jorge Gonzalez Garcia <jorge@garragames.com>
- *
- */
-
-//% color=#fa8f13 icon="\uf1b9" block="AutoBot"
-//% groups=['Commands', 'Sensors', 'Logic', 'Variables']
 namespace autoBot {
 
     const MIN_VEL = 150;  //   0 km/hr
@@ -132,7 +123,7 @@ namespace autoBot {
     let AUTOMATIC_GEAR = AutomaticGears.Parking
     let MANUAL_GEAR = ManualGears.Neutral
     let SPEED = 0
-    let FORWARD = true
+    let FORWARD = false
 
     /**
      * Stop the autobot
@@ -297,9 +288,9 @@ namespace autoBot {
             MANUAL_GEAR = gear
             SPEED = gear
             if (gear == REVERSE_GEAR) {
-                FORWARD = false
-            } else {
                 FORWARD = true
+            } else {
+                FORWARD = false
             }
         } else {
             console.warn('You cannot shift gears if you do not have your seat belt fastened.')
