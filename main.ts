@@ -410,8 +410,11 @@ namespace autoBot {
         control.waitMicros(5)
         pins.digitalWritePin(DigitalPin.P1, 0)
         // read pulse
-        const d = pins.pulseIn(DigitalPin.P0, PulseValue.High, maxCmDistance * 58)
-        //return d
+        let d = pins.pulseIn(DigitalPin.P0, PulseValue.High, maxCmDistance * 58)
+        
+        if (d == 0) {
+            d = maxCmDistance
+        }
         return Math.idiv(d, 58); 
     }
 
@@ -539,7 +542,7 @@ namespace autoBot {
     }
 
     console.log('AutoBot, (c)2023 Garragames')
-    console.log('micro:bit version: ' + control.hardwareVersion() )
-    console.log('RAM Size: ' + control.ramSize())
+    //console.log('micro:bit version: ' + control.hardwareVersion() )
+    //console.log('RAM Size: ' + control.ramSize())
 
 }
