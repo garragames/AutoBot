@@ -389,7 +389,7 @@ namespace autoBot {
     //% block="light sensor"
     //% group="Sensors"
     export function senseLight(): number {
-        return 0
+        return FORWARD?1:0
     }
 
     /**
