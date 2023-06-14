@@ -12,15 +12,15 @@ namespace autoBot {
     const MIN_VEL = 150;  //   0 km/hr
     const MAX_VEL = 1023; // 100 km/hr
 
-    const FIRST_GEAR = 20;
-    const SECOND_GEAR = 40;
-    const THIRD_GEAR = 60;
-    const FOURTH_GEAR = 80;
-    const FIFTH_GEAR = 100;
-    const DRIVE_GEAR = 100;
-    const NEUTRAL_GEAR = 0;
-    const PARKING_GEAR = 0;
-    const REVERSE_GEAR = 15;
+    const FIRST_GEAR   = 0
+    const SECOND_GEAR  = 1
+    const THIRD_GEAR   = 2
+    const FOURTH_GEAR  = 3
+    const FIFTH_GEAR   = 4
+    const DRIVE_GEAR   = 5
+    const NEUTRAL_GEAR = 6
+    const PARKING_GEAR = 7
+    const REVERSE_GEAR = 8
 
     /**
      * Setup variables, pins and enumerations
@@ -192,10 +192,39 @@ namespace autoBot {
 
     /**
      * Set Speed
-     * @param speed
+     * @param gear
      */
-    function _setSpeed(speed: number): void {
-        let s = speed * (MAX_VEL - MIN_VEL) / 100 + MIN_VEL; // Adjust to the min and max PWM values
+    function _setSpeed(gear: number): void {
+        let speed = 0
+        switch (gear) {
+            case 0:
+                speed = 0
+                break
+            case 1:
+                speed = 20
+                break
+            case 2:
+                speed = 40
+                break
+            case 3:
+                speed = 60
+                break
+            case 4:
+                speed = 80
+                break
+            case 5:
+                speed = 100
+            case 6:
+                speed = 0
+                break
+            case 7:
+                speed = 0
+                break
+            case 8:
+                speed = 20
+                break
+        }
+        let s = gear * (MAX_VEL - MIN_VEL) / 100 + MIN_VEL; // Adjust to the min and max PWM values
         // PWM para motor izquierdo
         pins.analogWritePin(AnalogPin.P8, s)
         // PWM para motor derecho
