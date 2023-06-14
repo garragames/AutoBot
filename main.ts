@@ -297,9 +297,9 @@ namespace autoBot {
             MANUAL_GEAR = gear
             SPEED = gear
             if (gear == REVERSE_GEAR) {
-                FORWARD = false
-            } else {
                 FORWARD = true
+            } else {
+                FORWARD = false
             }
         } else {
             console.warn('You cannot shift gears if you do not have your seat belt fastened.')
