@@ -132,7 +132,7 @@ namespace autoBot {
     let AUTOMATIC_GEAR = AutomaticGears.Parking
     let MANUAL_GEAR = ManualGears.Neutral
     let SPEED = 0
-    let FORWARD = false
+    let FORWARD = true
 
     /**
      * Stop the autobot
@@ -297,9 +297,9 @@ namespace autoBot {
             MANUAL_GEAR = gear
             SPEED = gear
             if (gear == REVERSE_GEAR) {
-                FORWARD = true
-            } else {
                 FORWARD = false
+            } else {
+                FORWARD = true
             }
         } else {
             console.warn('You cannot shift gears if you do not have your seat belt fastened.')
@@ -404,13 +404,14 @@ namespace autoBot {
     export function senseUltrasonic(maxCmDistance = 500): number {
         // send pulse
         pins.setPull(DigitalPin.P1, PinPullMode.PullNone);
-        pins.digitalWritePin(DigitalPin.P1, 0);
-        control.waitMicros(2);
-        pins.digitalWritePin(DigitalPin.P1, 1);
-        control.waitMicros(5);
-        pins.digitalWritePin(DigitalPin.P1, 0);
+        pins.digitalWritePin(DigitalPin.P1, 0)
+        control.waitMicros(2)
+        pins.digitalWritePin(DigitalPin.P1, 1)
+        control.waitMicros(5)
+        pins.digitalWritePin(DigitalPin.P1, 0)
         // read pulse
-        const d = pins.pulseIn(DigitalPin.P0, PulseValue.High, maxCmDistance * 58);
+        const d = pins.pulseIn(DigitalPin.P0, PulseValue.High, maxCmDistance * 58)
+        //return d
         return Math.idiv(d, 58); 
     }
 
@@ -538,7 +539,7 @@ namespace autoBot {
     }
 
     console.log('AutoBot, (c)2023 Garragames')
-    console.log('micro:bit version: ' + control.hardwareVersion())
+    console.log('micro:bit version: ' + control.hardwareVersion() )
     console.log('RAM Size: ' + control.ramSize())
 
 }
