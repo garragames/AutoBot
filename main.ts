@@ -132,7 +132,7 @@ namespace autoBot {
     let AUTOMATIC_GEAR = AutomaticGears.Parking
     let MANUAL_GEAR = ManualGears.Neutral
     let SPEED = 0
-    let FORWARD = true
+    let FORWARD = false
 
     /**
      * Stop the autobot
