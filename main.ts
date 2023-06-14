@@ -20,7 +20,7 @@ namespace autoBot {
     const DRIVE_GEAR = 100;
     const NEUTRAL_GEAR = 0;
     const PARKING_GEAR = 0;
-    const REVERSE_GEAR = 20;
+    const REVERSE_GEAR = 15;
 
     /**
      * Setup variables, pins and enumerations
@@ -125,6 +125,10 @@ namespace autoBot {
         First = FIRST_GEAR
     }
 
+    /**
+     * Global Variables
+     */
+
     let SIGN = Signs.Straight
     let BELT = BeltStates.Unfasten
     let DIRECTION = Directions.Front
@@ -132,7 +136,7 @@ namespace autoBot {
     let AUTOMATIC_GEAR = AutomaticGears.Parking
     let MANUAL_GEAR = ManualGears.Neutral
     let SPEED = 0
-    let FORWARD = false
+    let FORWARD = true
 
     /**
      * Stop the autobot
