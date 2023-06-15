@@ -202,10 +202,14 @@ namespace autoBot {
         let speed = 0
         switch (gear) {
             case NEUTRAL_GEAR:
+                speed = 0
+                break
             case PARKING_GEAR:
                 speed = 0
                 break
             case FIRST_GEAR:
+                speed = 20
+                break
             case REVERSE_GEAR:
                 speed = 20
                 break
@@ -219,6 +223,8 @@ namespace autoBot {
                 speed = 80
                 break
             case FIFTH_GEAR:
+                speed = 100
+                break
             case DRIVE_GEAR:
                 speed = 100
                 break
