@@ -229,7 +229,7 @@ namespace autoBot {
                 speed = 100
                 break
         }
-        let s = gear * (MAX_VEL - MIN_VEL) / 100 + MIN_VEL; // Adjust to the min and max PWM values
+        let s = speed * (MAX_VEL - MIN_VEL) / 100 + MIN_VEL; // Adjust to the min and max PWM values
         // PWM para motor izquierdo
         pins.analogWritePin(AnalogPin.P8, s)
         // PWM para motor derecho
