@@ -197,31 +197,26 @@ namespace autoBot {
     function _setSpeed(gear: number): void {
         let speed = 0
         switch (gear) {
-            case 0:
+            case NEUTRAL_GEAR:
+            case PARKING_GEAR:
                 speed = 0
                 break
-            case 1:
+            case FIRST_GEAR:
+            case REVERSE_GEAR:
                 speed = 20
                 break
-            case 2:
+            case SECOND_GEAR:
                 speed = 40
                 break
-            case 3:
+            case THIRD_GEAR:
                 speed = 60
                 break
-            case 4:
+            case FOURTH_GEAR:
                 speed = 80
                 break
-            case 5:
+            case FIFTH_GEAR:
+            case DRIVE_GEAR:
                 speed = 100
-            case 6:
-                speed = 0
-                break
-            case 7:
-                speed = 0
-                break
-            case 8:
-                speed = 20
                 break
         }
         let s = gear * (MAX_VEL - MIN_VEL) / 100 + MIN_VEL; // Adjust to the min and max PWM values
