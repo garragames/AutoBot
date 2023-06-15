@@ -142,6 +142,7 @@ namespace autoBot {
      * Stop the autobot
      */
     export function _stop(): void {
+        console.log('Stop')
         pins.digitalWritePin(DigitalPin.P12, 0)
         pins.digitalWritePin(DigitalPin.P13, 0)
         pins.digitalWritePin(DigitalPin.P14, 0)
@@ -152,6 +153,7 @@ namespace autoBot {
      * Turn the autobot right
      */
     export function _right(): void {
+        console.log('Right')
         pins.digitalWritePin(DigitalPin.P12, FORWARD?0:1)
         pins.digitalWritePin(DigitalPin.P13, FORWARD?0:1)
         pins.digitalWritePin(DigitalPin.P14, FORWARD?1:0)
@@ -162,6 +164,7 @@ namespace autoBot {
     * Turn the autobot left
     */
     export function _left(): void {
+        console.log('Left')
         pins.digitalWritePin(DigitalPin.P12, FORWARD?0:1)
         pins.digitalWritePin(DigitalPin.P13, FORWARD?1:0)
         pins.digitalWritePin(DigitalPin.P14, FORWARD?0:1)
@@ -184,6 +187,7 @@ namespace autoBot {
      * Moves the autobot straight
      */
     export function _straight(): void {
+        console.log('Straight')
         pins.digitalWritePin(DigitalPin.P12, FORWARD?0:1)
         pins.digitalWritePin(DigitalPin.P13, FORWARD?1:0)
         pins.digitalWritePin(DigitalPin.P14, FORWARD?1:0)
