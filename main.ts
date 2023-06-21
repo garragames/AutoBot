@@ -175,14 +175,12 @@ namespace autoBot {
     /**
      * Moves the autobot backward 
      */
-    /*
     export function _backward(): void {
         pins.digitalWritePin(DigitalPin.P12, FORWARD?1:0)
         pins.digitalWritePin(DigitalPin.P13, FORWARD?0:1)
         pins.digitalWritePin(DigitalPin.P14, FORWARD?0:1)
         pins.digitalWritePin(DigitalPin.P15, FORWARD?1:0)
     }
-    */
 
     /**
      * Moves the autobot straight
@@ -200,7 +198,6 @@ namespace autoBot {
      * @param gear
      */
     function _setSpeed(gear: number): void {
-        //let speed = 0
         switch (gear) {
             case NEUTRAL_GEAR:
                 SPEED = 0
@@ -276,11 +273,6 @@ namespace autoBot {
     //% group="Commands"
     //% weight=550
     export function setEngine(state: Engine): void {
-        /*
-        console.log('Gear: ' + MANUAL_GEAR)
-        console.log('Engine: ' + ENGINE)
-        console.log('State: ' + state)
-        */
 
         if (BELT == BeltStates.Unfasten && state == Engine.On) {
             console.warn('You cannot turn on the engine if you have not fastened your seat belt.')
