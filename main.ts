@@ -380,6 +380,7 @@ namespace autoBot {
     //% group="Commands"
     //% weight=340
     export function move(): void {
+        console.log('Move: ' + SPEED);
         _setSpeed(SPEED)
         switch (DIRECTION) {
             case Directions.Front:
