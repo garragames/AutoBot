@@ -137,6 +137,7 @@ namespace autoBot {
     let MANUAL_GEAR = ManualGears.Neutral
     let SPEED = 0
     let FORWARD = true
+    let GEAR = 0
 
     /**
      * Stop the autobot
@@ -333,7 +334,7 @@ namespace autoBot {
     export function setManualGear(gear: ManualGears): void {
         if (BELT == BeltStates.Fasten) {
             MANUAL_GEAR = gear
-            SPEED = gear
+            GEAR = gear
             if (gear == REVERSE_GEAR) {
                 FORWARD = false
             } else {
@@ -360,7 +361,7 @@ namespace autoBot {
     export function setAutomaticGear(gear: AutomaticGears): void {
         if (BELT == BeltStates.Fasten) {
             AUTOMATIC_GEAR = gear
-            SPEED = gear
+            GEAR = gear
             if (gear == REVERSE_GEAR) {
                 FORWARD = false
             } else {
