@@ -575,7 +575,6 @@ namespace autoBot {
     }
 
     console.log('AutoBot, (c)2023 Garragames')
-    //console.log('micro:bit version: ' + control.hardwareVersion() )
-    //console.log('RAM Size: ' + control.ramSize())
+    console.log('micro:bit version: ' + control.hardwareVersion() )
 
 }
