@@ -250,7 +250,7 @@ namespace autoBot {
     //% weight=590
     export function setSeatbelt(state: BeltStates): void {
         if (state == BeltStates.Unfasten) {
-            if (ENGINE == Engine.Off) {
+            if (_engine == Engine.Off) {
                 _belt = state
             } else {
                 console.error('Do not unfasten your seat belt while the engine is on')
@@ -290,7 +290,7 @@ namespace autoBot {
             return;
         }
 
-        ENGINE = state;
+        _engine = state;
     }
 
     /**
