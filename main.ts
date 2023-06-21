@@ -129,15 +129,16 @@ namespace autoBot {
      * Global Variables
      */
 
-    let SIGN = Signs.Straight
-    let BELT = BeltStates.Unfasten
-    let DIRECTION = Directions.Front
-    let ENGINE = Engine.Off
-    let AUTOMATIC_GEAR = AutomaticGears.Parking
-    let MANUAL_GEAR = ManualGears.Neutral
-    let SPEED = 0
-    let FORWARD = true
-    let GEAR = 0
+    let _sign = Signs.Straight
+    let _belt = BeltStates.Unfasten
+    let _direction = Directions.Front
+    let _engine = Engine.Off
+    let _automaticGear = AutomaticGears.Parking
+    let _manualGear = ManualGears.Neutral
+    let _speed = 0
+    let _forward = true
+    let _gear = 0
+
 
     /**
      * Stop the autobot
@@ -155,10 +156,10 @@ namespace autoBot {
      */
     export function _right(): void {
         console.log('Right')
-        pins.digitalWritePin(DigitalPin.P12, FORWARD?0:1)
-        pins.digitalWritePin(DigitalPin.P13, FORWARD?0:1)
-        pins.digitalWritePin(DigitalPin.P14, FORWARD?1:0)
-        pins.digitalWritePin(DigitalPin.P15, FORWARD?0:1)
+        pins.digitalWritePin(DigitalPin.P12, _forward?0:1)
+        pins.digitalWritePin(DigitalPin.P13, _forward?0:1)
+        pins.digitalWritePin(DigitalPin.P14, _forward?1:0)
+        pins.digitalWritePin(DigitalPin.P15, _forward?0:1)
     }
 
     /**
@@ -166,20 +167,20 @@ namespace autoBot {
     */
     export function _left(): void {
         console.log('Left')
-        pins.digitalWritePin(DigitalPin.P12, FORWARD?0:1)
-        pins.digitalWritePin(DigitalPin.P13, FORWARD?1:0)
-        pins.digitalWritePin(DigitalPin.P14, FORWARD?0:1)
-        pins.digitalWritePin(DigitalPin.P15, FORWARD?0:1)
+        pins.digitalWritePin(DigitalPin.P12, _forward?0:1)
+        pins.digitalWritePin(DigitalPin.P13, _forward?1:0)
+        pins.digitalWritePin(DigitalPin.P14, _forward?0:1)
+        pins.digitalWritePin(DigitalPin.P15, _forward?0:1)
     }
 
     /**
      * Moves the autobot backward 
      */
     export function _backward(): void {
-        pins.digitalWritePin(DigitalPin.P12, FORWARD?1:0)
-        pins.digitalWritePin(DigitalPin.P13, FORWARD?0:1)
-        pins.digitalWritePin(DigitalPin.P14, FORWARD?0:1)
-        pins.digitalWritePin(DigitalPin.P15, FORWARD?1:0)
+        pins.digitalWritePin(DigitalPin.P12, _forward?1:0)
+        pins.digitalWritePin(DigitalPin.P13, _forward?0:1)
+        pins.digitalWritePin(DigitalPin.P14, _forward?0:1)
+        pins.digitalWritePin(DigitalPin.P15, _forward?1:0)
     }
 
     /**
@@ -187,10 +188,10 @@ namespace autoBot {
      */
     export function _straight(): void {
         console.log('Straight')
-        pins.digitalWritePin(DigitalPin.P12, FORWARD?0:1)
-        pins.digitalWritePin(DigitalPin.P13, FORWARD?1:0)
-        pins.digitalWritePin(DigitalPin.P14, FORWARD?1:0)
-        pins.digitalWritePin(DigitalPin.P15, FORWARD?0:1)
+        pins.digitalWritePin(DigitalPin.P12, _forward?0:1)
+        pins.digitalWritePin(DigitalPin.P13, _forward?1:0)
+        pins.digitalWritePin(DigitalPin.P14, _forward?1:0)
+        pins.digitalWritePin(DigitalPin.P15, _forward?0:1)
     }
 
     /**
@@ -200,34 +201,34 @@ namespace autoBot {
     function _setSpeed(gear: number): void {
         switch (gear) {
             case NEUTRAL_GEAR:
-                SPEED = 0
+                _speed = 0
                 break
             case PARKING_GEAR:
-                SPEED = 0
+                _speed = 0
                 break
             case FIRST_GEAR:
-                SPEED = 20
+                _speed = 20
                 break
             case REVERSE_GEAR:
-                SPEED = 20
+                _speed = 20
                 break
             case SECOND_GEAR:
-                SPEED = 40
+                _speed = 40
                 break
             case THIRD_GEAR:
-                SPEED = 60
+                _speed = 60
                 break
             case FOURTH_GEAR:
-                SPEED = 80
+                _speed = 80
                 break
             case FIFTH_GEAR:
-                SPEED = 100
+                _speed = 100
                 break
             case DRIVE_GEAR:
-                SPEED = 100
+                _speed = 100
                 break
         }
-        let s = SPEED * (MAX_VEL - MIN_VEL) / 100 + MIN_VEL; // Adjust to the min and max PWM values
+        let s = _speed * (MAX_VEL - MIN_VEL) / 100 + MIN_VEL; // Adjust to the min and max PWM values
         // PWM para motor izquierdo
         pins.analogWritePin(AnalogPin.P8, s)
         // PWM para motor derecho
@@ -250,12 +251,12 @@ namespace autoBot {
     export function setSeatbelt(state: BeltStates): void {
         if (state == BeltStates.Unfasten) {
             if (ENGINE == Engine.Off) {
-                BELT = state
+                _belt = state
             } else {
                 console.error('Do not unfasten your seat belt while the engine is on')
             }
         } else {
-            BELT = state
+            _belt = state
         }
     }
 
@@ -274,17 +275,17 @@ namespace autoBot {
     //% weight=550
     export function setEngine(state: Engine): void {
 
-        if (BELT == BeltStates.Unfasten && state == Engine.On) {
+        if (_belt == BeltStates.Unfasten && state == Engine.On) {
             console.warn('You cannot turn on the engine if you have not fastened your seat belt.')
             return;
         }
 
-        if (MANUAL_GEAR != ManualGears.Neutral && state == Engine.On) {
+        if (_manualGear != ManualGears.Neutral && state == Engine.On) {
             console.warn('You need to put the AutoBot in neutral or parking to turn on the engine.')
             return;
         }
 
-        if (MANUAL_GEAR != ManualGears.Neutral && state == Engine.Off) {
+        if (_manualGear != ManualGears.Neutral && state == Engine.Off) {
             console.warn('You need to put the AutoBot in neutral or parking to be able to turn off the engine.')
             return;
         }
@@ -306,7 +307,7 @@ namespace autoBot {
     //% group="Commands"
     //% weight=380
     export function turnDirection(direction: Directions): void {
-        DIRECTION = direction
+        _direction = direction
     }
 
     /**
@@ -324,13 +325,13 @@ namespace autoBot {
     //% group="Commands"
     //% weight=370
     export function setManualGear(gear: ManualGears): void {
-        if (BELT == BeltStates.Fasten) {
-            MANUAL_GEAR = gear
-            GEAR = gear
+        if (_belt == BeltStates.Fasten) {
+            _manualGear = gear
+            _gear = gear
             if (gear == REVERSE_GEAR) {
-                FORWARD = false
+                _forward = false
             } else {
-                FORWARD = true
+                _forward = true
             }
         } else {
             console.warn('You cannot shift gears if you do not have your seat belt fastened.')
@@ -351,13 +352,13 @@ namespace autoBot {
     //% group="Commands"
     //% weight=360
     export function setAutomaticGear(gear: AutomaticGears): void {
-        if (BELT == BeltStates.Fasten) {
-            AUTOMATIC_GEAR = gear
-            GEAR = gear
+        if (_belt == BeltStates.Fasten) {
+            _automaticGear = gear
+            _gear = gear
             if (gear == REVERSE_GEAR) {
-                FORWARD = false
+                _forward = false
             } else {
-                FORWARD = true
+                _forward = true
             }
         } else {
             console.warn('You cannot shift gears if you do not have your seat belt fastened.')
@@ -373,9 +374,9 @@ namespace autoBot {
     //% group="Commands"
     //% weight=340
     export function move(): void {
-        _setSpeed(GEAR)
-        console.log('Move: ' + SPEED);
-        switch (DIRECTION) {
+        _setSpeed(_gear)
+        console.log('Move: ' + _speed);
+        switch (_direction) {
             case Directions.Front:
                 _straight()
                 break
@@ -421,7 +422,7 @@ namespace autoBot {
     //% block="light sensor"
     //% group="Sensors"
     export function senseLight(): number {
-        return FORWARD?1:0
+        return _forward?1:0
     }
 
     /**
