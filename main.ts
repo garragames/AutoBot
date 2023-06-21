@@ -199,37 +199,37 @@ namespace autoBot {
      * @param gear
      */
     function _setSpeed(gear: number): void {
-        let speed = 0
+        //let speed = 0
         switch (gear) {
             case NEUTRAL_GEAR:
-                speed = 0
+                SPEED = 0
                 break
             case PARKING_GEAR:
-                speed = 0
+                SPEED = 0
                 break
             case FIRST_GEAR:
-                speed = 20
+                SPEED = 20
                 break
             case REVERSE_GEAR:
-                speed = 20
+                SPEED = 20
                 break
             case SECOND_GEAR:
-                speed = 40
+                SPEED = 40
                 break
             case THIRD_GEAR:
-                speed = 60
+                SPEED = 60
                 break
             case FOURTH_GEAR:
-                speed = 80
+                SPEED = 80
                 break
             case FIFTH_GEAR:
-                speed = 100
+                SPEED = 100
                 break
             case DRIVE_GEAR:
-                speed = 100
+                SPEED = 100
                 break
         }
-        let s = speed * (MAX_VEL - MIN_VEL) / 100 + MIN_VEL; // Adjust to the min and max PWM values
+        let s = SPEED * (MAX_VEL - MIN_VEL) / 100 + MIN_VEL; // Adjust to the min and max PWM values
         // PWM para motor izquierdo
         pins.analogWritePin(AnalogPin.P8, s)
         // PWM para motor derecho
