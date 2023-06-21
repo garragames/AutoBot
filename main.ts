@@ -382,7 +382,7 @@ namespace autoBot {
     //% weight=340
     export function move(): void {
         console.log('Move: ' + SPEED);
-        _setSpeed(SPEED)
+        _setSpeed(GEAR)
         switch (DIRECTION) {
             case Directions.Front:
                 _straight()
