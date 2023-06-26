@@ -174,16 +174,6 @@ namespace autoBot {
     }
 
     /**
-     * Moves the autobot backward 
-     */
-    export function _backward(): void {
-        pins.digitalWritePin(DigitalPin.P12, _forward?1:0)
-        pins.digitalWritePin(DigitalPin.P13, _forward?0:1)
-        pins.digitalWritePin(DigitalPin.P14, _forward?0:1)
-        pins.digitalWritePin(DigitalPin.P15, _forward?1:0)
-    }
-
-    /**
      * Moves the autobot straight
      */
     export function _straight(): void {
