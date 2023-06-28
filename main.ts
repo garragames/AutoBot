@@ -12,8 +12,6 @@
 //% groups=['Commands', 'Sensors', 'Logic', 'Variables']
 namespace autoBot {
 
-
-
     const MIN_VEL = 150;  //   0 km/hr
     const MAX_VEL = 1023; // 100 km/hr
 
@@ -34,14 +32,6 @@ namespace autoBot {
     // Disable LED Matrix
     led.enable(true) // Set true to DEBUG
 
-    export enum Errors {
-        //% block="Error 001",
-        Errror001 = 100,
-        //% block="Error 002",
-        Errror002 = 500
-
-    }
-    
     // Engine Sates
     export enum Engine {
         //% block="off"
@@ -256,7 +246,6 @@ namespace autoBot {
             if (_engine == Engine.Off) {
                 _belt = state
             } else {
-                console.log(autoBot.Errors.Errror001)
                 console.error('Do not unfasten your seat belt while the engine is on')
             }
         } else {
