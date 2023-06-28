@@ -5,6 +5,9 @@
  *
  */
 
+import * as data from ‘./es_resource.json’;
+let fooBarVal = data.foo_bar;
+
 //% color=#fa8f13 icon="\uf1b9" block="AutoBot"
 //% groups=['Commands', 'Sensors', 'Logic', 'Variables']
 namespace autoBot {

@@ -14,6 +14,8 @@
         "main.blocks",
         "main.ts",
         "icons.jres",
+        "es_resource.json",
+        "typePatches/localizationResource.d.ts",
         "_locales/autobot-strings.json",
         "_locales/autobot-jsdoc-strings.json",
         "_locales/es-ES/autobot-strings.json",
