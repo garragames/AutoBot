@@ -30,10 +30,10 @@ namespace autoBot {
     led.enable(true) // Set true to DEBUG
 
     // Error messages
-    export let Errors = [ 
-        "Error Uno",
-        "Error Dos"
-    ]
+    export let Errors = {
+        ERR01: "Error Uno",
+        ERR02: "Error Dos"
+    }
     
     // Engine Sates
     export enum Engine {
@@ -249,7 +249,7 @@ namespace autoBot {
             if (_engine == Engine.Off) {
                 _belt = state
             } else {
-                console.log(autoBot.Errors[1])
+                console.log(autoBot.Errors.ERR01)
                 console.error('Do not unfasten your seat belt while the engine is on')
             }
         } else {

@@ -1,4 +1,6 @@
 {
+  "autoBot.Errors.ERRR01|block": "Error one",
+  "autoBot.Errors.ERRR02|block": "Error two",
   "autoBot.AutomaticGears.Drive|block": "second gear",
   "autoBot.AutomaticGears.First|block": "reverse gear",
   "autoBot.AutomaticGears.Neutral|block": "fifth gear",
