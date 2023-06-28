@@ -29,10 +29,12 @@ namespace autoBot {
     // Disable LED Matrix
     led.enable(true) // Set true to DEBUG
 
-    // Error messages
-    export let Errors = {
-        ERR01: "Error Uno",
-        ERR02: "Error Dos"
+    export enum Errors {
+        //% block="Error 001",
+        Errror001 = 100,
+        //% block="Error 002",
+        Errror002 = 500
+
     }
     
     // Engine Sates
