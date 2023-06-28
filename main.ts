@@ -29,6 +29,12 @@ namespace autoBot {
     // Disable LED Matrix
     led.enable(true) // Set true to DEBUG
 
+    // Error messages
+    export enum errors {
+        ERR01 = "Error Uno",
+        ERR02 = "Error Dos"
+    }
+    
     // Engine Sates
     export enum Engine {
         //% block="off"
