@@ -1,5 +1,6 @@
 {
-  "autoBot.Errors.ERRR01": "Horror!!"
+  "autoBot.Errors.ERRR01|block": "Error one",
+  "autoBot.Errors.ERRR02|block": "Error two",
   "autoBot.AutomaticGears.Drive|block": "drive",
   "autoBot.AutomaticGears.First|block": "primera velocidad",
   "autoBot.AutomaticGears.Neutral|block": "neutral",
