@@ -449,17 +449,6 @@ namespace autoBot {
     }
 
     /**
-     * Detects the tilt of the micro:bit card via the accelerometer
-     * @returns 
-     */
-    //% blockId=senseAcelerometer
-    //% block="acelerometer"
-    //% group="Sensors"
-    export function senseAcelerometer(): number {
-        return 0
-    }
-
-    /**
      * Compares two values and returns true if equal or false if not equal
      * @param A
      * @param B
