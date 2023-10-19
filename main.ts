@@ -395,30 +395,6 @@ namespace autoBot {
     }
 
     /**
-     * TEST BLOCK
-     */
-    //% blockId=test
-    //% block="stop"
-    //% block.loc.es-ES="detenerse"
-    //% group="Commands"
-    //% weight=590
-    //% subcategory="K-12"
-    export function test(): void {
-        _stop()
-    }
-
-    /**
-     * Detects ligth sensor
-     * @returns 
-     */
-    //% blockId=senseLight
-    //% block="light sensor"
-    //% group="Sensors"
-    export function senseLight(): number {
-        return _forward?1:0
-    }
-
-    /**
      * Send a ping and get the echo time (in microseconds) as a result
      * @param trig tigger pin
      * @param echo echo pin
