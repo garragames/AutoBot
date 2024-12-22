@@ -1,6 +1,6 @@
 {
     "name": "pxt-autobot",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Extension for programming the collection of Autobots robots",
     "dependencies": {
         "core": "*",
